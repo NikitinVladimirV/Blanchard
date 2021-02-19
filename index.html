@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blanchard-художественная галерея</title>
+  <link rel="stylesheet" href="/css/normalize.css">
   <link rel="stylesheet" href="/css/style.css">
 </head>
 
@@ -13,64 +14,112 @@
 
   <header class="header">
     <div class="container header-container">
-      <a href="www.blanchard.ru">
-        <img class="header-logo" src="/img/Лого.svg" alt="Blanchard-художественная галерея">
+      <a class="header__link" href="www.blanchard.ru">
+        <img class="logo header__logo" src="/img/Лого.svg" alt="Blanchard-художественная галерея">
       </a>
-      <nav class="header-nav">
-        <ul class="nav-list">
-          <li class="list-item"><a class="nav-link" href="">О нас</a></li>
-          <li class="list-item"><a class="nav-link" href="">Галерея</a></li>
-          <li class="list-item"><a class="nav-link" href="">Каталог</a></li>
-          <li class="list-item"><a class="nav-link" href="">События</a></li>
-          <li class="list-item"><a class="nav-link" href="">Издания</a></li>
-          <li class="list-item"><a class="nav-link" href="">Проекты</a></li>
-          <li class="list-item"><a class="nav-link" href="">Контакты</a></li>
+
+      <nav class="header__nav header-nav">
+        <ul class="header__list">
+          <li class="header__item"><a class="header-nav__link" href="#about">О нас</a></li>
+          <li class="header__item"><a class="header-nav__link" href="#gallery">Галерея</a></li>
+          <li class="header__item"><a class="header-nav__link" href="#catalog">Каталог</a></li>
+          <li class="header__item"><a class="header-nav__link" href="#events">События</a></li>
+          <li class="header__item"><a class="header-nav__link" href="#publications">Издания</a></li>
+          <li class="header__item"><a class="header-nav__link" href="#projects">Проекты</a></li>
+          <li class="header__item"><a class="header-nav__link" href="#contacts">Контакты</a></li>
         </ul>
       </nav>
-      
+
+      <a class="header__enter" href="">Войти</a>
+
+      <div class="container header__menu header-menu">
+        <ul class="header-menu__list">
+          <li class="header-menu__item">Реализм</li>
+          <li class="header-menu__item">Импрессионизм</li>
+          <li class="header-menu__item">Постимпрессионизм</li>
+          <li class="header-menu__item">Авангард</li>
+          <li class="header-menu__item">Футуризм</li>
+        </ul>
+        <a class="header-menu__search" href="">Поиск по сайту</a>
+      </div>
     </div>
+
+
   </header>
-
-
-
-
-
-
-
 
   <main class="main">
 
+    <section class="primary" aria-label="Презентация">
+      <div class="container primary-container">
+        <div class="primary__text">
+          <h1 class="primary__title">Прикоснитесь к прекрасному</h1>
+          <p class="primary__description">
+            Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки для новых
+            предложений.
+          </p>
+          <a class="button primary__button" href="#contacts">Подписаться на рассылку</a>
+        </div>
+      </div>
+    </section>
+
     <article class="article">
 
-      <section class="primary">
+      <section class="about" id="about" aria-label="О нас">
+        <div class="container about-container">
+          <h2 class="about__title">О нас</h2>
+          <p class="about__description">
+            Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет каждого
+            участника как способного принимать собственные решения касаемо распределения внутренних резервов и ресурсов.
+            Не следует, однако, забывать, что высококачественный прототип будущего проекта влечет за собой процесс
+            внедрения и модернизации модели развития. Повседневная практика показывает, что высокое качество позиционных
+            исследований создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с
+            учётом комплекса распределения внутренних резервов и ресурсов. В рамках спецификации современных стандартов,
+            действия представителей оппозиции набирают популярность среди определенных слоев населения, а значит, должны
+            быть разоблачены.
+          </p>
+        </div>
+      </section>
+
+      <section class="gallery" id="gallery" aria-label="Галерея">
+        <div class="container gallery-container">
+          <div class="gallery__function">
+            <h2 class="gallery__title">Галерея</h2>
+            <select class="gallery__select" name="" id="">
+              <option class="gallery__item" value="">Автор</option>
+              <option class="gallery__item" value="">Направление</option>
+              <option class="gallery__item" value="">Техника</option>
+            </select>
+            <p class="gallery__description">Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества
+              скачиваний <a href="">авторизуйтесь,</a> либо воспользуйтесь лицензией. 
+            </p>
+          </div>
+          <div class="gallery__slider">
+            
+          </div>
+        </div>
+      </section>
+
+      <section class="catalog" id="catalog" aria-label="Каталог">
+        <div class="container catalog-container">
+          <h2>Каталог</h2>
+          <div class="language"></div>
+          
+        </div>
+      </section>
+
+      <section class="events" id="events" aria-label="События">
 
       </section>
 
-      <section class="about">
+      <section class="publication" id="publications" aria-label="Публикации">
 
       </section>
 
-      <section class="gallery">
+      <section class="projects" id="projects" aria-label="Проекты">
 
       </section>
 
-      <section class="catalog">
-
-      </section>
-
-      <section class="events">
-
-      </section>
-
-      <section class="publication">
-
-      </section>
-
-      <section class="projects">
-
-      </section>
-
-      <section class="contacts">
+      <section class="contacts" id="contacts" aria-label="Контакты">
 
       </section>
 
