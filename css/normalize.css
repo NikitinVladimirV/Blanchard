@@ -41,6 +41,10 @@
     font-size: 2em;
     margin: 0 0 0 0;
   }
+
+  h2 {
+    margin: 0;
+  }
   
   /* Grouping content
      ========================================================================== */
@@ -349,7 +353,10 @@
   }
 
   div,
-  li,
   li {
     box-sizing: border-box;
+  }
+
+  p {
+    margin: 0;
   }

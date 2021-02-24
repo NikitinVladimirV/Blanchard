@@ -6,14 +6,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blanchard-художественная галерея</title>
+  <link rel="stylesheet" href="/css/choices.min.css">
   <link rel="stylesheet" href="/css/normalize.css">
   <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/choices.min.js"></script>
+  <script src="/js/index.js"></script>
 </head>
 
 <body>
-
   <header class="header">
-
     <div class="container header-container">
       <a class="header__link" href="www.blanchard.ru">
         <img class="logo header__logo" src="/img/header/Лого.svg" alt="Blanchard-художественная галерея">
@@ -32,20 +33,62 @@
       <a class="header__enter" href="">Войти</a>
       <div class="container header__menu header-menu">
         <ul class="header-menu__list">
-          <li class="header-menu__item">Реализм</li>
-          <li class="header-menu__item">Импрессионизм</li>
-          <li class="header-menu__item">Постимпрессионизм</li>
-          <li class="header-menu__item">Авангард</li>
-          <li class="header-menu__item">Футуризм</li>
+          <li class="header-menu__item">
+            <select class="header-menu__select header-menu__realism" name="select">
+              <option placeholder>Реализм</option>
+              <option>Тинторетто</option>
+              <option>Фридрих</option>
+              <option>Леонардо</option>
+              <option>Верроккьо</option>
+              <option>ТЕСТ</option>
+            </select>
+          </li>
+          <li class="header-menu__item">
+            <select class="header-menu__select header-menu__umpressionism" name="select">
+              <option placeholder>Импрессионизм</option>
+              <option>Моне</option>
+              <option>Сислей</option>
+              <option>Мане</option>
+              <option>Ренуар</option>
+            </select>
+          </li>
+          <li class="header-menu__item">
+            <select class="header-menu__select" name="select">
+              <option placeholder>Постимпрессионизм</option>
+              <option>Ван Гог</option>
+              <option>Сезанн</option>
+              <option>Гоген</option>
+              <option>Сёра</option>
+            </select>
+          </li>
+          <li class="header-menu__item">
+            <select class="header-menu__select" name="select">
+              <option placeholder>Авангард</option>
+              <option>Кандинский</option>
+              <option>Маринетти</option>
+              <option>Малевич</option>
+              <option>Пикассо</option>
+            </select>
+          </li>
+          <li class="header-menu__item">
+            <select class="header-menu__select" name="select">
+              <option placeholder>Футуризм</option>
+              <option>Карра</option>
+              <option>Прателла</option>
+              <option>Северини</option>
+              <option>Балла</option>
+            </select>
+          </li>
         </ul>
-        <a class="header-menu__search" href="">Поиск по сайту</a>
+        <form class="header__search header-search" action="">
+          <button class="header-search__btn"></button>
+          <input class="header-search__input" type="search" placeholder="Поиск по сайту">
+        </form>
       </div>
     </div>
-
   </header>
 
   <main class="main">
-
     <section class="primary" aria-label="Презентация">
       <div class="container primary-container">
         <div class="primary__text">
@@ -60,7 +103,6 @@
     </section>
 
     <article class="article">
-
       <section class="about" id="about" aria-label="О нас">
         <div class="container about-container">
           <h2 class="about__title">О нас</h2>
@@ -91,7 +133,14 @@
             </p>
           </div>
           <div class="gallery__slider">
-
+            <ul class="gallery__list">
+              <li class="gallery__item"><img src="/img/gallery/gallery13.jpg" alt="Картина1"></li>
+              <li class="gallery__item"><img src="/img/gallery/gallery15.jpg" alt="Картина1"></li>
+              <li class="gallery__item"><img src="/img/gallery/gallery17.png" alt="Картина1"></li>
+              <li class="gallery__item"><img src="/img/gallery/gallery14.png" alt="Картина1"></li>
+              <li class="gallery__item"><img src="/img/gallery/gallery16.png" alt="Картина1"></li>
+              <li class="gallery__item"><img src="/img/gallery/gallery18.png" alt="Картина1"></li>
+            </ul>
           </div>
         </div>
       </section>
@@ -101,8 +150,7 @@
           <div class="catalog__top">
             <h2 class="catalog__title">Каталог</h2>
             <div class="catalog__lang lang">
-              <button class="lang__button lang__france" style="border: none; background-color: #e5e5e5;"><img
-                  src="/img/catalog/france.png" alt=""></button>
+              <button class="lang__button lang__france"><img src="/img/catalog/france.png" alt=""></button>
               <button class="lang__button lang__germany"><img src="/img/catalog/germany.png" alt=""></button>
               <button class="lang__button lang__italy"><img src="/img/catalog/italy.png" alt=""></button>
               <button class="lang__button lang__russia"><img src="/img/catalog/russia.png" alt=""></button>
@@ -116,11 +164,11 @@
             независимые элементы.
           </p>
           <div class="catalog__bottom">
-            <div class="catalog__biogrphy">
-              <img src="/img/catalog/Domenico.jpg" alt="">
-              <h3>Доменико Гирландайо</h3>
-              <span>2 июня 1448 — 11 января 1494.</span>
-              <p>
+            <div class="catalog__biogrphy biography">
+              <img class="catalog__portrait" src="/img/catalog/Domenico.jpg" alt="">
+              <h3 class="biography__name">Доменико Гирландайо</h3>
+              <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
+              <p class="biography__description">
                 Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую
                 продолжили его брат Давид и сын Ридольфо. Глава художественной мастерской, где юный Микеланджело в
                 течение года овладевал профессиональными навыками. Автор фресковых циклов, в которых выпукло, со
@@ -139,58 +187,98 @@
         <div class="container events-container">
           <h2 class="events__title">События</h2>
           <ul class="events__list">
-            <li class="events__item events-item events-item__shchuseva">
-              <span class="events-item__date">Музей им. Щусева с 20 марта по 30 апреля</span>
-              <h3 class="events-item__title">Книжная гравюра в живом восприятии</h3>
-              <p class="events-item__description">
-                Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую
-                продолжили его брат Давид и сын Ридольфо.
-              </p>
-              <a class="events-item__link" href="">Подробнее</a>
+            <li class="events__item event-item">
+              <img src="/img/events/shchuseva.jpg" alt="Музей имени Щусева">
+              <div class="event-item__text">
+                <span class="event-item__date">
+                  Музей им. Щусева
+                  <br>
+                  с 20 марта по 30 апреля
+                </span>
+                <h3 class="event-item__title">Книжная гравюра в живом восприятии</h3>
+                <p class="event-item__description">
+                  Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую
+                  продолжили его брат Давид и сын Ридольфо.
+                </p>
+                <a class="event-item__link" href="">Подробнее</a>
+              </div>
             </li>
-            <li class="events__item events-item events-item__mmoma">
-              <span class="events-item__date">ММОМА 24 марта 19:00</span>
-              <h3 class="events-item__title">«Открытая дискуссия». Дмитрий Петров и Сергей Ильин.</h3>
-              <p class="events-item__description">
-                Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого
-                факта.
-              </p>
-              <a class="events-item__link" href="">Подробнее</a>
+            <li class="events__item event-item">
+              <img src="/img/events/mmoma.jpg" alt="Московский музей современного искуства">
+              <div class="event-item__text">
+                <span class="event-item__date">
+                  ММОМА
+                  <br>
+                  24 марта 19:00
+                </span>
+                <h3 class="event-item__title">«Открытая дискуссия». Дмитрий Петров и Сергей Ильин.</h3>
+                <p class="event-item__description">
+                  Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого
+                  факта.
+                </p>
+                <a class="event-item__link" href="">Подробнее</a>
+              </div>
             </li>
-            <li class="events__item events-item events-item__european">
-              <span class="events-item__date">Еврейский музей с 31 марта по 21 апреля</span>
-              <h3 class="events-item__title">Выставка «Формация 2020»</h3>
-              <p class="events-item__description">
-                Идейные соображения высшего порядка, а также современная методология разработки играет важную роль в
-                формировании глубокомысленных рассуждений.
-              </p>
-              <a class="events-item__link" href="">Подробнее</a>
+            <li class="events__item event-item">
+              <img src="/img/events/jewish.jpg" alt="Евейский музей">
+              <div class="event-item__text">
+                <span class="event-item__date">
+                  Еврейский музей
+                  <br>
+                  с 31 марта по 21 апреля</span>
+                <h3 class="event-item__title">Выставка «Формация 2020»</h3>
+                <p class="event-item__description">
+                  Идейные соображения высшего порядка, а также современная методология разработки играет важную роль в
+                  формировании глубокомысленных рассуждений.
+                </p>
+                <a class="event-item__link" href="">Подробнее</a>
+              </div>
             </li>
-            <li class="events__item events-item events-item__tretyakovka">
-              <span class="events-item__date">Третьяковка на Крымском валу с 30 марта по 30 апреля</span>
-              <h3 class="events-item__title">XXIV Международная биеннале молодого искусства</h3>
-              <p class="events-item__description">
-                Внезапно, реплицированные с зарубежных источников, современные исследования.
-              </p>
-              <a class="events-item__link" href="">Подробнее</a>
+          </ul>
+          <ul class="events__list events__list_hidden">
+            <li class="events__item event-item">
+              <img src="/img/events/tretyakovka.png" alt="Третьяковка на Крымском валу">
+              <div class="event-item__text">
+                <span class="event-item__date">
+                  Третьяковка на Крымском валу
+                  <br>
+                  с 30 марта по 30 апреля</span>
+                <h3 class="event-item__title">XXIV Международная биеннале молодого искусства</h3>
+                <p class="event-item__description">
+                  Внезапно, реплицированные с зарубежных источников, современные исследования.
+                </p>
+                <a class="event-item__link" href="">Подробнее</a>
+              </div>
             </li>
-            <li class="events__item events-item events-item__mmam">
-              <span class="events-item__date">ММАМ с 8 апреля по 20 мая</span>
-              <h3 class="events-item__title">Джон Винзор. Фотографии из серии «Метафора серебра»</h3>
-              <p class="events-item__description">
-                Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую
-                продолжили его брат Давид и сын Ридольфо.
-              </p>
-              <a class="events-item__link" href="">Подробнее</a>
+            <li class="events__item event-item">
+              <img src="/img/events/mmam.png" alt="Мультимедиа арт музей">
+              <div class="event-item__text">
+                <span class="event-item__date">
+                  ММАМ
+                  <br>
+                  с 8 апреля по 20 мая</span>
+                <h3 class="event-item__title">Джон Винзор. Фотографии из серии «Метафора серебра»</h3>
+                <p class="event-item__description">
+                  Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую
+                  продолжили его брат Давид и сын Ридольфо.
+                </p>
+                <a class="event-item__link" href="">Подробнее</a>
+              </div>
             </li>
-            <li class="events__item events-item events-item__european">
-              <span class="events-item__date">Музей им. Щусева с 20 марта по 30 апреля</span>
-              <h3 class="events-item__title">Книжная гравюра в живом восприятии</h3>
-              <p class="events-item__description">
-                Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую
-                продолжили его брат Давид и сын Ридольфо.
-              </p>
-              <a class="events-item__link" href="">Подробнее</a>
+            <li class="events__item event-item">
+              <img src="/img/events/shchuseva.jpg" alt="Музей имени Щусева">
+              <div class="event-item__text">
+                <span class="event-item__date">
+                  Музей им. Щусева
+                  <br>
+                  с 20 марта по 30 апреля</span>
+                <h3 class="event-item__title">Книжная гравюра в живом восприятии</h3>
+                <p class="event-item__description">
+                  Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую
+                  продолжили его брат Давид и сын Ридольфо.
+                </p>
+                <a class="event-item__link" href="">Подробнее</a>
+              </div>
             </li>
           </ul>
           <button class="button events__button">Все события</button>
@@ -262,22 +350,22 @@
           <div class="publications__slider">
             <div class="publications__page">
               <div class="publications__item publication publication-itten">
-                  <h4 class="publication__name">Искусство цвета</h4>
-                  <i class="publication__cost">620 руб</i>
-                  <span class="publication__autor">Иттен, Иоханнес</span>
-                  <button class="button">Заказать</button>
+                <b class="publication__name">Искусство цвета</b>
+                <i class="publication__cost">620 руб</i>
+                <span class="publication__autor">Иттен, Иоханнес</span>
+                <button class="button">Заказать</button>
               </div>
               <div class="publications__item publication publication-ruder">
-                  <h4 class="publication__name">Искусство цвета</h4>
-                  <i class="publication__cost">620 руб</i>
-                  <span class="publication__autor">Иттен, Иоханнес</span>
-                  <button class="button">Заказать</button>
+                <b class="publication__name">Искусство цвета</b>
+                <i class="publication__cost">620 руб</i>
+                <span class="publication__autor">Иттен, Иоханнес</span>
+                <button class="button">Заказать</button>
               </div>
               <div class="publications__item publication publication-gordon">
-                  <h4 class="publication__name">Искусство цвета</h4>
-                  <i class="publication__cost">620 руб</i>
-                  <span class="publication__autor">Иттен, Иоханнес</span>
-                  <button class="button">Заказать</button>
+                <b class="publication__name">Искусство цвета</b>
+                <i class="publication__cost">620 руб</i>
+                <span class="publication__autor">Иттен, Иоханнес</span>
+                <button class="button">Заказать</button>
               </div>
             </div>
           </div>
@@ -288,7 +376,15 @@
         <div class="container projects-container">
           <h2 class="projects__title">Проекты</h2>
           <p class="projects__description">
-            Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно фиксирует необходимость своевременного выполнения сверхзадачи. А ещё независимые государства смешаны с не уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус бесполезности. Прежде всего, постоянное информационно-пропагандистское      обеспечение нашей деятельности однозначно фиксирует необходимость экономической целесообразности принимаемых решений. И нет сомнений, что действия представителей оппозиции могут быть рассмотрены исключительно в разрезе маркетинговых и финансовых      предпосылок. Банальные, но неопровержимые выводы, а также представители современных социальных резервов призывают нас к новым свершениям, которые, в свою очередь, должны быть смешаны с не уникальными данными до степени совершенной неузнаваемости. Подробнее: 
+            Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно
+            фиксирует необходимость своевременного выполнения сверхзадачи. А ещё независимые государства смешаны с не
+            уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус бесполезности.
+            Прежде всего, постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно фиксирует
+            необходимость экономической целесообразности принимаемых решений. И нет сомнений, что действия
+            представителей оппозиции могут быть рассмотрены исключительно в разрезе маркетинговых и финансовых
+            предпосылок. Банальные, но неопровержимые выводы, а также представители современных социальных резервов
+            призывают нас к новым свершениям, которые, в свою очередь, должны быть смешаны с не уникальными данными до
+            степени совершенной неузнаваемости. Подробнее:
             <a class="projects__link" href="">blanchard-art.ru/projects/about</a>
           </p>
           <div class="project__partners partners">
@@ -333,9 +429,7 @@
           </div>
         </div>
       </section>
-
     </article>
-
   </main>
 
   <footer class="footer">
@@ -350,7 +444,6 @@
       </div>
     </div>
   </footer>
-
 </body>
 
 </html>
