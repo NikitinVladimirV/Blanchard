@@ -6,78 +6,81 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blanchard-художественная галерея</title>
-  <link rel="stylesheet" href="/css/choices.min.css">
   <link rel="stylesheet" href="/css/normalize.css">
+  <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">--><!--Анимация-->
+  <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css"><!-- Скролл -->
   <link rel="stylesheet" href="/css/style.css">
-  <script src="/js/choices.min.js"></script>
+
+  <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script><!-- Скролл -->
   <script src="/js/index.js"></script>
 </head>
 
 <body>
   <header class="header">
-    <div class="container header-container">
-      <a class="header__link" href="www.blanchard.ru">
-        <img class="logo header__logo" src="/img/header/Лого.svg" alt="Blanchard-художественная галерея">
-      </a>
-      <nav class="header__nav header-nav">
-        <ul class="header__list">
-          <li class="header__item"><a class="header-nav__link" href="#about">О нас</a></li>
-          <li class="header__item"><a class="header-nav__link" href="#gallery">Галерея</a></li>
-          <li class="header__item"><a class="header-nav__link" href="#catalog">Каталог</a></li>
-          <li class="header__item"><a class="header-nav__link" href="#events">События</a></li>
-          <li class="header__item"><a class="header-nav__link" href="#publications">Издания</a></li>
-          <li class="header__item"><a class="header-nav__link" href="#projects">Проекты</a></li>
-          <li class="header__item"><a class="header-nav__link" href="#contacts">Контакты</a></li>
-        </ul>
-      </nav>
-      <a class="header__enter" href="">Войти</a>
-      <div class="container header__menu header-menu">
+    <div class="header-container">
+      <div class="header__top">
+        <a class="header__link" href="www.blanchard.ru">
+          <img class="logo header__logo" src="/img/header/Лого.svg" alt="Blanchard-художественная галерея">
+        </a>
+        <nav class="header__nav header-nav">
+          <ul class="header__list">
+            <li class="header__item"><a class="header-nav__link" href="#about">О нас</a></li>
+            <li class="header__item"><a class="header-nav__link" href="#gallery">Галерея</a></li>
+            <li class="header__item"><a class="header-nav__link" href="#catalog">Каталог</a></li>
+            <li class="header__item"><a class="header-nav__link" href="#events">События</a></li>
+            <li class="header__item"><a class="header-nav__link" href="#publications">Издания</a></li>
+            <li class="header__item"><a class="header-nav__link" href="#projects">Проекты</a></li>
+            <li class="header__item"><a class="header-nav__link" href="#contacts">Контакты</a></li>
+          </ul>
+        </nav>
+        <a class="header__enter" href="">Войти</a>
+      </div>
+      <div class="header__menu header-menu">
         <ul class="header-menu__list">
           <li class="header-menu__item">
-            <select class="header-menu__select header-menu__realism" name="select">
-              <option placeholder>Реализм</option>
-              <option>Тинторетто</option>
-              <option>Фридрих</option>
-              <option>Леонардо</option>
-              <option>Верроккьо</option>
-              <option>ТЕСТ</option>
-            </select>
+            <button class="header-menu__btn">Реализм</button>
+            <ul class="header-menu__drop header-drop" data-simplebar>
+              <li class="header-drop__item tintoretto">Тинторетто</li>
+              <li class="header-drop__item fridrih">Фридрих</li>
+              <li class="header-drop__item leonardo">Леонардо</li>
+              <li class="header-drop__item verrokkyo">Верроккьо</li>
+            </ul>
           </li>
           <li class="header-menu__item">
-            <select class="header-menu__select header-menu__umpressionism" name="select">
-              <option placeholder>Импрессионизм</option>
-              <option>Моне</option>
-              <option>Сислей</option>
-              <option>Мане</option>
-              <option>Ренуар</option>
-            </select>
+            <button class="header-menu__btn">Импрессионизм</button>
+            <ul class="header-menu__drop none" data-simplebar>
+              <li class="header-drop__item mone">Моне</li>
+              <li class="header-drop__item sisley">Сислей</li>
+              <li class="header-drop__item mane">Мане</li>
+              <li class="header-drop__item renuar">Ренуар</li>
+            </ul>
           </li>
           <li class="header-menu__item">
-            <select class="header-menu__select" name="select">
-              <option placeholder>Постимпрессионизм</option>
-              <option>Ван Гог</option>
-              <option>Сезанн</option>
-              <option>Гоген</option>
-              <option>Сёра</option>
-            </select>
+            <button class="header-menu__btn">Постимпрессионизм</button>
+            <ul class="header-menu__drop none" data-simplebar>
+              <li class="header-drop__item vangog">Ван Гог</li>
+              <li class="header-drop__item sezann">Сезанн</li>
+              <li class="header-drop__item gogen">Гоген</li>
+              <li class="header-drop__item syora">Сёра</li>
+            </ul>
           </li>
           <li class="header-menu__item">
-            <select class="header-menu__select" name="select">
-              <option placeholder>Авангард</option>
-              <option>Кандинский</option>
-              <option>Маринетти</option>
-              <option>Малевич</option>
-              <option>Пикассо</option>
-            </select>
+            <button class="header-menu__btn">Авангард</button>
+            <ul class="header-menu__drop none" data-simplebar>
+              <li class="header-drop__item kandinsky">Кандинский</li>
+              <li class="header-drop__item marinetti">Маринетти</li>
+              <li class="header-drop__item malevich">Малевич</li>
+              <li class="header-drop__item picasso">Пикассо</li>
+            </ul>
           </li>
           <li class="header-menu__item">
-            <select class="header-menu__select" name="select">
-              <option placeholder>Футуризм</option>
-              <option>Карра</option>
-              <option>Прателла</option>
-              <option>Северини</option>
-              <option>Балла</option>
-            </select>
+            <button class="header-menu__btn">Футуризм</button>
+            <ul class="header-menu__drop none" data-simplebar>
+              <li class="header-drop__item karra">Карра</li>
+              <li class="header-drop__item pratella">Прателла</li>
+              <li class="header-drop__item severini">Северини</li>
+              <li class="header-drop__item balla">Балла</li>
+            </ul>
           </li>
         </ul>
         <form class="header__search header-search" action="">
@@ -90,7 +93,7 @@
 
   <main class="main">
     <section class="primary" aria-label="Презентация">
-      <div class="container primary-container">
+      <div class="container primary-container animate__animated animate__pulse animate__infinite">
         <div class="primary__text">
           <h1 class="primary__title">Прикоснитесь к прекрасному</h1>
           <p class="primary__description">
