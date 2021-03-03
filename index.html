@@ -7,10 +7,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blanchard-художественная галерея</title>
   <link rel="stylesheet" href="/css/normalize.css">
-  <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">--><!--Анимация-->
+  <link rel="stylesheet" href="/css/choices.min.css"><!-- Селект -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" /><!-- Слайдер -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /><!-- Слайдер -->
+  <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">--><!-- Анимация -->
   <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css"><!-- Скролл -->
   <link rel="stylesheet" href="/css/style.css">
 
+  <script src="/js/choices.min.js"></script><!-- Селект -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script><!-- Слайдер -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script><!-- Слайдер -->
   <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script><!-- Скролл -->
   <script src="/js/index.js"></script>
 </head>
@@ -93,14 +99,25 @@
 
   <main class="main">
     <section class="primary" aria-label="Презентация">
-      <div class="container primary-container animate__animated animate__pulse animate__infinite">
-        <div class="primary__text">
-          <h1 class="primary__title">Прикоснитесь к прекрасному</h1>
-          <p class="primary__description">
-            Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки для новых
-            предложений.
-          </p>
-          <a class="button primary__button" href="#contacts">Подписаться на рассылку</a>
+      <div class="primary-container animate__animated animate__pulse animate__infinite">
+        <!-- Slider main container -->
+        <div class="swiper-container">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide slide1"></div>
+            <div class="swiper-slide slide2"></div>
+            <div class="swiper-slide slide3"></div>
+          </div>
+          <div class="primary__text">
+            <h1 class="primary__title">Прикоснитесь к прекрасному</h1>
+            <p class="primary__description">
+              Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки для
+              новых
+              предложений.
+            </p>
+            <a class="button primary__button" href="#contacts">Подписаться на рассылку</a>
+          </div>
         </div>
       </div>
     </section>
@@ -126,24 +143,77 @@
         <div class="container gallery-container">
           <div class="gallery__function">
             <h2 class="gallery__title">Галерея</h2>
-            <select class="gallery__select" name="" id="">
-              <option class="gallery__item" value="">Автор</option>
-              <option class="gallery__item" value="">Направление</option>
-              <option class="gallery__item" value="">Техника</option>
+            <span class="gallery__textfilter">Фильтровать по:</span>
+            <select class="gallery__select" name="filter" id="gallery__select">
+              <option class="gallery__item" value="Автор">Автор</option>
+              <option class="gallery__item" value="Направление">Направление</option>
+              <option class="gallery__item" value="Техника">Техника</option>
             </select>
             <p class="gallery__description">Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества
               скачиваний <a href="">авторизуйтесь,</a> либо воспользуйтесь лицензией.
             </p>
           </div>
           <div class="gallery__slider">
-            <ul class="gallery__list">
+
+            <!-- Slider main container -->
+            <div class="swiper-container1">
+
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev1"></div>
+              <div class="swiper-button-next1"></div>
+
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide card">1</div>
+                <div class="swiper-slide card">2</div>
+                <div class="swiper-slide card">3</div>
+                <div class="swiper-slide card">4</div>
+                <div class="swiper-slide card">5</div>
+                <div class="swiper-slide card">6</div>
+                <!-- <div class="swiper-slide card">Slide 5</div>
+                <div class="swiper-slide card">Slide 6</div>
+                <div class="swiper-slide card">Slide 7</div>
+                <div class="swiper-slide card">Slide 8</div>
+                <div class="swiper-slide card">Slide 9</div>
+                <div class="swiper-slide card">Slide 10</div>
+                <div class="swiper-slide card">Slide 11</div>
+                <div class="swiper-slide card">Slide 12</div>
+                <div class="swiper-slide card">Slide 13</div>
+                <div class="swiper-slide card">Slide 14</div>
+                <div class="swiper-slide card">Slide 15</div>
+                <div class="swiper-slide card">Slide 16</div>
+                <div class="swiper-slide card">Slide 17</div>
+                <div class="swiper-slide card">Slide 18</div>
+                <div class="swiper-slide card">Slide 19</div>
+                <div class="swiper-slide card">Slide 20</div>
+                <div class="swiper-slide card">Slide 21</div>
+                <div class="swiper-slide card">Slide 22</div>
+                <div class="swiper-slide card">Slide 23</div>
+                <div class="swiper-slide card">Slide 24</div>
+                <div class="swiper-slide card">Slide 25</div>
+                <div class="swiper-slide card">Slide 26</div>
+                <div class="swiper-slide card">Slide 27</div>
+                <div class="swiper-slide card">Slide 28</div>
+                <div class="swiper-slide card">Slide 29</div>
+                <div class="swiper-slide card">Slide 30</div> -->
+              </div>
+              <!-- If we need pagination -->
+              <div class="swiper-pagination1 pag-1"></div>
+
+              
+
+              <!-- If we need scrollbar -->
+              <div class="swiper-scrollbar1"></div>
+            </div>
+            <!-- <ul class="gallery__list">
               <li class="gallery__item"><img src="/img/gallery/gallery13.jpg" alt="Картина1"></li>
               <li class="gallery__item"><img src="/img/gallery/gallery15.jpg" alt="Картина1"></li>
               <li class="gallery__item"><img src="/img/gallery/gallery17.png" alt="Картина1"></li>
               <li class="gallery__item"><img src="/img/gallery/gallery14.png" alt="Картина1"></li>
               <li class="gallery__item"><img src="/img/gallery/gallery16.png" alt="Картина1"></li>
               <li class="gallery__item"><img src="/img/gallery/gallery18.png" alt="Картина1"></li>
-            </ul>
+            </ul> -->
           </div>
         </div>
       </section>
