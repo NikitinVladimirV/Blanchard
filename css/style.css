@@ -563,13 +563,18 @@ img {
 
 .gallery__slider {
   width: 71.8%;
-  padding: 85px 0 0 0;
+  padding: 25px 0 0 0;
 }
 .swiper-container1 {
   margin: 0 auto;
   width: 100%;
   overflow: hidden;
+  
 }
+
+/* .swiper-wrapper {
+  flex-wrap: wrap;
+} */
 
 .card {
   /* width: 350px; */
@@ -579,6 +584,16 @@ img {
   /* background-image: url(/img/gallery/gallery1.png);
   background-repeat: no-repeat;
   background-size: cover; */
+}
+
+.swiper__nav {
+  display: flex;
+  padding: 0 0 28px 4px;
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+  display: inline-block;
+  width: 4.5%;
 }
 
 .swiper-pagination-bullet {
@@ -595,7 +610,7 @@ img {
 
 .swiper-button-prev1 {
   display: inline-block;
-  margin-right: 20px;
+  margin-right: 18px;
   width: 30px;
   height: 30px;
   background-color: #666;

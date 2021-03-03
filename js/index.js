@@ -36,9 +36,9 @@ window.addEventListener('DOMContentLoaded', function () {
 
   const swiper1 = new Swiper('.swiper-container1', {
     slidesPerView: 3, // сколько показывать
-    spaceBetween: 10, //расстояние между слайдами
+    spaceBetween: 50, //расстояние между слайдами
     pagination: { // Точки пагинации
-      el: '.swiper-pagination1', // класс контейнера для точек
+      el: '.swiper-pagination1', // класс контейнера для пагинации
       // type: 'bullets', тип: точки
       type: 'fraction', // тип: цифры
       clickable: true, // возможность кликать по точкам

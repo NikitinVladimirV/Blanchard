@@ -10,7 +10,8 @@
   <link rel="stylesheet" href="/css/choices.min.css"><!-- Селект -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" /><!-- Слайдер -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /><!-- Слайдер -->
-  <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">--><!-- Анимация -->
+  <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">-->
+  <!-- Анимация -->
   <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css"><!-- Скролл -->
   <link rel="stylesheet" href="/css/style.css">
 
@@ -153,17 +154,22 @@
               скачиваний <a href="">авторизуйтесь,</a> либо воспользуйтесь лицензией.
             </p>
           </div>
-          <div class="gallery__slider">
+          <div class="gallery__slider swiper">
 
             <!-- Slider main container -->
             <div class="swiper-container1">
+              <div class="swiper__nav">
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev1"></div>
 
-              <!-- If we need navigation buttons -->
-              <div class="swiper-button-prev1"></div>
-              <div class="swiper-button-next1"></div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination1 pag-1"></div>
 
+                <div class="swiper-button-next1"></div>
+              </div>
               <!-- Additional required wrapper -->
               <div class="swiper-wrapper">
+
                 <!-- Slides -->
                 <div class="swiper-slide card">1</div>
                 <div class="swiper-slide card">2</div>
@@ -198,14 +204,11 @@
                 <div class="swiper-slide card">Slide 29</div>
                 <div class="swiper-slide card">Slide 30</div> -->
               </div>
-              <!-- If we need pagination -->
-              <div class="swiper-pagination1 pag-1"></div>
-
-              
 
               <!-- If we need scrollbar -->
               <div class="swiper-scrollbar1"></div>
             </div>
+
             <!-- <ul class="gallery__list">
               <li class="gallery__item"><img src="/img/gallery/gallery13.jpg" alt="Картина1"></li>
               <li class="gallery__item"><img src="/img/gallery/gallery15.jpg" alt="Картина1"></li>
