@@ -31,32 +31,26 @@ window.addEventListener('DOMContentLoaded', function () {
 
   // Слайдер
   const swiper = new Swiper('.swiper-container', {
-    loop: true,
+    loop: true, // зацикленность
   });
 
   const swiper1 = new Swiper('.swiper-container1', {
     slidesPerView: 3, // сколько показывать
+    slidesPerGroup: 3, // сколько проматывать слайдов за один клик
+    slidesPerColumn: 2, // сколько слайдов в колонке
     spaceBetween: 50, //расстояние между слайдами
     pagination: { // Точки пагинации
       el: '.swiper-pagination1', // класс контейнера для пагинации
       // type: 'bullets', тип: точки
       type: 'fraction', // тип: цифры
-      clickable: true, // возможность кликать по точкам
+      // clickable: true, возможность кликать по точкам
     },
-
-    slideToClickedSlide: true, // переход к кликаемому слайду(слайд переходит в начало)
-
-    centeredSlides: true, // ставит кликнутый слайд в центр
-
-    loop: true, // зацикленность
-
+    // slideToClickedSlide: true, переход к кликаемому слайду(слайд переходит в начало)
+    // centeredSlides: true, ставит кликнутый слайд в центр
     navigation: { // стрелки навигации
-      nextEl: '.swiper-button-next1',
-      prevEl: '.swiper-button-prev1',
+      nextEl: '.swiper-button-next1', // класс навигации в предыдущий
+      prevEl: '.swiper-button-prev1', // класс навигации в следующий
     },
-
-    // slidesPerGroup: 2,  сколько проматывать слайдов за один клик
-
 
   });
 
