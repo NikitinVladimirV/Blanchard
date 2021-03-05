@@ -208,8 +208,25 @@ img {
   content: url(/img/header/arrow-hover.png);
 }
 
-.header-menu__btn:active:after {
+/* .header-menu__btn:active:after {
   content: url(/img/header/arrow-active.png);
+} */
+
+/* .is-active:after {
+  content: url(/img/header/arrow-active.png);
+} */
+
+.is-active:after,
+.is-active:hover::after {
+  content: url(/img/header/arrow-active.png);
+  color: #7943A4;
+}
+
+.is-active,
+.is-active:hover,
+.is-active:focus {
+  color: #7943A4;
+  border: none;
 }
 
 .header-menu__drop {
@@ -227,9 +244,13 @@ img {
   overflow-y: auto;
 }
 
-.header-menu__drop--active {
+.is-active ~ .header-menu__drop {
   display: block;
 }
+
+/* .header-menu__drop--active {
+  display: block;
+} */
 
 .simplebar-track.simplebar-vertical {
   top: 40px;
@@ -528,6 +549,10 @@ img {
   border-radius: 6px;
 }
 
+.is-focused .choices__inner {
+  border: 1px solid var(--color-white);
+}
+
 .is-open .choices__inner {
   width: 100%;
   height: 40px;
@@ -544,7 +569,7 @@ img {
   width: 99.3%;
   color: #999;
   background-color: transparent;
-  border: 1px solid var(--color-white);
+  border: 1px solid #999;
   border-radius: 6px;
 }
 
@@ -552,8 +577,34 @@ img {
   padding: 3px 0 3px 20px;
 }
 
+.choices__list--dropdown .choices__item:not(:last-child) {
+  border-bottom: 1px solid #999;
+}
+
+.choices__list--dropdown .choices__item:first-child {
+  border-top: 1px solid var(--color-white);
+}
+
 .choices__list--dropdown .choices__item--selectable.is-highlighted {
   background-color: rgba(0, 0, 0, 0.6);
+}
+
+.choices[data-type*=select-one]:after {
+  content: url(/img/gallery/select-arrow__down.svg);
+  position: absolute;
+  right: 15px;
+  top: 4px;
+  height: 10px;
+  width: 10px;
+  margin: 0;
+  border: none;
+  pointer-events: none;
+}
+
+.choices[data-type*=select-one].is-open:after {
+  content: url(/img/gallery/select-arrow__up.svg);
+  margin: 0;
+  border: none;
 }
 
 .gallery__description {
@@ -578,7 +629,9 @@ img {
   padding: 0 0 28px 4px;
 }
 
-.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+.swiper-container-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
   display: inline-block;
   width: 4.5%;
 }
@@ -669,12 +722,6 @@ img {
   display: block;
 }
 
-
-
-.card:hover {
-
-}
-
 .Начало {
 
 }
@@ -711,7 +758,7 @@ img {
 
 .catalog__description {
   width: 68%;
-  margin: 0 0 39px 0;
+  margin: 0 0 38px 0;
 }
 
 .catalog__bottom {
@@ -724,19 +771,23 @@ img {
 }
 
 .catalog__portrait {
-  margin: 0 0 28px 0;
+  margin: 0 0 21px 0;
 }
 
 .biography__name {
-  margin: 0 0 5px 0;
+  margin: 0 0 0 0;
+  letter-spacing: 0;
 }
 
 .biography__date {
   display: inline-block;
-  margin: 0 0 8px 0;
   font-size: 12px;
   line-height: 16px;
   color: #999;
+}
+
+.catalog__accordion {
+  width: 50%;
 }
 
 /* Events */
