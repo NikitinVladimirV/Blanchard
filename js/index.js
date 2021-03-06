@@ -68,4 +68,12 @@ window.addEventListener('DOMContentLoaded', function () {
     itemSelectText: '',
   });
 
+  //Аккордион
+  $( function() {
+    $( "#accordion" ).accordion( {
+      collapsible: true,
+      heightStyle: 'content'
+    });
+  } );
+
 })
