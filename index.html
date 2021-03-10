@@ -16,6 +16,9 @@
   <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">--><!-- Анимация -->
   <link rel="stylesheet" href="/css/style.css">
 
+  <script src="/js/just-validate.min.js"></script><!--Валидация форм-->
+  <script src="/js/inputmask.min.js"></script><!--Маскирование полей-->
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script><!--Карта-->
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script><!--Jquerry Аккордион-->
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script><!--Jquerry Аккордион-->
   <script src="/js/choices.min.js"></script><!-- Селект -->
@@ -58,7 +61,7 @@
           </li>
           <li class="header-menu__item">
             <button class="header-menu__btn">Импрессионизм</button>
-            <ul class="header-menu__drop none" data-simplebar>
+            <ul class="header-menu__drop header-drop" data-simplebar>
               <li class="header-drop__item mone">Моне</li>
               <li class="header-drop__item sisley">Сислей</li>
               <li class="header-drop__item mane">Мане</li>
@@ -67,7 +70,7 @@
           </li>
           <li class="header-menu__item">
             <button class="header-menu__btn">Постимпрессионизм</button>
-            <ul class="header-menu__drop none" data-simplebar>
+            <ul class="header-menu__drop header-drop" data-simplebar>
               <li class="header-drop__item vangog">Ван Гог</li>
               <li class="header-drop__item sezann">Сезанн</li>
               <li class="header-drop__item gogen">Гоген</li>
@@ -76,7 +79,7 @@
           </li>
           <li class="header-menu__item">
             <button class="header-menu__btn">Авангард</button>
-            <ul class="header-menu__drop none" data-simplebar>
+            <ul class="header-menu__drop header-drop" data-simplebar>
               <li class="header-drop__item kandinsky">Кандинский</li>
               <li class="header-drop__item marinetti">Маринетти</li>
               <li class="header-drop__item malevich">Малевич</li>
@@ -85,7 +88,7 @@
           </li>
           <li class="header-menu__item">
             <button class="header-menu__btn">Футуризм</button>
-            <ul class="header-menu__drop none" data-simplebar>
+            <ul class="header-menu__drop header-drop" data-simplebar>
               <li class="header-drop__item karra">Карра</li>
               <li class="header-drop__item pratella">Прателла</li>
               <li class="header-drop__item severini">Северини</li>
@@ -104,11 +107,8 @@
   <main class="main">
     <section class="primary" aria-label="Презентация">
       <div class="primary-container animate__animated animate__pulse animate__infinite">
-        <!-- Slider main container -->
         <div class="swiper-container">
-          <!-- Additional required wrapper -->
           <div class="swiper-wrapper">
-            <!-- Slides -->
             <div class="swiper-slide slide1"></div>
             <div class="swiper-slide slide2"></div>
             <div class="swiper-slide slide3"></div>
@@ -157,53 +157,74 @@
               скачиваний <a href="">авторизуйтесь,</a> либо воспользуйтесь лицензией.
             </p>
           </div>
-          <div class="gallery__slider swiper">
-
-            <!-- Slider main container -->
+          <div class="gallery__slider">
             <div class="swiper-container1">
               <div class="swiper__nav">
-                <!-- If we need navigation buttons -->
-                <div class="swiper-button-prev1 swiper-button1"></div>
-
-                <!-- If we need pagination -->
+                <div class="swiper-button-prev1 swiper-button"></div>
                 <div class="swiper-pagination1 pag-1"></div>
-
-                <div class="swiper-button-next1 swiper-button1"></div>
+                <div class="swiper-button-next1 swiper-button"></div>
               </div>
-              <!-- Additional required wrapper -->
               <div class="swiper-wrapper">
-
-                <!-- Slides -->
-                <div class="swiper-slide card"><img class="gallery__img" src="/img/gallery/gallery13.jpg" alt="Картина Фигура торса с розовым лицом, художник Казимир Малевич"></div>
-                <div class="swiper-slide card"><img class="gallery__img" src="/img/gallery/gallery14.png" alt="Картина Суперматизм, художник Казимир Малевич"></div>
-                <div class="swiper-slide card"><img class="gallery__img" src="/img/gallery/gallery15.jpg" alt="Картина Женщина с граблями, художник Казимир Малевич"></div>
-                <div class="swiper-slide card"><img class="gallery__img" src="/img/gallery/gallery16.png" alt="Картина Женщина с ведрами, художник Казимир Малевич"></div>
-                <div class="swiper-slide card"><img class="gallery__img" src="/img/gallery/gallery17.png" alt="Картина Уборка урожая, художник Казимир Малевич"></div>
-                <div class="swiper-slide card"><img class="gallery__img" src="/img/gallery/gallery18.png" alt="Картина Суперматизм, художник Казимир Малевич"></div>
-                <div class="swiper-slide card"><img class="gallery__img" src="/img/gallery/gallery1.png" alt="Картина Итальянский полдень, художник Карл Брюлов"></div>
-                <div class="swiper-slide card"><img class="gallery__img" src="/img/gallery/gallery2.png" alt="Картина Цветы и плоды, художник Ян ван Хейсум"></div>
-                <div class="swiper-slide card"><img class="gallery__img" src="/img/gallery/gallery3.png" alt="Картина Игра в жмурки, художник Жан Оноре"></div>
-                <div class="swiper-slide card"><img class="gallery__img" src="/img/gallery/gallery4.png" alt="Картина Неизвестная, художник Иван Крамской"></div>
-                <div class="swiper-slide card"><img class="gallery__img" src="/img/gallery/gallery5.png" alt="Картина Самсон и Далила, художник Питер Пауль"></div>
-                <div class="swiper-slide card"><img class="gallery__img" src="/img/gallery/gallery6.png" alt="Картина Игра в кости, художник Генрих Семирадский"></div>
-                <div class="swiper-slide card"><img class="gallery__img" src="/img/gallery/gallery7.png" alt="Картина Отплытие царицы Савской, художник Клод Лоррен"></div>
-                <div class="swiper-slide card"><img class="gallery__img" src="/img/gallery/gallery8.png" alt="Картина Падение Икара, художник Питер Брейгель Старший"></div>
-                <div class="swiper-slide card"><img class="gallery__img" src="/img/gallery/gallery9.png" alt="Картина Купальщицы на фоне горы Сент-Виктуар, художник Поль Сезанн"></div>
-                <div class="swiper-slide card"><img class="gallery__img" src="/img/gallery/gallery10.png" alt="Картина Счастливая Аркадия, художник Константин Маковский"></div>
-                <div class="swiper-slide card"><img class="gallery__img" src="/img/gallery/gallery11.png" alt="Картина Речной пейзаж с рыболовом, художник Верне Клод"></div>
-                <div class="swiper-slide card"><img class="gallery__img" src="/img/gallery/gallery12.png" alt="Картина Весна, художник Сандро Боттичелли"></div>
-                <div class="swiper-slide card"><img class="gallery__img" src="/img/gallery/gallery19.png" alt="Картина Плотник, художник Казимир Малевич"></div>
-                <div class="swiper-slide card"><img class="gallery__img" src="/img/gallery/gallery20.png" alt="Картина Крестьянин в поле, художник Казимир Малевич"></div>
-                <div class="swiper-slide card"><img class="gallery__img" src="/img/gallery/gallery21.png" alt="Картина Два крестьянина на фоне полей, художник Казимир Малевич"></div>
-                <div class="swiper-slide card"><img class="gallery__img" src="/img/gallery/gallery22.png" alt="Картина Суперматизм. Желтое и черное, художник Казимир Малевич"></div>
-                <div class="swiper-slide card"><img class="gallery__img" src="/img/gallery/gallery23.png" alt="Картина Суперматизм, художник Казимир Малевич"></div>
-                <div class="swiper-slide card"><img class="gallery__img" src="/img/gallery/gallery24.png" alt="Картина Девушки в поле, художник Казимир Малевич"></div>
-                <div class="swiper-slide card"><img class="gallery__img" src="/img/gallery/gallery25.png" alt="Картина Женщина с граблями, художник Казимир Малевич"></div>
-                <div class="swiper-slide card"><img class="gallery__img" src="/img/gallery/gallery26.png" alt="Картина Конторка и комната, художник Казимир Малевич"></div>
-                <div class="swiper-slide card"><img class="gallery__img" src="/img/gallery/gallery27.png" alt="Картина Суперматизм, художник Казимир Малевич"></div>
-                <div class="swiper-slide card"><img class="gallery__img" src="/img/gallery/gallery28.png" alt="Картина Зимний пейзаж, художник Казимир Малевич"></div>
-                <div class="swiper-slide card"><img class="gallery__img" src="/img/gallery/gallery29.png" alt="Картина Спортсмены, художник Казимир Малевич"></div>
-                <div class="swiper-slide card"><img class="gallery__img" src="/img/gallery/gallery30.png" alt="Картина На жатву, художник Казимир Малевич"></div>
+                <div class="swiper-slide card"><img class="gallery__img" src="/img/gallery/gallery13.jpg"
+                    alt="Картина Фигура торса с розовым лицом, художник Казимир Малевич"></div>
+                <div class="swiper-slide card"><img class="gallery__img" src="/img/gallery/gallery14.png"
+                    alt="Картина Суперматизм, художник Казимир Малевич"></div>
+                <div class="swiper-slide card"><img class="gallery__img" src="/img/gallery/gallery15.jpg"
+                    alt="Картина Женщина с граблями, художник Казимир Малевич"></div>
+                <div class="swiper-slide card"><img class="gallery__img" src="/img/gallery/gallery16.png"
+                    alt="Картина Женщина с ведрами, художник Казимир Малевич"></div>
+                <div class="swiper-slide card"><img class="gallery__img" src="/img/gallery/gallery17.png"
+                    alt="Картина Уборка урожая, художник Казимир Малевич"></div>
+                <div class="swiper-slide card"><img class="gallery__img" src="/img/gallery/gallery18.png"
+                    alt="Картина Суперматизм, художник Казимир Малевич"></div>
+                <div class="swiper-slide card"><img class="gallery__img" src="/img/gallery/gallery1.png"
+                    alt="Картина Итальянский полдень, художник Карл Брюлов"></div>
+                <div class="swiper-slide card"><img class="gallery__img" src="/img/gallery/gallery2.png"
+                    alt="Картина Цветы и плоды, художник Ян ван Хейсум"></div>
+                <div class="swiper-slide card"><img class="gallery__img" src="/img/gallery/gallery3.png"
+                    alt="Картина Игра в жмурки, художник Жан Оноре"></div>
+                <div class="swiper-slide card"><img class="gallery__img" src="/img/gallery/gallery4.png"
+                    alt="Картина Неизвестная, художник Иван Крамской"></div>
+                <div class="swiper-slide card"><img class="gallery__img" src="/img/gallery/gallery5.png"
+                    alt="Картина Самсон и Далила, художник Питер Пауль"></div>
+                <div class="swiper-slide card"><img class="gallery__img" src="/img/gallery/gallery6.png"
+                    alt="Картина Игра в кости, художник Генрих Семирадский"></div>
+                <div class="swiper-slide card"><img class="gallery__img" src="/img/gallery/gallery7.png"
+                    alt="Картина Отплытие царицы Савской, художник Клод Лоррен"></div>
+                <div class="swiper-slide card"><img class="gallery__img" src="/img/gallery/gallery8.png"
+                    alt="Картина Падение Икара, художник Питер Брейгель Старший"></div>
+                <div class="swiper-slide card"><img class="gallery__img" src="/img/gallery/gallery9.png"
+                    alt="Картина Купальщицы на фоне горы Сент-Виктуар, художник Поль Сезанн"></div>
+                <div class="swiper-slide card"><img class="gallery__img" src="/img/gallery/gallery10.png"
+                    alt="Картина Счастливая Аркадия, художник Константин Маковский"></div>
+                <div class="swiper-slide card"><img class="gallery__img" src="/img/gallery/gallery11.png"
+                    alt="Картина Речной пейзаж с рыболовом, художник Верне Клод"></div>
+                <div class="swiper-slide card"><img class="gallery__img" src="/img/gallery/gallery12.png"
+                    alt="Картина Весна, художник Сандро Боттичелли"></div>
+                <div class="swiper-slide card"><img class="gallery__img" src="/img/gallery/gallery19.png"
+                    alt="Картина Плотник, художник Казимир Малевич"></div>
+                <div class="swiper-slide card"><img class="gallery__img" src="/img/gallery/gallery20.png"
+                    alt="Картина Крестьянин в поле, художник Казимир Малевич"></div>
+                <div class="swiper-slide card"><img class="gallery__img" src="/img/gallery/gallery21.png"
+                    alt="Картина Два крестьянина на фоне полей, художник Казимир Малевич"></div>
+                <div class="swiper-slide card"><img class="gallery__img" src="/img/gallery/gallery22.png"
+                    alt="Картина Суперматизм. Желтое и черное, художник Казимир Малевич"></div>
+                <div class="swiper-slide card"><img class="gallery__img" src="/img/gallery/gallery23.png"
+                    alt="Картина Суперматизм, художник Казимир Малевич"></div>
+                <div class="swiper-slide card"><img class="gallery__img" src="/img/gallery/gallery24.png"
+                    alt="Картина Девушки в поле, художник Казимир Малевич"></div>
+                <div class="swiper-slide card"><img class="gallery__img" src="/img/gallery/gallery25.png"
+                    alt="Картина Женщина с граблями, художник Казимир Малевич"></div>
+                <div class="swiper-slide card"><img class="gallery__img" src="/img/gallery/gallery26.png"
+                    alt="Картина Конторка и комната, художник Казимир Малевич"></div>
+                <div class="swiper-slide card"><img class="gallery__img" src="/img/gallery/gallery27.png"
+                    alt="Картина Суперматизм, художник Казимир Малевич"></div>
+                <div class="swiper-slide card"><img class="gallery__img" src="/img/gallery/gallery28.png"
+                    alt="Картина Зимний пейзаж, художник Казимир Малевич"></div>
+                <div class="swiper-slide card"><img class="gallery__img" src="/img/gallery/gallery29.png"
+                    alt="Картина Спортсмены, художник Казимир Малевич"></div>
+                <div class="swiper-slide card"><img class="gallery__img" src="/img/gallery/gallery30.png"
+                    alt="Картина На жатву, художник Казимир Малевич"></div>
               </div>
             </div>
           </div>
@@ -215,11 +236,11 @@
           <div class="catalog__top">
             <h2 class="catalog__title">Каталог</h2>
             <div class="catalog__lang lang">
-              <button class="lang__button lang__france"><img class="lang__img" src="/img/catalog/france.png" alt=""></button>
-              <button class="lang__button lang__germany"><img class="lang__img" src="/img/catalog/germany.png" alt=""></button>
-              <button class="lang__button lang__italy"><img class="lang__img" src="/img/catalog/italy.png" alt=""></button>
-              <button class="lang__button lang__russia"><img class="lang__img" src="/img/catalog/russia.png" alt=""></button>
-              <button class="lang__button lang__belgium"><img class="lang__img" src="/img/catalog/belgium.png" alt=""></button>
+              <button class="lang__button lang__france" data-path="france"></button>
+              <button class="lang__button lang__germany" data-path="germany"></button>
+              <button class="lang__button lang__italy" data-path="italy"></button>
+              <button class="lang__button lang__russia" data-path="russia"></button>
+              <button class="lang__button lang__belgium" data-path="belgium"></button>
             </div>
           </div>
           <p class="catalog__description">Акционеры крупнейших компаний, которые представляют собой яркий пример
@@ -228,125 +249,1061 @@
             нанотехнологии и по сей день остаются уделом либералов, которые жаждут быть функционально разнесены на
             независимые элементы.
           </p>
-          <div class="catalog__bottom">
-            <div class="catalog__biogrphy biography">
-              <img class="catalog__portrait" src="/img/catalog/Domenico.jpg" alt="">
+
+          <div class="catalog__bottom bottom-france" data-target="france">
+            <div class="catalog__biography biography catalog__biography--active" data-target="fuke">
+              <img class="catalog__portrait" src="/img/catalog/fuke.png" alt="Жан Фуке">
+              <h3 class="biography__name">Жан Фуке</h3>
+              <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
+              <p class="biography__description">
+                Один из ведущих французских художников.
+              </p>
+            </div>
+            <div class="catalog__biography biography" data-target="testar">
+              <img class="catalog__portrait" src="/img/catalog/Domenico" alt="Робине Тестар">
+              <h3 class="biography__name">Робине Тестар</h3>
+              <span class="biography__date">XXXXг. — 1531г.</span>
+              <p class="biography__description">
+                Один из ведущих французских художников.
+              </p>
+            </div>
+            <div class="catalog__biography biography" data-target="dyumustye">
+              <img class="catalog__portrait" src="/img/catalog/Domenico" alt="Жоффруа Дюмустье">
+              <h3 class="biography__name">Жоффруа Дюмустье</h3>
+              <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
+              <p class="biography__description">
+                Один из ведущих французских художников.
+              </p>
+            </div>
+            <div class="catalog__biography biography" data-target="etyen">
+              <img class="catalog__portrait" src="/img/catalog/Domenico" alt="Этьен Дюмустье">
+              <h3 class="biography__name">Этьен Дюмустье</h3>
+              <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
+              <p class="biography__description">
+                Один из ведущих французских художников.
+              </p>
+            </div>
+            <div class="catalog__biography biography">
+              <img class="catalog__portrait" src="/img/catalog/Domenico" alt="">
+              <h3 class="biography__name"></h3>
+              <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
+              <p class="biography__description">
+                Один из ведущих французских художников.
+              </p>
+            </div>
+            <div class="catalog__biography biography">
+              <img class="catalog__portrait" src="/img/catalog/Domenico" alt="">
+              <h3 class="biography__name"></h3>
+              <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
+              <p class="biography__description">
+                Один из ведущих французских художников.
+              </p>
+            </div>
+            <div class="catalog__biography biography">
+              <img class="catalog__portrait" src="/img/catalog/Domenico" alt="">
+              <h3 class="biography__name"></h3>
+              <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
+              <p class="biography__description">
+                Один из ведущих французских художников.
+              </p>
+            </div>
+            <div class="catalog__biography biography">
+              <img class="catalog__portrait" src="/img/catalog/Domenico" alt="">
+              <h3 class="biography__name"></h3>
+              <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
+              <p class="biography__description">
+                Один из ведущих французских художников.
+              </p>
+            </div>
+            <div class="catalog__biography biography">
+              <img class="catalog__portrait" src="/img/catalog/Domenico" alt="">
+              <h3 class="biography__name"></h3>
+              <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
+              <p class="biography__description">
+                Один из ведущих французских художников.
+              </p>
+            </div>
+            <div class="catalog__biography biography">
+              <img class="catalog__portrait" src="/img/catalog/Domenico" alt="">
+              <h3 class="biography__name"></h3>
+              <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
+              <p class="biography__description">
+                Один из ведущих французских художников.
+              </p>
+            </div>
+            <div class="catalog__biography biography">
+              <img class="catalog__portrait" src="/img/catalog/Domenico" alt="">
+              <h3 class="biography__name"></h3>
+              <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
+              <p class="biography__description">
+                Один из ведущих французских художников.
+              </p>
+            </div>
+            <div class="catalog__biography biography">
+              <img class="catalog__portrait" src="/img/catalog/Domenico" alt="">
+              <h3 class="biography__name"></h3>
+              <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
+              <p class="biography__description">
+                Один из ведущих французских художников.
+              </p>
+            </div>
+            <div class="catalog__accordion">
+              <div id="accordion1" class="accordion">
+                <h3 class="accordion__title">C 1400 по 1499 гг.</h3>
+                <ul class="accordion__list">
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="fuke">Жан Фуке</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="testar">Робине Тестар</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="testar">Робине Тестар</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="testar">Робине Тестар</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="testar">Робине Тестар</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="testar">Робине Тестар</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="testar">Робине Тестар</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="testar">Робине Тестар</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="testar">Робине Тестар</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="testar">Робине Тестар</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="testar">Робине Тестар</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="testar">Робине Тестар</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="testar">Робине Тестар</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="testar">Робине Тестар</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="testar">Робине Тестар</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="testar">Робине Тестар</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="testar">Робине Тестар</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="testar">Робине Тестар</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="testar">Робине Тестар</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="testar">Робине Тестар</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="testar">Робине Тестар</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="testar">Робине Тестар</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="testar">Робине Тестар</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="testar">Робине Тестар</button></li>
+                </ul>
+                <h3 class="accordion__title">C 1500 по 1599 гг.</h3>
+                <ul class="accordion__list">
+                  <li class="accordion__item"><button class="accordion__btn" data-path="dyumustye">Жоффруа Дюмустье</button></li>
+                  <li class="accordion__item"><button class="accordion__btn" data-path="etyen">Этьен Дюмустье</button></li>
+                  <li class="accordion__item"><button class="accordion__btn" data-path="etyen">Этьен Дюмустье</button></li>
+                  <li class="accordion__item"><button class="accordion__btn" data-path="etyen">Этьен Дюмустье</button></li>
+                  <li class="accordion__item"><button class="accordion__btn" data-path="etyen">Этьен Дюмустье</button></li>
+                  <li class="accordion__item"><button class="accordion__btn" data-path="etyen">Этьен Дюмустье</button></li>
+                  <li class="accordion__item"><button class="accordion__btn" data-path="etyen">Этьен Дюмустье</button></li>
+                  <li class="accordion__item"><button class="accordion__btn" data-path="etyen">Этьен Дюмустье</button></li>
+                  <li class="accordion__item"><button class="accordion__btn" data-path="etyen">Этьен Дюмустье</button></li>
+                  <li class="accordion__item"><button class="accordion__btn" data-path="etyen">Этьен Дюмустье</button></li>
+                </ul>
+                <h3 class="accordion__title">C 1600 по 1699 гг.</h3>
+                <ul class="accordion__list">
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                </ul>
+                <h3 class="accordion__title">C 1700 по 1799 гг.</h3>
+                <ul class="accordion__list">
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                </ul>
+                <h3 class="accordion__title">C 1800 по 1899 гг.</h3>
+                <ul class="accordion__list">
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                </ul>
+                <h3 class="accordion__title">C 1900 по 1999 гг.</h3>
+                <ul class="accordion__list">
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                </ul>
+                <h3 class="accordion__title">C 2000 г.</h3>
+                <ul class="accordion__list">
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="catalog__bottom bottom-germany" data-target="germany">
+            <div class="catalog__biography biography catalog__biography--active" data-target="volgemut">
+              <img class="catalog__portrait" src="/img/catalog/volgemut.jpg" alt="Михаэль Вольгемут">
+              <h3 class="biography__name">Михаэль Вольгемут</h3>
+              <span class="biography__date">1434г. — 30 ноября 1519г.</span>
+              <p class="biography__description">
+                Один из ведущих немецких художников.
+              </p>
+            </div>
+            <div class="catalog__biography biography" data-target="notke">
+              <img class="catalog__portrait" src="/img/catalog/notke.jpg" alt="Бернт Нотке">
+              <h3 class="biography__name">Бернт Нотке</h3>
+              <span class="biography__date">1435г. — 12 мая 1509г.</span>
+              <p class="biography__description">
+                Один из ведущих немецких художников.
+              </p>
+            </div>
+            <div class="catalog__biography biography">
+              <img class="catalog__portrait" src="/img/catalog/Domenico" alt="">
+              <h3 class="biography__name"></h3>
+              <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
+              <p class="biography__description">
+                Один из ведущих немецких художников.
+              </p>
+            </div>
+            <div class="catalog__biography biography">
+              <img class="catalog__portrait" src="/img/catalog/Domenico" alt="">
+              <h3 class="biography__name"></h3>
+              <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
+              <p class="biography__description">
+                Один из ведущих немецких художников.
+              </p>
+            </div>
+            <div class="catalog__biography biography">
+              <img class="catalog__portrait" src="/img/catalog/Domenico" alt="">
+              <h3 class="biography__name"></h3>
+              <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
+              <p class="biography__description">
+                Один из ведущих немецких художников.
+              </p>
+            </div>
+            <div class="catalog__biography biography">
+              <img class="catalog__portrait" src="/img/catalog/Domenico" alt="">
+              <h3 class="biography__name"></h3>
+              <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
+              <p class="biography__description">
+                Один из ведущих немецких художников.
+              </p>
+            </div>
+            <div class="catalog__biography biography">
+              <img class="catalog__portrait" src="/img/catalog/Domenico" alt="">
+              <h3 class="biography__name"></h3>
+              <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
+              <p class="biography__description">
+                Один из ведущих немецких художников.
+              </p>
+            </div>
+            <div class="catalog__biography biography">
+              <img class="catalog__portrait" src="/img/catalog/Domenico" alt="">
+              <h3 class="biography__name"></h3>
+              <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
+              <p class="biography__description">
+                Один из ведущих немецких художников.
+              </p>
+            </div>
+            <div class="catalog__biography biography">
+              <img class="catalog__portrait" src="/img/catalog/Domenico" alt="">
+              <h3 class="biography__name"></h3>
+              <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
+              <p class="biography__description">
+                Один из ведущих немецких художников.
+              </p>
+            </div>
+            <div class="catalog__biography biography">
+              <img class="catalog__portrait" src="/img/catalog/Domenico" alt="">
+              <h3 class="biography__name"></h3>
+              <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
+              <p class="biography__description">
+                Один из ведущих немецких художников.
+              </p>
+            </div>
+            <div class="catalog__biography biography">
+              <img class="catalog__portrait" src="/img/catalog/Domenico" alt="">
+              <h3 class="biography__name"></h3>
+              <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
+              <p class="biography__description">
+                Один из ведущих немецких художников.
+              </p>
+            </div>
+            <div class="catalog__biography biography">
+              <img class="catalog__portrait" src="/img/catalog/Domenico" alt="">
+              <h3 class="biography__name"></h3>
+              <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
+              <p class="biography__description">
+                Один из ведущих немецких художников.
+              </p>
+            </div>
+            <div class="catalog__accordion">
+              <div id="accordion2" class="accordion">
+                <h3 class="accordion__title">C 1400 по 1499 гг.</h3>
+                <ul class="accordion__list">
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="volgemut">Михаэль Вольгемут</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="notke">Бернт Нотке</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="notke">Бернт Нотке</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="notke">Бернт Нотке</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="notke">Бернт Нотке</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="notke">Бернт Нотке</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="notke">Бернт Нотке</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="notke">Бернт Нотке</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="notke">Бернт Нотке</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="notke">Бернт Нотке</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="notke">Бернт Нотке</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="notke">Бернт Нотке</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="notke">Бернт Нотке</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="notke">Бернт Нотке</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="notke">Бернт Нотке</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="notke">Бернт Нотке</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="notke">Бернт Нотке</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="notke">Бернт Нотке</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="notke">Бернт Нотке</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="notke">Бернт Нотке</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="notke">Бернт Нотке</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="notke">Бернт Нотке</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="notke">Бернт Нотке</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="notke">Бернт Нотке</button></li>
+                </ul>
+                <h3 class="accordion__title">C 1500 по 1599 гг.</h3>
+                <ul class="accordion__list">
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                </ul>
+                <h3 class="accordion__title">C 1600 по 1699 гг.</h3>
+                <ul class="accordion__list">
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                </ul>
+                <h3 class="accordion__title">C 1700 по 1799 гг.</h3>
+                <ul class="accordion__list">
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                </ul>
+                <h3 class="accordion__title">C 1800 по 1899 гг.</h3>
+                <ul class="accordion__list">
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                </ul>
+                <h3 class="accordion__title">C 1900 по 1999 гг.</h3>
+                <ul class="accordion__list">
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                </ul>
+                <h3 class="accordion__title">C 2000 г.</h3>
+                <ul class="accordion__list">
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="catalog__bottom bottom-italy catalog__bottom--active" data-target="italy">
+            <div class="catalog__biography biography" data-target="benedetto">
+              <img class="catalog__portrait" src="/img/catalog/Domenico" alt="">
+              <h3 class="biography__name">Бенедетто ди Биндо</h3>
+              <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
+              <p class="biography__description">
+                Один из ведущих итальянских художников.
+              </p>
+            </div>
+            <div class="catalog__biography biography" data-target="bergonyone">
+              <img class="catalog__portrait" src="/img/catalog/Domenico" alt="">
+              <h3 class="biography__name">Бергоньоне, Амброджо</h3>
+              <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
+              <p class="biography__description">
+                Один из ведущих итальянских художников.
+              </p>
+            </div>
+            <div class="catalog__biography biography" data-target="bissolo">
+              <img class="catalog__portrait" src="/img/catalog/Domenico" alt="">
+              <h3 class="biography__name">Биссоло, Франческо</h3>
+              <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
+              <p class="biography__description">
+                Один из ведущих итальянских художников.
+              </p>
+            </div>
+            <div class="catalog__biography biography" data-target="boltraffio">
+              <img class="catalog__portrait" src="/img/catalog/Domenico" alt="">
+              <h3 class="biography__name">Больтраффио, Джованни</h3>
+              <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
+              <p class="biography__description">
+                Один из ведущих итальянских художников.
+              </p>
+            </div>
+            <div class="catalog__biography biography" data-target="bonsinyori">
+              <img class="catalog__portrait" src="/img/catalog/Domenico" alt="">
+              <h3 class="biography__name">Бонсиньори, Франческо</h3>
+              <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
+              <p class="biography__description">
+                Один из ведущих итальянских художников.
+              </p>
+            </div>
+            <div class="catalog__biography biography" data-target="bottichini">
+              <img class="catalog__portrait" src="/img/catalog/Domenico" alt="">
+              <h3 class="biography__name">Боттичини, Рафаэлло</h3>
+              <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
+              <p class="biography__description">
+                Один из ведущих итальянских художников.
+              </p>
+            </div>
+            <div class="catalog__biography biography" data-target="bramantino">
+              <img class="catalog__portrait" src="/img/catalog/Domenico" alt="">
+              <h3 class="biography__name">Брамантино</h3>
+              <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
+              <p class="biography__description">
+                Один из ведущих итальянских художников.
+              </p>
+            </div>
+            <div class="catalog__biography biography" data-target="brea">
+              <img class="catalog__portrait" src="/img/catalog/Domenico" alt="">
+              <h3 class="biography__name">Бреа, Людовико</h3>
+              <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
+              <p class="biography__description">
+                Один из ведущих итальянских художников.
+              </p>
+            </div>
+            <div class="catalog__biography biography" data-target="tuchchi">
+              <img class="catalog__portrait" src="/img/catalog/Domenico" alt="">
+              <h3 class="biography__name">Бьяджо д'Антонио Туччи</h3>
+              <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
+              <p class="biography__description">
+                Один из ведущих итальянских художников.
+              </p>
+            </div>
+            <div class="catalog__biography biography" data-target="vekkyetta">
+              <img class="catalog__portrait" src="/img/catalog/Domenico" alt="">
+              <h3 class="biography__name">Веккьетта</h3>
+              <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
+              <p class="biography__description">
+                Один из ведущих итальянских художников.
+              </p>
+            </div>
+            <div class="catalog__biography biography" data-target="verrokkyo">
+              <img class="catalog__portrait" src="/img/catalog/Domenico" alt="">
+              <h3 class="biography__name">Андреа Верроккьо</h3>
+              <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
+              <p class="biography__description">
+                Один из ведущих итальянских художников.
+              </p>
+            </div>
+            <div class="catalog__biography biography catalog__biography--active" data-target="domenico">
+              <img class="catalog__portrait" src="/img/catalog/Domenico.jpg" alt="Доменико Гирландайо">
               <h3 class="biography__name">Доменико Гирландайо</h3>
               <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
               <p class="biography__description">
-                Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую
-                продолжили его брат Давид и сын Ридольфо. Глава художественной мастерской, где юный Микеланджело в
-                течение года овладевал профессиональными навыками. Автор фресковых циклов, в которых выпукло, со
-                всевозможными подробностями показана домашняя жизнь библейских персонажей (в их роли выступают знатные
-                граждане Флоренции в костюмах того времени).
+                Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо. Глава художественной мастерской, где юный Микеланджело в течение года овладевал профессиональными навыками. Автор фресковых циклов, в которых выпукло, со всевозможными подробностями показана домашняя жизнь библейских персонажей (в их роли выступают знатные граждане Флоренции в костюмах того времени).
               </p>
             </div>
-            <div id="accordion" class="catalog__accordion accordion">
-              <h3 class="accordion__title">C 1400 по 1499 гг.</h3>
-              <ul class="accordion__list">
-                <li class="accordion__item"><button class="accordion__btn">Бенедетто ди Биндо</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Бергоньоне, Амборджо</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Биссоло, Франческо</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Больтраффио, Джованни</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Бонсиньори, Франческо</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Боттичини, Рафаэлло</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Брамантино</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Бреа, Людовико</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Бьяджо д’Антонио Туччи</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Веккьетта</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Андреа Верроккьо</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Доменико Гирландайо</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Беноццо Гоццоли</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Граначчи, Франческо</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Грегорио ди Чекко</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Джованни да Удине</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Джованни ди Паоло</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Джорджоне</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Парентино, Бернардо</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Пезеллино</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Пьетро Перуджино</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Перуцци, Бальдассаре</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Пизанелло</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Пинтуриккьо</button></li>
-              </ul>
-              <h3 class="accordion__title">C 1500 по 1599 гг.</h3>
-              <ul class="accordion__list">
-                <li class="accordion__item"><button class="accordion__btn">Бенедетто ди Биндо</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Бергоньоне, Амборджо</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Биссоло, Франческо</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Больтраффио, Джованни</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Бонсиньори, Франческо</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Боттичини, Рафаэлло</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Брамантино</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Бреа, Людовико</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Бьяджо д’Антонио Туччи</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Веккьетта</button></li>
-              </ul>
-              <h3 class="accordion__title">C 1600 по 1699 гг.</h3>
-              <ul class="accordion__list">
-                <li class="accordion__item"><button class="accordion__btn">Бенедетто ди Биндо</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Бергоньоне, Амборджо</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Биссоло, Франческо</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Больтраффио, Джованни</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Бонсиньори, Франческо</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Боттичини, Рафаэлло</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Брамантино</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Бреа, Людовико</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Бьяджо д’Антонио Туччи</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Веккьетта</button></li>
-              </ul>
-              <h3 class="accordion__title">C 1700 по 1799 гг.</h3>
-              <ul class="accordion__list">
-                <li class="accordion__item"><button class="accordion__btn">Бенедетто ди Биндо</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Бергоньоне, Амборджо</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Биссоло, Франческо</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Больтраффио, Джованни</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Бонсиньори, Франческо</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Боттичини, Рафаэлло</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Брамантино</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Бреа, Людовико</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Бьяджо д’Антонио Туччи</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Веккьетта</button></li>
-              </ul>
-              <h3 class="accordion__title">C 1800 по 1899 гг.</h3>
-              <ul class="accordion__list">
-                <li class="accordion__item"><button class="accordion__btn">Бенедетто ди Биндо</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Бергоньоне, Амборджо</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Биссоло, Франческо</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Больтраффио, Джованни</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Бонсиньори, Франческо</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Боттичини, Рафаэлло</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Брамантино</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Бреа, Людовико</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Бьяджо д’Антонио Туччи</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Веккьетта</button></li>
-              </ul>
-              <h3 class="accordion__title">C 1900 по 1999 гг.</h3>
-              <ul class="accordion__list">
-                <li class="accordion__item"><button class="accordion__btn">Бенедетто ди Биндо</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Бергоньоне, Амборджо</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Биссоло, Франческо</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Больтраффио, Джованни</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Бонсиньори, Франческо</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Боттичини, Рафаэлло</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Брамантино</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Бреа, Людовико</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Бьяджо д’Антонио Туччи</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Веккьетта</button></li>
-              </ul>
-              <h3 class="accordion__title">C 2000 г.</h3>
-              <ul class="accordion__list">
-                <li class="accordion__item"><button class="accordion__btn">Бенедетто ди Биндо</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Бергоньоне, Амборджо</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Биссоло, Франческо</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Больтраффио, Джованни</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Бонсиньори, Франческо</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Боттичини, Рафаэлло</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Брамантино</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Бреа, Людовико</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Бьяджо д’Антонио Туччи</button></li>
-                <li class="accordion__item"><button class="accordion__btn">Веккьетта</button></li>
-              </ul>
+            <div class="catalog__accordion">
+              <div id="accordion3" class="accordion">
+                <h3 class="accordion__title">C 1400 по 1499 гг.</h3>
+                <ul class="accordion__list">
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="benedetto">Бенедетто ди Биндо</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="bergonyone">Бергоньоне, Амброджо</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="bissolo">Биссоло, Франческо</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="boltraffio">Больтраффио, Джованни</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="bonsinyori">Бонсиньори, Франческо</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="bottichini">Боттичини, Рафаэлло</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="bramantino">Брамантино</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="brea">Бреа, Людовико</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="tuchchi">Бьяджо д'Антонио Туччи</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="vekkyetta">Веккьетта</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="verrokkyo">Андреа Верроккьо</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="domenico">Доменико Гирландайо</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="domenico">Беноццо Гоццоли</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="domenico">Граначчи, Франческо</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="domenico">Грегорио ди Чекко</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="domenico">Джованни да Удине</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="domenico">Джованни ди Паоло</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="domenico">Джорджони</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="domenico">Парентино, Бернардо</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="domenico">Пезеллино</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="domenico">Пьетро Перуджино</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="domenico">Перуцци, Бальдассаре</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="domenico">Пизанелло</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="domenico">Пинтуриккьо</button></li>
+                </ul>
+                <h3 class="accordion__title">C 1500 по 1599 гг.</h3>
+                <ul class="accordion__list">
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                </ul>
+                <h3 class="accordion__title">C 1600 по 1699 гг.</h3>
+                <ul class="accordion__list">
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                </ul>
+                <h3 class="accordion__title">C 1700 по 1799 гг.</h3>
+                <ul class="accordion__list">
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                </ul>
+                <h3 class="accordion__title">C 1800 по 1899 гг.</h3>
+                <ul class="accordion__list">
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                </ul>
+                <h3 class="accordion__title">C 1900 по 1999 гг.</h3>
+                <ul class="accordion__list">
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                </ul>
+                <h3 class="accordion__title">C 2000 г.</h3>
+                <ul class="accordion__list">
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+           
+          <div class="catalog__bottom bottom-russia" data-target="russia">
+            <div class="catalog__biography biography catalog__biography--active" data-target="rublev">
+              <img class="catalog__portrait" src="/img/catalog/rublev.jpg" alt="Андрей Рублёв">
+              <h3 class="biography__name">Андрей Рублёв</h3>
+              <span class="biography__date">1360г. — 29 января 1430г.</span>
+              <p class="biography__description">
+                Один из ведущих русских художников.
+              </p>
+            </div> 
+            <div class="catalog__biography biography" data-target="amvrosiy">
+              <img class="catalog__portrait" src="/img/catalog/Domenico" alt="Амвросий">
+              <h3 class="biography__name">Амвросий</h3>
+              <span class="biography__date">ХХХХг. — 1494г.</span>
+              <p class="biography__description">
+                Один из ведущих русских художников.
+              </p>
+            </div>
+            <div class="catalog__biography biography">
+              <img class="catalog__portrait" src="/img/catalog/Domenico" alt="">
+              <h3 class="biography__name"></h3>
+              <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
+              <p class="biography__description">
+                Один из ведущих русских художников.
+              </p>
+            </div>
+            <div class="catalog__biography biography">
+              <img class="catalog__portrait" src="/img/catalog/Domenico" alt="">
+              <h3 class="biography__name"></h3>
+              <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
+              <p class="biography__description">
+                Один из ведущих русских художников.
+              </p>
+            </div>
+            <div class="catalog__biography biography">
+              <img class="catalog__portrait" src="/img/catalog/Domenico" alt="">
+              <h3 class="biography__name"></h3>
+              <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
+              <p class="biography__description">
+                Один из ведущих русских художников.
+              </p>
+            </div>
+            <div class="catalog__biography biography">
+              <img class="catalog__portrait" src="/img/catalog/Domenico" alt="">
+              <h3 class="biography__name"></h3>
+              <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
+              <p class="biography__description">
+                Один из ведущих русских художников.
+              </p>
+            </div>
+            <div class="catalog__biography biography">
+              <img class="catalog__portrait" src="/img/catalog/Domenico" alt="">
+              <h3 class="biography__name"></h3>
+              <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
+              <p class="biography__description">
+                Один из ведущих русских художников.
+              </p>
+            </div>
+            <div class="catalog__biography biography">
+              <img class="catalog__portrait" src="/img/catalog/Domenico" alt="">
+              <h3 class="biography__name"></h3>
+              <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
+              <p class="biography__description">
+                Один из ведущих русских художников.
+              </p>
+            </div>
+            <div class="catalog__biography biography">
+              <img class="catalog__portrait" src="/img/catalog/Domenico" alt="">
+              <h3 class="biography__name"></h3>
+              <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
+              <p class="biography__description">
+                Один из ведущих русских художников.
+              </p>
+            </div>
+            <div class="catalog__biography biography">
+              <img class="catalog__portrait" src="/img/catalog/Domenico" alt="">
+              <h3 class="biography__name"></h3>
+              <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
+              <p class="biography__description">
+                Один из ведущих русских художников.
+              </p>
+            </div>
+            <div class="catalog__biography biography">
+              <img class="catalog__portrait" src="/img/catalog/Domenico" alt="">
+              <h3 class="biography__name"></h3>
+              <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
+              <p class="biography__description">
+                Один из ведущих русских художников.
+              </p>
+            </div>
+            <div class="catalog__biography biography">
+              <img class="catalog__portrait" src="/img/catalog/Domenico" alt="">
+              <h3 class="biography__name"></h3>
+              <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
+              <p class="biography__description">
+                Один из ведущих русских художников.
+              </p>
+            </div>
+            <div class="catalog__biography biography">
+              <img class="catalog__portrait" src="/img/catalog/Domenico" alt="">
+              <h3 class="biography__name"></h3>
+              <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
+              <p class="biography__description">
+                Один из ведущих русских художников.
+              </p>
+            </div>
+            <div class="catalog__accordion">
+              <div id="accordion4" class="accordion">
+                <h3 class="accordion__title">C 1400 по 1499 гг.</h3>
+                <ul class="accordion__list">
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="rublev">Андрей Рублёв</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="amvrosiy">Амвросий</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="amvrosiy">Амвросий</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="amvrosiy">Амвросий</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="amvrosiy">Амвросий</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="amvrosiy">Амвросий</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="amvrosiy">Амвросий</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="amvrosiy">Амвросий</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="amvrosiy">Амвросий</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="amvrosiy">Амвросий</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="amvrosiy">Амвросий</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="amvrosiy">Амвросий</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="amvrosiy">Амвросий</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="amvrosiy">Амвросий</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="amvrosiy">Амвросий</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="amvrosiy">Амвросий</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="amvrosiy">Амвросий</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="amvrosiy">Амвросий</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="amvrosiy">Амвросий</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="amvrosiy">Амвросий</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="amvrosiy">Амвросий</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="amvrosiy">Амвросий</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="amvrosiy">Амвросий</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="amvrosiy">Амвросий</button></li>
+                </ul>
+                <h3 class="accordion__title">C 1500 по 1599 гг.</h3>
+                <ul class="accordion__list">
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                </ul>
+                <h3 class="accordion__title">C 1600 по 1699 гг.</h3>
+                <ul class="accordion__list">
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                </ul>
+                <h3 class="accordion__title">C 1700 по 1799 гг.</h3>
+                <ul class="accordion__list">
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                </ul>
+                <h3 class="accordion__title">C 1800 по 1899 гг.</h3>
+                <ul class="accordion__list">
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                </ul>
+                <h3 class="accordion__title">C 1900 по 1999 гг.</h3>
+                <ul class="accordion__list">
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                </ul>
+                <h3 class="accordion__title">C 2000 г.</h3>
+                <ul class="accordion__list">
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                  <li class="accordion__item"><button class="accordion__btn"></button></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="catalog__bottom bottom-belgium" data-target="belgium">
+            <div class="catalog__biography biography catalog__biography--active" data-target="zittov">
+              <img class="catalog__portrait" src="/img/catalog/zittov.jpg" alt="Михель Зиттов">
+              <h3 class="biography__name">Михель Зиттов</h3>
+              <span class="biography__date">1459г. — 21 декабря 1525г.</span>
+              <p class="biography__description">
+                Один из ведущих бельгийских художников.
+              </p>
+            </div>
+            <div class="catalog__biography biography" data-target="levina">
+              <img class="catalog__portrait" src="/img/catalog/Domenico" alt="Левина Теерлинк">
+              <h3 class="biography__name">Левина Теерлинк</h3>
+              <span class="biography__date">1520г. — 23 июня 1576г.</span>
+              <p class="biography__description">
+                Один из ведущих бельгийских художников.
+              </p>
+            </div>
+            <div class="catalog__biography biography" data-target="vayriks">
+              <img class="catalog__portrait" src="/img/catalog/Domenico" alt="Вайрикс Антоний">
+              <h3 class="biography__name">Вайрикс Антоний</h3>
+              <span class="biography__date">1555г. — 11 марта 1604г.</span>
+              <p class="biography__description">
+                Один из ведущих бельгийских художников.
+              </p>
+            </div>
+            <div class="catalog__biography biography" data-target="francua">
+              <img class="catalog__portrait" src="/img/catalog/Domenico" alt="Петер Франшуа">
+              <h3 class="biography__name">Петер Франшуа</h3>
+              <span class="biography__date">20 октября 1606г. — 11 августа 1654г.</span>
+              <p class="biography__description">
+                Один из ведущих бельгийских художников.
+              </p>
+            </div>
+            <div class="catalog__biography biography" data-target="zhakuy">
+              <img class="catalog__portrait" src="/img/catalog/Domenico" alt="Жакуй д'Артуа">
+              <h3 class="biography__name">Жакуй д'Артуа</h3>
+              <span class="biography__date">1613г. — 1686г.</span>
+              <p class="biography__description">
+                Один из ведущих бельгийских художников.
+              </p>
+            </div>
+            <div class="catalog__biography biography" data-target="suve">
+              <img class="catalog__portrait" src="/img/catalog/Domenico" alt="Жозев-Бенуа Сюве">
+              <h3 class="biography__name">Жозев-Бенуа Сюве</h3>
+              <span class="biography__date">3 января 1743г. — 9 февраля 1807г.</span>
+              <p class="biography__description">
+                Один из ведущих бельгийских художников.
+              </p>
+            </div>
+            <div class="catalog__biography biography" data-target="de-vis">
+              <img class="catalog__portrait" src="/img/catalog/Domenico" alt="Маттейс де Вис">
+              <h3 class="biography__name">Маттейс де Вис</h3>
+              <span class="biography__date">22 марта 1702г. — 23 апреля 1765г.</span>
+              <p class="biography__description">
+                Один из ведущих бельгийских художников.
+              </p>
+            </div>
+            <div class="catalog__biography biography" data-target="de-byef">
+              <img class="catalog__portrait" src="/img/catalog/Domenico" alt="Эдуард де Бьеф">
+              <h3 class="biography__name">Эдуард де Бьеф</h3>
+              <span class="biography__date">14 декабря 1808г. — 1881г.</span>
+              <p class="biography__description">
+                Один из ведущих бельгийских художников.
+              </p>
+            </div>
+            <div class="catalog__biography biography" data-target="bonye">
+              <img class="catalog__portrait" src="/img/catalog/Domenico" alt="Шарль Бонье">
+              <h3 class="biography__name">Шарль Бонье</h3>
+              <span class="biography__date">27 февраля 1814г. — 5 июля 1886г.</span>
+              <p class="biography__description">
+                Один из ведущих бельгийских художников.
+              </p>
+            </div>
+            <div class="catalog__biography biography" data-target="misho">
+              <img class="catalog__portrait" src="/img/catalog/Domenico" alt="Анри Мишо">
+              <h3 class="biography__name">Анри Мишо</h3>
+              <span class="biography__date">24 мая 1899г. — 19 октября 1984г.</span>
+              <p class="biography__description">
+                Один из ведущих бельгийских художников.
+              </p>
+            </div>
+            <div class="catalog__biography biography" data-target="labis">
+              <img class="catalog__portrait" src="/img/catalog/Domenico" alt="Феликс Лабис">
+              <h3 class="biography__name">Феликс Лабис</h3>
+              <span class="biography__date">9 марта 1905г. — 27 января 1982г.</span>
+              <p class="biography__description">
+                Один из ведущих бельгийских художников.
+              </p>
+            </div>
+            <div class="catalog__biography biography" data-target="bervuts">
+              <img class="catalog__portrait" src="/img/catalog/Domenico" alt="Фред Бервутс">
+              <h3 class="biography__name">Фред Бервутс</h3>
+              <span class="biography__date">12 мая 1942 — </span>
+              <p class="biography__description">
+                Один из ведущих бельгийских художников.
+              </p>
+            </div>
+            <div class="catalog__biography biography" data-target="leemans">
+              <img class="catalog__portrait" src="/img/catalog/Domenico" alt="Хек Лееманс">
+              <h3 class="biography__name">Хек Лееманс</h3>
+              <span class="biography__date">28 января 1950 — </span>
+              <p class="biography__description">
+                Один из ведущих бельгийских художников.
+              </p>
+            </div>
+            <div class="catalog__accordion">
+              <div id="accordion5" class="accordion">
+                <h3 class="accordion__title">C 1400 по 1499 гг.</h3>
+                <ul class="accordion__list">
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="zittov">Михель Зиттов</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="zittov">Михель Зиттов</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="zittov">Михель Зиттов</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="zittov">Михель Зиттов</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="zittov">Михель Зиттов</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="zittov">Михель Зиттов</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="zittov">Михель Зиттов</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="zittov">Михель Зиттов</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="zittov">Михель Зиттов</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="zittov">Михель Зиттов</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="zittov">Михель Зиттов</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="zittov">Михель Зиттов</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="zittov">Михель Зиттов</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="zittov">Михель Зиттов</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="zittov">Михель Зиттов</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="zittov">Михель Зиттов</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="zittov">Михель Зиттов</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="zittov">Михель Зиттов</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="zittov">Михель Зиттов</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="zittov">Михель Зиттов</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="zittov">Михель Зиттов</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="zittov">Михель Зиттов</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="zittov">Михель Зиттов</button></li>
+                  <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="zittov">Михель Зиттов</button></li>
+                </ul>
+                <h3 class="accordion__title">C 1500 по 1599 гг.</h3>
+                <ul class="accordion__list">
+                  <li class="accordion__item"><button class="accordion__btn" data-path="levina">Левина Теерлинк</button></li>
+                  <li class="accordion__item"><button class="accordion__btn" data-path="vayriks">Вайрикс Антоний</button></li>
+                  <li class="accordion__item"><button class="accordion__btn" data-path="vayriks">Вайрикс Антоний</button></li>
+                  <li class="accordion__item"><button class="accordion__btn" data-path="vayriks">Вайрикс Антоний</button></li>
+                  <li class="accordion__item"><button class="accordion__btn" data-path="vayriks">Вайрикс Антоний</button></li>
+                  <li class="accordion__item"><button class="accordion__btn" data-path="vayriks">Вайрикс Антоний</button></li>
+                  <li class="accordion__item"><button class="accordion__btn" data-path="vayriks">Вайрикс Антоний</button></li>
+                  <li class="accordion__item"><button class="accordion__btn" data-path="vayriks">Вайрикс Антоний</button></li>
+                  <li class="accordion__item"><button class="accordion__btn" data-path="vayriks">Вайрикс Антоний</button></li>
+                  <li class="accordion__item"><button class="accordion__btn" data-path="vayriks">Вайрикс Антоний</button></li>
+                </ul>
+                <h3 class="accordion__title">C 1600 по 1699 гг.</h3>
+                <ul class="accordion__list">
+                  <li class="accordion__item"><button class="accordion__btn" data-path="francua">Петер Франшуа</button></li>
+                  <li class="accordion__item"><button class="accordion__btn" data-path="zhakuy">Жакуй д'Артуа</button></li>
+                  <li class="accordion__item"><button class="accordion__btn" data-path="zhakuy">Жакуй д'Артуа</button></li>
+                  <li class="accordion__item"><button class="accordion__btn" data-path="zhakuy">Жакуй д'Артуа</button></li>
+                  <li class="accordion__item"><button class="accordion__btn" data-path="zhakuy">Жакуй д'Артуа</button></li>
+                  <li class="accordion__item"><button class="accordion__btn" data-path="zhakuy">Жакуй д'Артуа</button></li>
+                  <li class="accordion__item"><button class="accordion__btn" data-path="zhakuy">Жакуй д'Артуа</button></li>
+                  <li class="accordion__item"><button class="accordion__btn" data-path="zhakuy">Жакуй д'Артуа</button></li>
+                  <li class="accordion__item"><button class="accordion__btn" data-path="zhakuy">Жакуй д'Артуа</button></li>
+                  <li class="accordion__item"><button class="accordion__btn" data-path="zhakuy">Жакуй д'Артуа</button></li>
+                </ul>
+                <h3 class="accordion__title">C 1700 по 1799 гг.</h3>
+                <ul class="accordion__list">
+                  <li class="accordion__item"><button class="accordion__btn" data-path="suve">Жозев-Бенуа Сюве</button></li>
+                  <li class="accordion__item"><button class="accordion__btn" data-path="de-vis">Маттейс де Вис</button></li>
+                  <li class="accordion__item"><button class="accordion__btn" data-path="de-vis">Маттейс де Вис</button></li>
+                  <li class="accordion__item"><button class="accordion__btn" data-path="de-vis">Маттейс де Вис</button></li>
+                  <li class="accordion__item"><button class="accordion__btn" data-path="de-vis">Маттейс де Вис</button></li>
+                  <li class="accordion__item"><button class="accordion__btn" data-path="de-vis">Маттейс де Вис</button></li>
+                  <li class="accordion__item"><button class="accordion__btn" data-path="de-vis">Маттейс де Вис</button></li>
+                  <li class="accordion__item"><button class="accordion__btn" data-path="de-vis">Маттейс де Вис</button></li>
+                  <li class="accordion__item"><button class="accordion__btn" data-path="de-vis">Маттейс де Вис</button></li>
+                  <li class="accordion__item"><button class="accordion__btn" data-path="de-vis">Маттейс де Вис</button></li>
+                </ul>
+                <h3 class="accordion__title">C 1800 по 1899 гг.</h3>
+                <ul class="accordion__list">
+                  <li class="accordion__item"><button class="accordion__btn" data-path="de-byef">Эдуард де Бьеф</button></li>
+                  <li class="accordion__item"><button class="accordion__btn" data-path="bonye">Шарль Бонье</button></li>
+                  <li class="accordion__item"><button class="accordion__btn" data-path="bonye">Шарль Бонье</button></li>
+                  <li class="accordion__item"><button class="accordion__btn" data-path="bonye">Шарль Бонье</button></li>
+                  <li class="accordion__item"><button class="accordion__btn" data-path="bonye">Шарль Бонье</button></li>
+                  <li class="accordion__item"><button class="accordion__btn" data-path="bonye">Шарль Бонье</button></li>
+                  <li class="accordion__item"><button class="accordion__btn" data-path="bonye">Шарль Бонье</button></li>
+                  <li class="accordion__item"><button class="accordion__btn" data-path="bonye">Шарль Бонье</button></li>
+                  <li class="accordion__item"><button class="accordion__btn" data-path="bonye">Шарль Бонье</button></li>
+                  <li class="accordion__item"><button class="accordion__btn" data-path="bonye">Шарль Бонье</button></li>
+                </ul>
+                <h3 class="accordion__title">C 1900 по 1999 гг.</h3>
+                <ul class="accordion__list">
+                  <li class="accordion__item"><button class="accordion__btn" data-path="misho">Анри Мишо</button></li>
+                  <li class="accordion__item"><button class="accordion__btn" data-path="labis">Феликс Лабис</button></li>
+                  <li class="accordion__item"><button class="accordion__btn" data-path="labis">Феликс Лабис</button></li>
+                  <li class="accordion__item"><button class="accordion__btn" data-path="labis">Феликс Лабис</button></li>
+                  <li class="accordion__item"><button class="accordion__btn" data-path="labis">Феликс Лабис</button></li>
+                  <li class="accordion__item"><button class="accordion__btn" data-path="labis">Феликс Лабис</button></li>
+                  <li class="accordion__item"><button class="accordion__btn" data-path="labis">Феликс Лабис</button></li>
+                  <li class="accordion__item"><button class="accordion__btn" data-path="labis">Феликс Лабис</button></li>
+                  <li class="accordion__item"><button class="accordion__btn" data-path="labis">Феликс Лабис</button></li>
+                  <li class="accordion__item"><button class="accordion__btn" data-path="labis">Феликс Лабис</button></li>
+                </ul>
+                <h3 class="accordion__title">C 2000 г.</h3>
+                <ul class="accordion__list">
+                  <li class="accordion__item"><button class="accordion__btn" data-path="bervuts">Фред Бервутс</button></li>
+                  <li class="accordion__item"><button class="accordion__btn" data-path="leemans">Хек Лееманс</button></li>
+                  <li class="accordion__item"><button class="accordion__btn" data-path="leemans">Хек Лееманс</button></li>
+                  <li class="accordion__item"><button class="accordion__btn" data-path="leemans">Хек Лееманс</button></li>
+                  <li class="accordion__item"><button class="accordion__btn" data-path="leemans">Хек Лееманс</button></li>
+                  <li class="accordion__item"><button class="accordion__btn" data-path="leemans">Хек Лееманс</button></li>
+                  <li class="accordion__item"><button class="accordion__btn" data-path="leemans">Хек Лееманс</button></li>
+                  <li class="accordion__item"><button class="accordion__btn" data-path="leemans">Хек Лееманс</button></li>
+                  <li class="accordion__item"><button class="accordion__btn" data-path="leemans">Хек Лееманс</button></li>
+                  <li class="accordion__item"><button class="accordion__btn" data-path="leemans">Хек Лееманс</button></li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -404,8 +1361,8 @@
               </div>
             </li>
           </ul>
-          <ul class="events__list events__list_hidden">
-            <li class="events__item event-item">
+          <ul class="events__list">
+            <li class="events__item event-item" id="hidden1">
               <img src="/img/events/tretyakovka.png" alt="Третьяковка на Крымском валу">
               <div class="event-item__text">
                 <span class="event-item__date">
@@ -419,7 +1376,7 @@
                 <a class="event-item__link" href="">Подробнее</a>
               </div>
             </li>
-            <li class="events__item event-item">
+            <li class="events__item event-item" id="hidden2">
               <img src="/img/events/mmam.png" alt="Мультимедиа арт музей">
               <div class="event-item__text">
                 <span class="event-item__date">
@@ -434,7 +1391,7 @@
                 <a class="event-item__link" href="">Подробнее</a>
               </div>
             </li>
-            <li class="events__item event-item">
+            <li class="events__item event-item" id="hidden3">
               <img src="/img/events/shchuseva.jpg" alt="Музей имени Щусева">
               <div class="event-item__text">
                 <span class="event-item__date">
@@ -450,91 +1407,159 @@
               </div>
             </li>
           </ul>
-          <button class="button events__button">Все события</button>
+          <button class="events__button button" id="events__btn">Все события</button>
         </div>
       </section>
 
-      <section class="publications" id="publications" aria-label="Публикации">
+      <section class="publications" id="publications" aria-label="Издания">
         <div class="container publications-container">
-          <div class="publications__category">
+          <div class="publications__left">
             <h2 class="publications__title">Издания</h2>
-            <form class="publications__tree publications-tree">
-              <h4 class="publications-tree__title">Категории</h4>
-              <div class="publications__filter">
-                <label for="check-1">
-                  <input class="check" type="checkbox" id="check-1">
-                  Бестселлеры
-                </label>
-                <label for="check-2">
-                  <input class="check" type="checkbox" id="check-2">
-                  Искусство
-                </label>
-                <label for="check-3">
-                  <input class="check" type="checkbox" id="check-3">
-                  Архитектура
-                </label>
-                <label for="check-4">
-                  <input class="check" type="checkbox" id="check-4">
-                  Дизайн
-                </label>
-                <label for="check-5">
-                  <input class="check" type="checkbox" id="check-5">
-                  Мода
-                </label>
-                <label for="check-6">
-                  <input class="check" type="checkbox" id="check-6">
-                  Детям
-                </label>
-                <label for="check-7">
-                  <input class="check" type="checkbox" id="check-7">
-                  Художественная литература
-                </label>
-                <label for="check-8">
-                  <input class="check" type="checkbox" id="check-8">
-                  Публицистика
-                </label>
-                <label for="check-9">
-                  <input class="check" type="checkbox" id="check-9">
-                  Путеводители
-                </label>
-                <label for="check-10">
-                  <input class="check" type="checkbox" id="check-10">
-                  Философия
-                </label>
-                <label for="check-11">
-                  <input class="check" type="checkbox" id="check-11">
-                  Учебная литература
-                </label>
-                <label for="check-12">
-                  <input class="check" type="checkbox" id="check-12">
-                  Журналы и газеты
-                </label>
-              </div>
-              <label for="">
-                <h4>Цена</h4>
-                <input type="">
+            <div class="publications__category publications-category">
+              <b class="publications-category__title">Категории</b>
+              <label class="publications-category__label" for="check-1">
+                <input class="publications-category__check" type="checkbox" id="check-1">
+                Бестселлеры
+                <span class="publications-category__span"></span>
               </label>
-            </form>
+              <label class="publications-category__label" for="check-2">
+                <input class="publications-category__check" type="checkbox" id="check-2">
+                Искусство
+                <span class="publications-category__span"></span>
+              </label>
+              <label class="publications-category__label" for="check-3">
+                <input class="publications-category__check" type="checkbox" id="check-3">
+                Архитектура
+                <span class="publications-category__span"></span>
+              </label>
+              <label class="publications-category__label" for="check-4">
+                <input class="publications-category__check" type="checkbox" id="check-4">
+                Дизайн
+                <span class="publications-category__span"></span>
+              </label>
+              <label class="publications-category__label" for="check-5">
+                <input class="publications-category__check" type="checkbox" id="check-5">
+                Мода
+                <span class="publications-category__span"></span>
+              </label>
+              <label class="publications-category__label" for="check-6">
+                <input class="publications-category__check" type="checkbox" id="check-6">
+                Детям
+                <span class="publications-category__span"></span>
+              </label>
+              <label class="publications-category__label" for="check-7">
+                <input class="publications-category__check" type="checkbox" id="check-7">
+                Художественная литература
+                <span class="publications-category__span"></span>
+              </label>
+              <label class="publications-category__label" for="check-8">
+                <input class="publications-category__check" type="checkbox" id="check-8">
+                Публицистика
+                <span class="publications-category__span"></span>
+              </label>
+              <label class="publications-category__label" for="check-9">
+                <input class="publications-category__check" type="checkbox" id="check-9">
+                Путеводители
+                <span class="publications-category__span"></span>
+              </label>
+              <label class="publications-category__label" for="check-10">
+                <input class="publications-category__check" type="checkbox" id="check-10">
+                Философия
+                <span class="publications-category__span"></span>
+              </label>
+              <label class="publications-category__label" for="check-11">
+                <input class="publications-category__check" type="checkbox" id="check-11">
+                Учебная литература
+                <span class="publications-category__span"></span>
+              </label>
+              <label class="publications-category__label" for="check-12">
+                <input class="publications-category__check" type="checkbox" id="check-12">
+                Журналы и газеты
+                <span class="publications-category__span"></span>
+              </label>
+            </div>
+            <div>
+              <b class="publications-filter__cost">Цена</b>
+              <div class="publications-filter__inputs filters-input">
+                От
+                <input class="filters-input__min filter-price" type="text" value="50">
+                до
+                <input class="filters-input__max filter-price" type="text" value="25 000">
+                руб.
+              </div>
+            </div>
           </div>
           <div class="publications__slider">
-            <div class="publications__page">
-              <div class="publications__item publication publication-itten">
-                <b class="publication__name">Искусство цвета</b>
-                <i class="publication__cost">620 руб</i>
-                <span class="publication__autor">Иттен, Иоханнес</span>
-                <button class="button">Заказать</button>
+            <div class="swiper-container2">
+              <div class="swiper__nav2">
+                <div class="swiper-button-prev2 swiper-button"></div>
+                <div class="swiper-pagination2"></div>
+                <div class="swiper-button-next2 swiper-button"></div>
               </div>
-              <div class="publications__item publication publication-ruder">
-                <b class="publication__name">Искусство цвета</b>
-                <i class="publication__cost">620 руб</i>
-                <span class="publication__autor">Иттен, Иоханнес</span>
-                <button class="button">Заказать</button>
-              </div>
-              <div class="publications__item publication publication-gordon">
-                <b class="publication__name">Искусство цвета</b>
-                <i class="publication__cost">620 руб</i>
-                <span class="publication__autor">Иттен, Иоханнес</span>
-                <button class="button">Заказать</button>
+              <div class="swiper-wrapper">
+                <div class="swiper-slide publications-slide">
+                  <img class="publications-slide__img" src="/img/publications/itten.jpg" alt="">
+                  <div class="publications-slide__heading">
+                    <b class="publications-slide__name">Искусство цвета</b>
+                    <i class="publications-slide__cost">620 руб</i>
+                  </div>
+                  <span class="publications-slide__autor">Иттен, Иоханнес</span>
+                  <button class="publications-slide__btn button">Заказать</button>
+                </div>
+                <div class="swiper-slide publications-slide">
+                  <img class="publications-slide__img" src="/img/publications/ruder.jpg" alt="">
+                  <div class="publications-slide__heading">
+                    <b class="publications-slide__name">Типографика</b>
+                    <i class="publications-slide__cost">2450 руб</i>
+                  </div>
+                  <span class="publications-slide__autor">Рудер, Эмиль</span>
+                  <button class="publications-slide__btn button">Заказать</button>
+                </div>
+                <div class="swiper-slide publications-slide">
+                  <img class="publications-slide__img" src="/img/publications/gordon.jpg" alt="">
+                  <div class="publications-slide__heading">
+                    <b class="publications-slide__name">Книга про буквы</b>
+                    <i class="publications-slide__cost">2200 руб</i>
+                  </div>
+                  <span class="publications-slide__autor">Гордон, Юрий</span>
+                  <button class="publications-slide__btn button">Заказать</button>
+                </div>
+                <div class="swiper-slide publications-slide">
+                  <img class="publications-slide__img" src="/img/publications/krichevsky.png" alt="">
+                  <div class="publications-slide__heading">
+                    <b class="publications-slide__name">Николай Ильин</b>
+                    <i class="publications-slide__cost">1100 руб</i>
+                  </div>
+                  <span class="publications-slide__autor">Кричевский, Владимир</span>
+                  <button class="publications-slide__btn button">Заказать</button>
+                </div>
+                <div class="swiper-slide publications-slide">
+                  <img class="publications-slide__img" src="/img/publications/muller-brockman.png" alt="">
+                  <div class="publications-slide__heading">
+                    <b class="publications-slide__name">Модульные сетки в граф...</b>
+                    <i class="publications-slide__cost">1450 руб</i>
+                  </div>
+                  <span class="publications-slide__autor">Мюллер-Брокманн, Йозеф</span>
+                  <button class="publications-slide__btn button">Заказать</button>
+                </div>
+                <div class="swiper-slide publications-slide">
+                  <img class="publications-slide__img" src="/img/publications/heller.png" alt="">
+                  <div class="publications-slide__heading">
+                    <b class="publications-slide__name">Эволюция графических ст...</b>
+                    <i class="publications-slide__cost">3200 руб</i>
+                  </div>
+                  <span class="publications-slide__autor">Хеллер, Чваст</span>
+                  <button class="publications-slide__btn button">Заказать</button>
+                </div>
+                <div class="swiper-slide publications-slide">
+                  <img class="publications-slide__img" src="/img/publications/arnheim.png" alt="">
+                  <div class="publications-slide__heading">
+                    <b class="publications-slide__name">Искусство и визуальное в...</b>
+                    <i class="publications-slide__cost">2200 руб</i>
+                  </div>
+                  <span class="publications-slide__autor">Арнхейм, Рудольф</span>
+                  <button class="publications-slide__btn button">Заказать</button>
+                </div>
               </div>
             </div>
           </div>
@@ -548,27 +1573,41 @@
             Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно
             фиксирует необходимость своевременного выполнения сверхзадачи. А ещё независимые государства смешаны с не
             уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус бесполезности.
-            Прежде всего, постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно фиксирует
+            Прежде всего, постоянное информационно&#8209;пропагандистское<span class="projects__tooltip"><span
+                class="projects__marker marker1">i</span><span class="projects__popup popup1">Пример современных тенденций -
+                современная методология разработки</span></span>
+            обеспечение нашей деятельности однозначно фиксирует
             необходимость экономической целесообразности принимаемых решений. И нет сомнений, что действия
-            представителей оппозиции могут быть рассмотрены исключительно в разрезе маркетинговых и финансовых
-            предпосылок. Банальные, но неопровержимые выводы, а также представители современных социальных резервов
+            представителей оппозиции могут быть рассмотрены
+            <span class="projects__tooltip"><span class="projects__marker marker2">i</span><span
+                class="projects__popup popup2">Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у
+                вас эмоции </span></span> исключительно в
+            разрезе
+            маркетинговых и финансовых
+            <span class="projects__tooltip"><span class="projects__marker marker3">i</span><span class="projects__popup popup3">В
+                стремлении повысить качество </span></span> предпосылок. Банальные, но неопровержимые
+            выводы, а также представители современных социальных резервов
             призывают нас к новым свершениям, которые, в свою очередь, должны быть смешаны с не уникальными данными до
             степени совершенной неузнаваемости. Подробнее:
             <a class="projects__link" href="">blanchard-art.ru/projects/about</a>
           </p>
           <div class="project__partners partners">
             <h3 class="partners__title">Партнеры проектов:</h3>
-            <div class="partners__slider">
-              <div class="partners__item partner-ff">
-                <img class="partners-img" src="/img/projects/ff-mono.png" alt="">
-              </div>
-              <div class="partners__item partner-ff">
-                <img class="partners-img" src="/img/projects/ff-mono.png" alt="">
-              </div>
-              <div class="partners__item partner-ff">
-                <img class="partners-img" src="/img/projects/ff-mono.png" alt="">
-              </div>
+            <div class="swiper-container3">
+            <div class="swiper-button-prev3 swiper-button"></div>
+            <div class="swiper-wrapper">
+              <a class="swiper-slide partners__slider partners__ffimg" target="blank" href="https://freelandsfoundation.co.uk/"></a>
+              <a class="swiper-slide partners__slider partners__icaimg" target="blank" href="https://www.ica.art/"></a>
+              <a class="swiper-slide partners__slider partners__wacimg" target="blank" href="https://www.workhousearts.org/"></a>
+              <a class="swiper-slide partners__slider partners__1849img" target="blank" href="https://www.1849wine.com/"></a>
+              <a class="swiper-slide partners__slider partners__hiscoximg" target="blank" href="https://www.hiscox.com/"></a>
+              <a class="swiper-slide partners__slider partners__cacimg" target="blank" href="https://camdenartcentre.org/"></a>
+              <a class="swiper-slide partners__slider partners__stassenimg" target="blank" href="http://www.stassen.be/"></a>
+              <a class="swiper-slide partners__slider partners__wgavimg" target="blank" href="https://www.wattsgallery.org.uk/"></a>
+              <a class="swiper-slide partners__slider partners__esadimg" target="blank" href="https://www.esad-valenciennes.fr/"></a>
             </div>
+            <div class="swiper-button-next3 swiper-button"></div>
+          </div>
           </div>
         </div>
       </section>
@@ -576,25 +1615,23 @@
       <section class="contacts" id="contacts" aria-label="Контакты">
         <div class="container contacts-container">
           <h2 class="contacts__title">Контакты</h2>
-          <div class="contacts__left">
-            <h3 class="contacts__name">Шоурум №4</h3>
-            <address class="contacts__address">Леонтьевский переулок, дом 5, строение 1</address>
-            <form action="">
-              <label for="">
-                Заказать обратный звонок
-                <input type="text">
-                <input type="text">
-              </label>
-              <button>Заказать</button>
-            </form>
-            <div>
-              <h3>Связаться в один клик</h3>
-              <a href=""></a>
-              <a href=""></a>
+          <div class="contacts__general">
+            <div class="contacts__left">
+              <h3 class="contacts__name">Шоурум №4</h3>
+              <address class="contacts__address">Леонтьевский переулок, дом 5, строение 1</address>
+              <form class="contacts__form contacts-form form" action="">
+                <p class="contacts-form__heading">Заказать обратный звонок</p>
+                <input class="contacts-form__input" name="Имя" type="text" placeholder="Имя*" data-validate-field="name">
+                <input class="contacts-form__input" name="tel" type="tel" placeholder="Телефон*" data-validate-field="tel" data-validate-rules="phone">
+                <button class="contacts-form__button button">Заказать</button>
+              </form>
+              <div class="contacts__social contact-social">
+                <h3 class="contact-social__heading">Связаться в один клик</h3>
+                <a class="contact-social__link contact-social__whatsapp" target="blank" href="https://www.whatsapp.com/"></a>
+                <a class="contact-social__link contact-social__telegramm" target="blank" href="https://telegram.org/"></a>
+              </div>
             </div>
-          </div>
-          <div class="contacts__map">
-
+            <div class="contacts__map" id="map"></div>
           </div>
         </div>
       </section>
@@ -603,16 +1640,17 @@
 
   <footer class="footer">
     <div class="container footer-container">
-      <a class="header__link" href="www.blanchard.ru">
+      <a class="header__link" target="blank" href="https://blanchard.ru/about-us/our-story">
         <img class="logo header__logo" src="/img/footer/Лого.svg" alt="Blanchard-художественная галерея">
       </a>
       <div class="footer__social footer-social">
-        <a class="footer-social__item footer-social__vk" href=""></a>
-        <a class="footer-social__item footer-social__instagram" href=""></a>
-        <a class="footer-social__item footer-social__facebook" href=""></a>
+        <a class="footer-social__item footer-social__vk" target="blank" href="https://vk.com/"></a>
+        <a class="footer-social__item footer-social__instagram" target="blank" href="https://www.instagram.com/"></a>
+        <a class="footer-social__item footer-social__facebook" target="blank" href="https://www.facebook.com/"></a>
       </div>
     </div>
   </footer>
+
 </body>
 
 </html>
