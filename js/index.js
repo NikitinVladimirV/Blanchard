@@ -13,6 +13,20 @@ window.addEventListener('DOMContentLoaded', function () {
     })
   }
 
+  // Выпадающий список хедер(от преподавателя v2)
+  const button = document.querySelectorAll('.header-menu__btn');
+  button.forEach(el => {
+    el.addEventListener('click', (e) => {
+      button.forEach(el => { el.classList.remove(('header-menu__btn--active')) })
+      e.currentTarget.closest('li').querySelector('.header-menu__btn').classList.toggle('header-menu__btn--active');
+    });
+  });
+  document.addEventListener('click', (e) => {
+    if (!e.target.classList.contains('header-menu__btn') && !e.target.classList.contains('header-menu__btn')) {
+      button.forEach(el => { el.classList.remove(('header-menu__btn--active')) })
+    }
+  });
+
   // Выпадающий список хедер(от преподавателя)
   // const button = document.querySelectorAll('.header-menu__btn');
   // const drop = document.querySelectorAll('.header-menu__drop')
@@ -29,11 +43,11 @@ window.addEventListener('DOMContentLoaded', function () {
   // });
 
   // Выпадающий список хедер(на основе пройденных уроков) 
-  document.querySelectorAll('.header-menu__btn').forEach(function (drop) {
-    drop.addEventListener('click', function (add) {
-      add.target.classList.toggle('is-active')
-    })
-  });
+  // document.querySelectorAll('.header-menu__btn').forEach(function (drop) {
+  //   drop.addEventListener('click', function (add) {
+  //     add.target.classList.toggle('is-active')
+  //   })
+  // });
 
   // Слайдер главный
   const swiper = new Swiper('.swiper-container', {
@@ -120,33 +134,31 @@ window.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  //Табы аккордионов каталог
-  document.querySelectorAll('.accordion__tab').forEach(function (tabsBtn) {
-    tabsBtn.addEventListener('click', function (event) {
+  //Табы аккордионов каталог(по уроку)
+  document.querySelectorAll('.accordion__tab').forEach(function(tabsBtn) {
+    tabsBtn.addEventListener('click', function(event) {
       const path = event.currentTarget.dataset.path
-      document.querySelectorAll('.catalog__biography').forEach(function (tabContent) {
+      document.querySelectorAll('.catalog__bottom--active .catalog__biography').forEach(function(tabContent) {
         tabContent.classList.remove('catalog__biography--active')
-      })
-      document.querySelectorAll(`[data-target="${path}"]`).forEach(function (tabContent) {
-        tabContent.classList.add('catalog__biography--active')
 
-        $('.accordion').accordion("refresh");
+        $('.accordion' ).accordion();
       })
+      document.querySelector(`[data-target="${path}"]`).classList.add('catalog__biography--active')
+      $('.accordion' ).accordion();
     })
   })
 
-  //Табы в аккордионе
-  document.querySelectorAll('.lang__button').forEach(function (tabsBtn) {
-    tabsBtn.addEventListener('click', function (event) {
+  //Табы в аккордионе(по уроку)
+  document.querySelectorAll('.lang__button').forEach(function(tabsBtn) {
+    tabsBtn.addEventListener('click', function(event) {
       const path = event.currentTarget.dataset.path
-      document.querySelectorAll('.catalog__bottom').forEach(function (tabContent) {
+      document.querySelectorAll('.catalog__bottom').forEach(function(tabContent) {
         tabContent.classList.remove('catalog__bottom--active')
-      })
-      document.querySelectorAll(`[data-target="${path}"]`).forEach(function (tabContent) {
-        tabContent.classList.add('catalog__bottom--active')
 
-        $('.accordion').accordion("refresh");
+        $('.accordion' ).accordion();
       })
+      document.querySelector(`[data-target="${path}"]`).classList.add('catalog__bottom--active')
+      $('.accordion' ).accordion();
     })
   })
 
