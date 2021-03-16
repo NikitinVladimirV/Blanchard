@@ -153,6 +153,14 @@ button {
   border: 2px solid var(--color-border--focus);
 }
 
+.header__link:hover .logo {
+  border-bottom: 1px solid var(--color-white);
+}
+
+.header__link:active .logo {
+  border-bottom: 1px solid var(--color-violet);
+}
+
 .header__link:active {
   border: none;
 }
@@ -472,8 +480,7 @@ button {
   top: 28px;
   background: var(--color-white);
 }
-Step-search {
-}
+
 .search__input {
   padding: 0 25px 2px 2px;
   color: var(--color-white);
@@ -774,8 +781,7 @@ Step-search {
 .swiper-button-prev1 {
   margin-right: 19px;
 }
-Step-card hover {
-}
+
 .card {
   max-height: 350px;
 }
@@ -1470,7 +1476,7 @@ margin: 0 0 8px 0;
 .partners__slider {
   min-height: 150px;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   box-sizing: border-box;
 }
 
@@ -1585,7 +1591,7 @@ margin: 0 0 8px 0;
 .contacts__left {
   display: flex;
   flex-direction: column;
-  padding: 100px 0 35px 5px;
+  padding: 100px 0 35px 3px;
   margin: 0 118px 0 0;
 }
 
@@ -1627,23 +1633,35 @@ margin: 0 0 8px 0;
 }
 
 .contacts-form__button {
+  position: relative;
   width: 157px;
   height: 59px;
   color: var(--color-violet);
 }
 
-.contacts-form__button:focus {
-  border: 2px solid var(--color-border--focus);
+.contacts-form__button:focus::before {
+  content: '';
+  position: absolute;
+  top: -7px;
+  right: -7px;
+  bottom: -7px;
+  left: -7px;
+  border: 3px solid #C283F3;
+  border-radius: 100px;
 }
 
 .contacts-form__button:hover {
+  background: var(--color-violet);
   color: var(--color-white);
-  background-color: #7943A4;
 }
 
 .contacts-form__button:active {
-  color: var(--color-white);
-  background-color: var(--color-violet);
+  background: #7943A4;
+  border:3px solid #d1a9f0;
+}
+
+.contacts-form__button:active:before {
+  border: none;
 }
 
 .contact-social {
@@ -1652,7 +1670,7 @@ margin: 0 0 8px 0;
 }
 
 .contact-social__heading {
-  margin: 26px 0 15px 0;
+  margin: 26px 0 13px 0;
   font-weight: 400;
   padding: 0 0 0 0;
 }
@@ -1661,7 +1679,21 @@ margin: 0 0 8px 0;
   display: inline-block;
   width: 40px;
   height: 40px;
-  margin-right: 16px;
+  margin-right: 12px;
+  border: 2px solid #e5e5e5;
+  border-radius: 50%;
+}
+
+.contact-social__link:focus {
+  border: 2px solid #C283F3;
+}
+
+.contact-social__link:hover {
+  border: 2px solid var(--color-violet);
+}
+
+.contact-social__link:active {
+  border: 3px solid var(--color-3A4);
 }
 
 .contact-social__whatsapp {
@@ -1691,35 +1723,53 @@ margin: 0 0 8px 0;
   justify-content: space-between;
   align-items: center;
   height: 140px;
-  padding: 3px 5px 3px 5px;
+  padding: 3px 0 3px 5px;
 }
 
 .footer__link {
   margin: 10px 11.15% 0  0;
 }
 
+.footer__link:focus {
+  border: 2px solid var(--color-border--focus);
+}
+
+.footer__link:hover .logo {
+  border-bottom: 1px solid var(--color-white);
+}
+
+.footer__link:active {
+  border: none;
+}
+
+.footer__link:active .logo {
+  border-bottom: 1px solid var(--color-violet);
+
+}
+
 .footer__social {
   display: flex;
   justify-content: space-between;
-  width: 173px;
+  width: 183px;
   padding: 0 0 0 0;
 }
 
 .footer-social__item {
-  width: 45px;
-  height: 45px;
-  background-repeat: no-repeat;
-  background-size: cover;
+  width: 47px;
+  height: 47px;
+  padding: 2px 2px 0 2px;
+  border: 2px solid var(--color-black);
+  border-radius: 50%;
 }
 
-.footer-social__vk {
-  background-image: url(/img/footer/vk.png);
+.footer-social__item:focus {
+  border: 2px solid var(--color-border--focus);
 }
 
-.footer-social__instagram {
-  background-image: url(/img/footer/instagram.png);
+.footer-social__icon:hover path {
+  fill: white;
 }
 
-.footer-social__facebook {
-  background-image: url(/img/footer/fb.svg);
+.footer-social__item:active {
+  border: 3px solid var(--color-3A4);
 }

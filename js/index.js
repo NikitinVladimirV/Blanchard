@@ -1,6 +1,6 @@
 window.addEventListener('DOMContentLoaded', function () {
   // Плавная прокрутка к якорю хедер
-  const anchors = document.querySelectorAll('a')
+  const anchors = document.querySelectorAll('.header-nav__link, .projects__link, .primary__button')
   for (let anchor of anchors) {
     anchor.addEventListener('click', function (e) {
       e.preventDefault()
@@ -155,5 +155,5 @@ window.addEventListener('DOMContentLoaded', function () {
       },
     },
   });
-  window.addEventListener('focusin', event => console.log(new Date, event.target));
+  // window.addEventListener('focusin', event => console.log(new Date, event.target));
 })
