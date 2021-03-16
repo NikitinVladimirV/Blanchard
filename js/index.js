@@ -1,7 +1,7 @@
 window.addEventListener('DOMContentLoaded', function () {
 
-  // Плавная прокрутка к якорю хедер
-  const anchors = document.querySelectorAll('.header__list a, .primary__text a[href*="#"]')
+  // Плавная прокрутка к якорю хедер.header__list a, .primary__text a[href*="#"], .project__description a[href*="#"]
+  const anchors = document.querySelectorAll('a')
   for (let anchor of anchors) {
     anchor.addEventListener('click', function (e) {
       e.preventDefault()
@@ -76,10 +76,10 @@ window.addEventListener('DOMContentLoaded', function () {
 
   // Слайдер издания
   const swiper2 = new Swiper('.swiper-container2', {
-    loop: true,
+    // loop: true,
     slidesPerView: 3,
     slidesPerGroup: 1,
-    spaceBetween: 17,
+    spaceBetween: 50,
     pagination: {
       el: '.swiper-pagination2',
       type: 'fraction',
@@ -92,7 +92,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
   // Слайдер проекты
   const swiper3 = new Swiper('.swiper-container3', {
-    loop: true,
+    // loop: true,
     slidesPerView: 3,
     spaceBetween: 50,
     navigation: {
@@ -203,4 +203,5 @@ window.addEventListener('DOMContentLoaded', function () {
       },
     },
   });
+  window.addEventListener('focusin', event => console.log(new Date, event.target));
 })
