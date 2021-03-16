@@ -1,6 +1,5 @@
 window.addEventListener('DOMContentLoaded', function () {
-
-  // Плавная прокрутка к якорю хедер.header__list a, .primary__text a[href*="#"], .project__description a[href*="#"]
+  // Плавная прокрутка к якорю хедер
   const anchors = document.querySelectorAll('a')
   for (let anchor of anchors) {
     anchor.addEventListener('click', function (e) {
@@ -12,8 +11,7 @@ window.addEventListener('DOMContentLoaded', function () {
       })
     })
   }
-
-  // Выпадающий список хедер(от преподавателя v2)
+  // Выпадающий список хедер
   const button = document.querySelectorAll('.header-menu__btn');
   button.forEach(el => {
     el.addEventListener('click', (e) => {
@@ -26,57 +24,27 @@ window.addEventListener('DOMContentLoaded', function () {
       button.forEach(el => { el.classList.remove(('header-menu__btn--active')) })
     }
   });
-
-  // Выпадающий список хедер(от преподавателя)
-  // const button = document.querySelectorAll('.header-menu__btn');
-  // const drop = document.querySelectorAll('.header-menu__drop')
-  // button.forEach(el => {
-  //   el.addEventListener('click', (e) => {
-  //     drop.forEach(el => { el.classList.remove(('header-menu__drop--active')) })
-  //     e.currentTarget.closest('li').querySelector('.header-menu__drop').classList.toggle('header-menu__drop--active');
-  //   });
-  // });
-  // document.addEventListener('click', (e) => {
-  //   if (!e.target.classList.contains('header-menu__drop') && !e.target.classList.contains('header-menu__btn')) {
-  //     drop.forEach(el => { el.classList.remove(('header-menu__drop--active')) })
-  //   }
-  // });
-
-  // Выпадающий список хедер(на основе пройденных уроков) 
-  // document.querySelectorAll('.header-menu__btn').forEach(function (drop) {
-  //   drop.addEventListener('click', function (add) {
-  //     add.target.classList.toggle('is-active')
-  //   })
-  // });
-
   // Слайдер главный
   const swiper = new Swiper('.swiper-container', {
-    loop: true, // зацикленность
+    loop: true,
   });
-
   // Слайдер галерея
   const swiper1 = new Swiper('.swiper-container1', {
-    slidesPerView: 3, // сколько показывать
-    slidesPerGroup: 3, // сколько проматывать слайдов за один клик
-    slidesPerColumn: 2, // сколько слайдов в колонке
-    spaceBetween: 50, //расстояние между слайдами
-    pagination: { // Точки пагинации
-      el: '.swiper-pagination1', // класс контейнера для пагинации
-      // type: 'bullets', тип: точки
-      type: 'fraction', // тип: цифры
-      // clickable: true, возможность кликать по точкам
+    slidesPerView: 3,
+    slidesPerGroup: 3,
+    slidesPerColumn: 2,
+    spaceBetween: 50,
+    pagination: {
+      el: '.swiper-pagination1',
+      type: 'fraction',
     },
-    // slideToClickedSlide: true, переход к кликаемому слайду(слайд переходит в начало)
-    // centeredSlides: true, ставит кликнутый слайд в центр
-    navigation: { // стрелки навигации
-      nextEl: '.swiper-button-next1', // класс навигации в предыдущий
-      prevEl: '.swiper-button-prev1', // класс навигации в следующий
+    navigation: {
+      nextEl: '.swiper-button-next1',
+      prevEl: '.swiper-button-prev1',
     },
   });
-
   // Слайдер издания
   const swiper2 = new Swiper('.swiper-container2', {
-    // loop: true,
     slidesPerView: 3,
     slidesPerGroup: 1,
     spaceBetween: 50,
@@ -89,10 +57,8 @@ window.addEventListener('DOMContentLoaded', function () {
       prevEl: '.swiper-button-prev2',
     },
   });
-
   // Слайдер проекты
   const swiper3 = new Swiper('.swiper-container3', {
-    // loop: true,
     slidesPerView: 3,
     spaceBetween: 50,
     navigation: {
@@ -100,7 +66,6 @@ window.addEventListener('DOMContentLoaded', function () {
       prevEl: '.swiper-button-prev3',
     },
   });
-
   //Селект галерея
   const element = document.querySelector('#gallery__select');
   const choices = new Choices(element, {
@@ -109,7 +74,6 @@ window.addEventListener('DOMContentLoaded', function () {
     position: 'bottom',
     itemSelectText: '',
   });
-
   //Аккордион каталог
   $(function () {
     $("#accordion1").accordion({
@@ -133,38 +97,28 @@ window.addEventListener('DOMContentLoaded', function () {
       heightStyle: 'content'
     });
   });
-
-  //Табы аккордионов каталог(по уроку)
+  //Табы аккордионов каталог
   document.querySelectorAll('.accordion__tab').forEach(function(tabsBtn) {
     tabsBtn.addEventListener('click', function(event) {
       const path = event.currentTarget.dataset.path
       document.querySelectorAll('.catalog__bottom--active .catalog__biography').forEach(function(tabContent) {
         tabContent.classList.remove('catalog__biography--active')
-
-        $('.accordion' ).accordion();
       })
       document.querySelector(`[data-target="${path}"]`).classList.add('catalog__biography--active')
-      $('.accordion' ).accordion();
     })
   })
-
-  //Табы в аккордионе(по уроку)
+  //Табы в аккордионе
   document.querySelectorAll('.lang__button').forEach(function(tabsBtn) {
     tabsBtn.addEventListener('click', function(event) {
       const path = event.currentTarget.dataset.path
       document.querySelectorAll('.catalog__bottom').forEach(function(tabContent) {
         tabContent.classList.remove('catalog__bottom--active')
-
-        $('.accordion' ).accordion();
       })
       document.querySelector(`[data-target="${path}"]`).classList.add('catalog__bottom--active')
-      $('.accordion' ).accordion();
     })
   })
-
   // Доп. лист события
   $('#events__btn').click(function(){ $('#hidden1, #hidden2, #hidden3').show(); $('#events__btn').hide(); });
-    
   //Карта контакты
   ymaps.ready(init);
   function init() {
@@ -180,12 +134,10 @@ window.addEventListener('DOMContentLoaded', function () {
     });
     myMap.geoObjects.add(myPlacemark);
   }
-  
   //Маскирование полей контакты
   var selector = document.querySelector("input[type='tel']");
   var im = new Inputmask("+7(999)999-99-99"); 
   im.mask(selector);
-  
   //Валидация форм контакты
   new JustValidate('.form', {
     rules: {

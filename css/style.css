@@ -53,7 +53,6 @@ h2 {
 h3 {
   font-size: 24px;
   font-weight: 600;
-  /* letter-spacing: -0.6px; */
 }
 
 a {
@@ -509,7 +508,7 @@ Step-search {
   animation-iteration-count: infinite;
 }
 
-/* @keyframes slide1 {
+@keyframes slide1 {
   0% {
     transform: scale(1, 1);
   }
@@ -519,7 +518,7 @@ Step-search {
   100% {
     transform: scale(1, 1);
   }
-} */
+}
 
 .main__slide2 {
   background-image: url(/img/primary/primary-background2.jpg);
@@ -917,7 +916,6 @@ Step-card hover {
 
 .biography__name {
   margin: 0 0 0 0;
-  /* letter-spacing: 0; */
 }
 
 .biography__date {
@@ -1472,7 +1470,7 @@ margin: 0 0 8px 0;
 .partners__slider {
   min-height: 150px;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   box-sizing: border-box;
 }
 
@@ -1569,8 +1567,7 @@ margin: 0 0 8px 0;
 .partners__ff {
   width: 54%;
 }
-Next {
-}
+
 /* Contacts */
 .contacts__title {
   padding: 40px 0 15px 3px;
@@ -1579,40 +1576,27 @@ Next {
 .contacts-container {
   display: flex;
   max-width: 100%;
-  /* height: 100%; */
   margin: 0;
   padding-right: 0;
-  padding-left: calc((100vw - 1618px) / 2);
+  padding-left: calc((100vw - 1610px) / 2);
   border-top: 1px solid #CACACA;
 }
-
-/* .contacts__general {
-  display: flex;
-  max-width: 100%;
-  margin: 0;
-  width: 100%;
-  justify-content: space-between;
-} */
 
 .contacts__left {
   display: flex;
   flex-direction: column;
-  /* width: 25.8%; */
-  /* width: 682px; */
-  /* padding: 99px 120px 0 471px; */
-  padding: 100px 0 35px 0;
-  margin: 0 122px 0 0;
+  padding: 100px 0 35px 5px;
+  margin: 0 118px 0 0;
 }
 
 .contacts__name {
   margin-bottom: 3px;
-  padding: 0 0 0 1px;
-  /* letter-spacing: 0; */
+  padding: 0 0 0 0;
 }
 
 .contacts__address {
   font-style: normal;
-  padding: 0 0 0 1px;
+  padding: 0 0 0 0;
 }
 
 .contacts__form {
@@ -1621,13 +1605,14 @@ Next {
   justify-content: space-between;
   min-width: 400px;
   height: 232px;
-  padding: 30px 0 0 1px;
+  padding: 28px 0 0 1px;
   margin: 0 0 12px 0;
 }
 
 .contacts-form__heading {
   font-size: 24px;
-  line-height: 27px;
+  line-height: 32px;
+  margin-bottom: -6px;
 }
 
 .contacts-form__input {
@@ -1667,10 +1652,9 @@ Next {
 }
 
 .contact-social__heading {
-  margin-bottom: 15px;
+  margin: 26px 0 15px 0;
   font-weight: 400;
   padding: 0 0 0 0;
-  /* letter-spacing: 0; */
 }
 
 .contact-social__link {
@@ -1690,7 +1674,6 @@ Next {
 
 .contacts__map {
   width: 100%;
-  /* width: 1238px; */
   height: 700px;
 }
 
@@ -1709,11 +1692,9 @@ Next {
   align-items: center;
   height: 140px;
   padding: 3px 5px 3px 5px;
-  /* padding-right: 6.3%; */
 }
 
 .footer__link {
-  /* width: 19.4%; */
   margin: 10px 11.15% 0  0;
 }
 
