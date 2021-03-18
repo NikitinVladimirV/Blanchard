@@ -31,7 +31,7 @@ window.addEventListener('DOMContentLoaded', function () {
   // Слайдер галерея
   const swiper1 = new Swiper('.swiper-container1', {
     slidesPerView: 3,
-    slidesPerGroup: 3,
+    slidesPerGroup: 1,
     slidesPerColumn: 2,
     spaceBetween: 50,
     pagination: {
@@ -42,6 +42,23 @@ window.addEventListener('DOMContentLoaded', function () {
       nextEl: '.swiper-button-next1',
       prevEl: '.swiper-button-prev1',
     },
+    // breakpoints: {
+    //   768: {
+    //     slidesPerView: 2,
+    //     spaceBetween: 10,
+    //   },
+    //   1024: {
+    //     slidesPerView: 2,
+    //     slidesPerColumn: 2,
+    //     spaceBetween: 34,
+    //   },
+    //   1920: {
+    //     slidesPerView: 3,
+    //     slidesPerGroup: 3,
+    //     slidesPerColumn: 2,
+    //     spaceBetween: 50,
+    //   },
+    // },
   });
   // Слайдер издания
   const swiper2 = new Swiper('.swiper-container2', {
@@ -56,6 +73,21 @@ window.addEventListener('DOMContentLoaded', function () {
       nextEl: '.swiper-button-next2',
       prevEl: '.swiper-button-prev2',
     },
+    // breakpoints: {
+    //   768: {
+    //     slidesPerView: 2,
+    //     spaceBetween: 10,
+    //   },
+    //   1024: {
+    //     slidesPerView: 2,
+    //     spaceBetween: 30,
+    //   },
+    //   1920: {
+    //     slidesPerView: 3,
+    //     slidesPerGroup: 3,
+    //     spaceBetween: 50,
+    //   }
+    // }
   });
   // Слайдер проекты
   const swiper3 = new Swiper('.swiper-container3', {
