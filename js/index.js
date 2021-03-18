@@ -73,21 +73,6 @@ window.addEventListener('DOMContentLoaded', function () {
       nextEl: '.swiper-button-next2',
       prevEl: '.swiper-button-prev2',
     },
-    // breakpoints: {
-    //   768: {
-    //     slidesPerView: 2,
-    //     spaceBetween: 10,
-    //   },
-    //   1024: {
-    //     slidesPerView: 2,
-    //     spaceBetween: 30,
-    //   },
-    //   1920: {
-    //     slidesPerView: 3,
-    //     slidesPerGroup: 3,
-    //     spaceBetween: 50,
-    //   }
-    // }
   });
   // Слайдер проекты
   const swiper3 = new Swiper('.swiper-container3', {
