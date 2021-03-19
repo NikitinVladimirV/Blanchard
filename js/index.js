@@ -124,7 +124,7 @@ window.addEventListener('DOMContentLoaded', function () {
   function init() {
     var myMap = new ymaps.Map("map", {
       center: [55.761259, 37.635498],
-      zoom: 14.4
+      zoom: 14.4,
     });
     var myPlacemark = new ymaps.Placemark([55.758450, 37.601072], {}, {
       iconLayout: 'default#image',
@@ -133,6 +133,14 @@ window.addEventListener('DOMContentLoaded', function () {
       iconImageOffset: [-3, -42]
     });
     myMap.geoObjects.add(myPlacemark);
+    myMap.controls.remove('searchControl'); // удаляем поиск
+    myMap.controls.remove('geolocationControl'); // удаляем геолокацию(навигатор)
+    myMap.controls.remove('trafficControl'); // удаляем контроль трафика(пробки)
+    myMap.controls.remove('typeSelector'); // удаляем тип(спутник,схема...)
+    myMap.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
+    myMap.controls.remove('zoomControl'); // удаляем контрол зуммирования(+...-)
+    myMap.controls.remove('rulerControl'); // удаляем контрол правил(масштаб)
+    // myMap.behaviors.disable(['scrollZoom']); отключаем скролл карты (опционально)
   }
   //Маскирование полей контакты
   var selector = document.querySelector("input[type='tel']");
@@ -155,5 +163,5 @@ window.addEventListener('DOMContentLoaded', function () {
       },
     },
   });
-  // window.addEventListener('focusin', event => console.log(new Date, event.target));
+  window.addEventListener('focusin', event => console.log(new Date, event.target));
 })
