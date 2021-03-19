@@ -140,7 +140,6 @@ window.addEventListener('DOMContentLoaded', function () {
     myMap.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
     myMap.controls.remove('zoomControl'); // удаляем контрол зуммирования(+...-)
     myMap.controls.remove('rulerControl'); // удаляем контрол правил(масштаб)
-    // myMap.behaviors.disable(['scrollZoom']); отключаем скролл карты (опционально)
   }
   //Маскирование полей контакты
   var selector = document.querySelector("input[type='tel']");
@@ -163,5 +162,5 @@ window.addEventListener('DOMContentLoaded', function () {
       },
     },
   });
-  window.addEventListener('focusin', event => console.log(new Date, event.target));
+  // window.addEventListener('focusin', event => console.log(new Date, event.target));
 })
