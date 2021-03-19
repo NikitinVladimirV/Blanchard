@@ -42,23 +42,6 @@ window.addEventListener('DOMContentLoaded', function () {
       nextEl: '.swiper-button-next1',
       prevEl: '.swiper-button-prev1',
     },
-    // breakpoints: {
-    //   768: {
-    //     slidesPerView: 2,
-    //     spaceBetween: 10,
-    //   },
-    //   1024: {
-    //     slidesPerView: 2,
-    //     slidesPerColumn: 2,
-    //     spaceBetween: 34,
-    //   },
-    //   1920: {
-    //     slidesPerView: 3,
-    //     slidesPerGroup: 3,
-    //     slidesPerColumn: 2,
-    //     spaceBetween: 50,
-    //   },
-    // },
   });
   // Слайдер издания
   const swiper2 = new Swiper('.swiper-container2', {
@@ -140,7 +123,7 @@ window.addEventListener('DOMContentLoaded', function () {
   ymaps.ready(init);
   function init() {
     var myMap = new ymaps.Map("map", {
-      center: [55.762259, 37.646498],
+      center: [55.761259, 37.635498],
       zoom: 14.4
     });
     var myPlacemark = new ymaps.Placemark([55.758450, 37.601072], {}, {
