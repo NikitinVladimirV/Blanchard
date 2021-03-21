@@ -371,7 +371,7 @@ button {
 }
 
 .verrokkyo {
-  background-image: url(../img/header/verrokkyo.jpg);
+  background-image: url(../img/header/verrokyo.jpg);
 }
 
 .mone {
@@ -511,6 +511,7 @@ button {
   animation-duration: 7s;
   animation-name: slide1;
   animation-iteration-count: infinite;
+  
 }
 
 @keyframes slide1 {
