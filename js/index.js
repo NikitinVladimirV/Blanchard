@@ -128,7 +128,7 @@ window.addEventListener('DOMContentLoaded', function () {
     });
     var myPlacemark = new ymaps.Placemark([55.758450, 37.601072], {}, {
       iconLayout: 'default#image',
-      iconImageHref: '/img/contacts/geopoint.svg',
+      iconImageHref: 'img/contacts/geopoint.svg',
       iconImageSize: [20, 20],
       iconImageOffset: [-3, -42]
     });

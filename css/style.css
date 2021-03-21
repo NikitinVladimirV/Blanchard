@@ -1,23 +1,23 @@
 @font-face {
   font-family: '0pen sans';
-  src: url('/font/opensans-regular.woff2') format('woff2'),
-       url('/font/opensans-regular.woff') format('woff');
+  src: url('../font/opensans-regular.woff2') format('woff2'),
+       url('../font/opensans-regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: '0pen sans';
-  src: url('/font/opensans-semibold.woff2') format('woff2'),
-       url('/font/opensans-semibold.woff') format('woff');
+  src: url('../font/opensans-semibold.woff2') format('woff2'),
+       url('../font/opensans-semibold.woff') format('woff');
   font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
   font-family: '0pen sans';
-  src: url('/font/opensans-bold.woff2') format('woff2'),
-       url('/font/opensans-bold.woff') format('woff');
+  src: url('../font/opensans-bold.woff2') format('woff2'),
+       url('../font/opensans-bold.woff') format('woff');
   font-weight: 700;
   font-style: normal;
 }
@@ -359,83 +359,83 @@ button {
 }
 
 .tintoretto {
-  background-image: url(/img/header/tintoretto.jpg);
+  background-image: url(../img/header/tintoretto.jpg);
 }
 
 .fridrih {
-  background-image: url(/img/header/fridrih.jpg);
+  background-image: url(../img/header/fridrih.jpg);
 }
 
 .leonardo {
-  background-image: url(/img/header/leonardo.jpg);
+  background-image: url(../img/header/leonardo.jpg);
 }
 
 .verrokkyo {
-  background-image: url(/img/header/verrokkyo.jpg);
+  background-image: url(../img/header/verrokkyo.jpg);
 }
 
 .mone {
-  background-image: url(/img/header/mone.jpg);
+  background-image: url(../img/header/mone.jpg);
 }
 
 .sisley {
-  background-image: url(/img/header/sisley.jpg);
+  background-image: url(../img/header/sisley.jpg);
 }
 
 .mane {
-  background-image: url(/img/header/mane.jpg);
+  background-image: url(../img/header/mane.jpg);
 }
 
 .renuar {
-  background-image: url(/img/header/renuar.jpg);
+  background-image: url(../img/header/renuar.jpg);
 }
 
 .vangog {
-  background-image: url(/img/header/vangog.jpg);
+  background-image: url(../img/header/vangog.jpg);
 }
 
 .sezann {
-  background-image: url(/img/header/sezann.jpg);
+  background-image: url(../img/header/sezann.jpg);
 }
 
 .gogen {
-  background-image: url(/img/header/gogen.jpg);
+  background-image: url(../img/header/gogen.jpg);
 }
 
 .syora {
-  background-image: url(/img/header/syora.jpg);
+  background-image: url(../img/header/syora.jpg);
 }
 
 .kandinsky {
-  background-image: url(/img/header/kandinsky.jpg);
+  background-image: url(../img/header/kandinsky.jpg);
 }
 
 .marinetti {
-  background-image: url(/img/header/marinetti.jpg);
+  background-image: url(../img/header/marinetti.jpg);
 }
 
 .malevich {
-  background-image: url(/img/header/malevich.jpg);
+  background-image: url(../img/header/malevich.jpg);
 }
 
 .picasso {
-  background-image: url(/img/header/picasso.jpg);
+  background-image: url(../img/header/picasso.jpg);
 }
 
 .karra {
-  background-image: url(/img/header/karra.jpg);
+  background-image: url(../img/header/karra.jpg);
 }
 
 .pratella {
-  background-image: url(/img/header/pratella.jpg);
+  background-image: url(../img/header/pratella.jpg);
 }
 
 .severini {
-  background-image: url(/img/header/severini.jpg);
+  background-image: url(../img/header/severini.jpg);
 }
 
 .balla {
-  background-image: url(/img/header/balla.jpg);
+  background-image: url(../img/header/balla.jpg);
 }
 
 .header__search {
@@ -507,7 +507,7 @@ button {
 }
 
 .main__slide1 {
-  background-image: url(/img/primary/primary-background1.jpg);
+  background-image: url(../img/primary/primary-background1.jpg);
   animation-duration: 7s;
   animation-name: slide1;
   animation-iteration-count: infinite;
@@ -526,11 +526,11 @@ button {
 }
 
 .main__slide2 {
-  background-image: url(/img/primary/primary-background2.jpg);
+  background-image: url(../img/primary/primary-background2.jpg);
 }
 
 .main__slide3 {
-  background-image: url(/img/primary/primary-background3.jpg);
+  background-image: url(../img/primary/primary-background3.jpg);
 }
 
 .primary__text {
@@ -607,7 +607,7 @@ button {
 /* Gallery */
 .gallery {
   max-height: 995px;
-  background-image: url(/img/gallery/gallery-backgroud.jpg);
+  background-image: url(../img/gallery/gallery-backgroud.jpg);
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
@@ -710,7 +710,7 @@ button {
 }
 
 .choices[data-type*=select-one]:after {
-  content: url(/img/gallery/select-arrow__down.svg);
+  content: url(../img/gallery/select-arrow__down.svg);
   position: absolute;
   right: 15px;
   top: 4px;
@@ -722,7 +722,7 @@ button {
 }
 
 .choices[data-type*=select-one].is-open:after {
-  content: url(/img/gallery/select-arrow__up.svg);
+  content: url(../img/gallery/select-arrow__up.svg);
   margin: 0;
   border: none;
 }
@@ -789,7 +789,7 @@ button {
 
 .card::before {
   display: none;
-  content: url(/img/gallery/zoom+.png);
+  content: url(../img/gallery/zoom+.png);
   position: absolute;
   z-index: 1;
   top: 25px;
@@ -875,19 +875,19 @@ button {
 }
 
 .lang__france {
-  background-image: url(/img/catalog/france.jpg);
+  background-image: url(../img/catalog/france.jpg);
 }
 .lang__germany {
-  background-image: url(/img/catalog/germany.jpg);
+  background-image: url(../img/catalog/germany.jpg);
 }
 .lang__italy {
-  background-image: url(/img/catalog/italy.jpg);
+  background-image: url(../img/catalog/italy.jpg);
 }
 .lang__russia {
-  background-image: url(/img/catalog/russia.jpg);
+  background-image: url(../img/catalog/russia.jpg);
 }
 .lang__belgium {
-  background-image: url(/img/catalog/belgium.jpg);
+  background-image: url(../img/catalog/belgium.jpg);
 }
 
 .catalog__description {
@@ -942,7 +942,6 @@ button {
   font-size: 24px;
   line-height: 32px;
   font-weight: 600;
-  letter-spacing: 0;
   box-sizing: border-box;
   border-top: 1px solid #CACACA;
   border-bottom: 1px solid #CACACA;
@@ -974,13 +973,13 @@ button {
 	display: inline-block;
 	width: 50px;
 	height: 50px;    
-	background: url(/img/catalog/catalog-accordion__arrow--closed.svg) 50% 50% no-repeat;
+	background: url(../img/catalog/catalog-accordion__arrow--closed.svg) 50% 50% no-repeat;
   background-color: #ECECEC;
   border-radius: 50%;
 }
 
 .accordion .ui-accordion-header-active .ui-accordion-header-icon {
-	background-image: url(/img/catalog/catalog-accordion__arrow--open.svg);
+	background-image: url(../img/catalog/catalog-accordion__arrow--open.svg);
 }
 
 .ui-accordion .ui-state-hover .ui-accordion-header-icon {
@@ -988,11 +987,11 @@ button {
 }
 
 .ui-accordion .ui-state-hover .ui-icon-triangle-1-e {
-  background-image: url(/img/catalog/catalog-accordion__arrow-closed--hover.svg);
+  background-image: url(../img/catalog/catalog-accordion__arrow-closed--hover.svg);
 }
 
 .accordion .ui-accordion-header-active:hover .ui-accordion-header-icon {
-  background-image: url(/img/catalog/catalog-accordion__arrow-open--hover.svg);
+  background-image: url(../img/catalog/catalog-accordion__arrow-open--hover.svg);
 }
 
 .ui-accordion .ui-state-hover:active .ui-accordion-header-icon {
@@ -1164,7 +1163,7 @@ button {
 
 /* Publications */
 .publications {
-  background-image: url(/img/publications/publications-background.jpg);
+  background-image: url(../img/publications/publications-background.jpg);
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
@@ -1436,11 +1435,11 @@ button {
 }
 
 .projects__link {
+  color: var(--color-violet);
   letter-spacing: 0.3px;
 }
 
 .projects__link:focus {
-  letter-spacing: 0.3px;
   border: 2px solid var(--color-border--focus);
 }
 
@@ -1462,7 +1461,6 @@ button {
 .partners__title {
   margin: 0 0 23px 0;
   padding: 0 0 0 2px;
-  letter-spacing: 0;
 }
 
 .swiper-container3 {
@@ -1485,75 +1483,75 @@ button {
 }
 
 .partners__ffimg {
-  background-image: url(/img/projects/ff-mono.svg);
+  background-image: url(../img/projects/ff-mono.svg);
 }
 
 .partners__icaimg {
-  background-image: url(/img/projects/ica-mono.svg);
+  background-image: url(../img/projects/ica-mono.svg);
 }
 
 .partners__wacimg {
-  background-image: url(/img/projects/wac-mono.svg);
+  background-image: url(../img/projects/wac-mono.svg);
 }
 
 .partners__1849img {
-  background-image: url(/img/projects/1849-mono.svg);
+  background-image: url(../img/projects/1849-mono.svg);
 }
 
 .partners__hiscoximg {
-  background-image: url(/img/projects/hiscox-mono.svg);
+  background-image: url(../img/projects/hiscox-mono.svg);
 }
 
 .partners__cacimg {
-  background-image: url(/img/projects/cac-mono.svg);
+  background-image: url(../img/projects/cac-mono.svg);
 }
 
 .partners__stassenimg {
-  background-image: url(/img/projects/stassen-mono.svg);
+  background-image: url(../img/projects/stassen-mono.svg);
 }
 
 .partners__wgavimg {
-  background-image: url(/img/projects/wgav-mono.svg);
+  background-image: url(../img/projects/wgav-mono.svg);
 }
 
 .partners__esadimg {
-  background-image: url(/img/projects/esad-mono.svg);
+  background-image: url(../img/projects/esad-mono.svg);
 }
 
 .partners__ffimg:hover {
-  background-image: url(/img/projects/ff.svg);
+  background-image: url(../img/projects/ff.svg);
 }
 
 .partners__icaimg:hover {
-  background-image: url(/img/projects/ica.svg);
+  background-image: url(../img/projects/ica.svg);
 }
 
 .partners__wacimg:hover {
-  background-image: url(/img/projects/wac.svg);
+  background-image: url(../img/projects/wac.svg);
 }
 
 .partners__1849img:hover {
-  background-image: url(/img/projects/1849.svg);
+  background-image: url(../img/projects/1849.svg);
 }
 
 .partners__hiscoximg:hover {
-  background-image: url(/img/projects/hiscox.svg);
+  background-image: url(../img/projects/hiscox.svg);
 }
 
 .partners__cacimg:hover {
-  background-image: url(/img/projects/cac.svg);
+  background-image: url(../img/projects/cac.svg);
 }
 
 .partners__stassenimg:hover {
-  background-image: url(/img/projects/stassen.svg);
+  background-image: url(../img/projects/stassen.svg);
 }
 
 .partners__wgavimg:hover {
-  background-image: url(/img/projects/wgav.svg);
+  background-image: url(../img/projects/wgav.svg);
 }
 
 .partners__esadimg:hover {
-  background-image: url(/img/projects/esad.svg);
+  background-image: url(../img/projects/esad.svg);
 }
 
 .swiper-button-prev3 {
@@ -1684,11 +1682,11 @@ button {
 }
 
 .contact-social__whatsapp {
-  background-image: url(/img/contacts/Whatsapp.svg);
+  background-image: url(../img/contacts/Whatsapp.svg);
 }
 
 .contact-social__telegramm {
-  background-image: url(/img/contacts/Telegram.svg);
+  background-image: url(../img/contacts/Telegram.svg);
 }
 
 .contacts__map {
