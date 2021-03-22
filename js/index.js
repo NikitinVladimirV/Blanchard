@@ -1,5 +1,4 @@
 window.addEventListener('DOMContentLoaded', function () {
-  // Плавная прокрутка к якорю хедер
   const anchors = document.querySelectorAll('.header-nav__link, .projects__link, .primary__button')
   for (let anchor of anchors) {
     anchor.addEventListener('click', function (e) {
@@ -11,7 +10,6 @@ window.addEventListener('DOMContentLoaded', function () {
       })
     })
   }
-  // Выпадающий список хедер
   const button = document.querySelectorAll('.header-menu__btn');
   button.forEach(el => {
     el.addEventListener('click', (e) => {
@@ -24,11 +22,9 @@ window.addEventListener('DOMContentLoaded', function () {
       button.forEach(el => { el.classList.remove(('header-menu__btn--active')) })
     }
   });
-  // Слайдер главный
   const swiper = new Swiper('.swiper-container', {
     loop: true,
   });
-  // Слайдер галерея
   const swiper1 = new Swiper('.swiper-container1', {
     slidesPerView: 3,
     slidesPerGroup: 1,
@@ -43,7 +39,6 @@ window.addEventListener('DOMContentLoaded', function () {
       prevEl: '.swiper-button-prev1',
     },
   });
-  // Слайдер издания
   const swiper2 = new Swiper('.swiper-container2', {
     slidesPerView: 3,
     slidesPerGroup: 1,
@@ -57,7 +52,6 @@ window.addEventListener('DOMContentLoaded', function () {
       prevEl: '.swiper-button-prev2',
     },
   });
-  // Слайдер проекты
   const swiper3 = new Swiper('.swiper-container3', {
     slidesPerView: 3,
     spaceBetween: 50,
@@ -66,7 +60,6 @@ window.addEventListener('DOMContentLoaded', function () {
       prevEl: '.swiper-button-prev3',
     },
   });
-  //Селект галерея
   const element = document.querySelector('#gallery__select');
   const choices = new Choices(element, {
     searchEnabled: false,
@@ -74,7 +67,6 @@ window.addEventListener('DOMContentLoaded', function () {
     position: 'bottom',
     itemSelectText: '',
   });
-  //Аккордион каталог
   $(function () {
     $("#accordion1").accordion({
       collapsible: true,
@@ -97,7 +89,6 @@ window.addEventListener('DOMContentLoaded', function () {
       heightStyle: 'content'
     });
   });
-  //Табы аккордионов каталог
   document.querySelectorAll('.accordion__tab').forEach(function(tabsBtn) {
     tabsBtn.addEventListener('click', function(event) {
       const path = event.currentTarget.dataset.path
@@ -107,7 +98,6 @@ window.addEventListener('DOMContentLoaded', function () {
       document.querySelector(`[data-target="${path}"]`).classList.add('catalog__biography--active')
     })
   })
-  //Табы в аккордионе
   document.querySelectorAll('.lang__button').forEach(function(tabsBtn) {
     tabsBtn.addEventListener('click', function(event) {
       const path = event.currentTarget.dataset.path
@@ -117,9 +107,7 @@ window.addEventListener('DOMContentLoaded', function () {
       document.querySelector(`[data-target="${path}"]`).classList.add('catalog__bottom--active')
     })
   })
-  // Доп. лист события
   $('#events__btn').click(function(){ $('#hidden1, #hidden2, #hidden3').show(); $('#events__btn').hide(); });
-  //Карта контакты
   ymaps.ready(init);
   function init() {
     var myMap = new ymaps.Map("map", {
@@ -133,19 +121,17 @@ window.addEventListener('DOMContentLoaded', function () {
       iconImageOffset: [-3, -42]
     });
     myMap.geoObjects.add(myPlacemark);
-    myMap.controls.remove('searchControl'); // удаляем поиск
-    myMap.controls.remove('geolocationControl'); // удаляем геолокацию(навигатор)
-    myMap.controls.remove('trafficControl'); // удаляем контроль трафика(пробки)
-    myMap.controls.remove('typeSelector'); // удаляем тип(спутник,схема...)
-    myMap.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
-    myMap.controls.remove('zoomControl'); // удаляем контрол зуммирования(+...-)
-    myMap.controls.remove('rulerControl'); // удаляем контрол правил(масштаб)
+    myMap.controls.remove('searchControl');
+    myMap.controls.remove('geolocationControl');
+    myMap.controls.remove('trafficControl');
+    myMap.controls.remove('typeSelector');
+    myMap.controls.remove('fullscreenControl');
+    myMap.controls.remove('zoomControl');
+    myMap.controls.remove('rulerControl');
   }
-  //Маскирование полей контакты
   var selector = document.querySelector("input[type='tel']");
   var im = new Inputmask("+7(999)999-99-99"); 
   im.mask(selector);
-  //Валидация форм контакты
   new JustValidate('.form', {
     rules: {
       name: {
@@ -162,5 +148,4 @@ window.addEventListener('DOMContentLoaded', function () {
       },
     },
   });
-  // window.addEventListener('focusin', event => console.log(new Date, event.target));
 })
