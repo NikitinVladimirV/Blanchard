@@ -93,6 +93,12 @@ button {
   border: 2px solid #ececec;
   border-radius: 50%;
   cursor: pointer;
+  transition: background-color .2s linear;
+  transition: border .2s linear;
+}
+
+.swiper-btn path {
+  transition: stroke .2s linear;
 }
 
 .swiper-btn:hover path,
@@ -186,6 +192,7 @@ button {
   font-size: 18px;
   font-weight: 600;
   color: var(--color-white);
+  transition: color .2s linear;
 }
 
 .header-nav__link:focus {
@@ -207,6 +214,7 @@ button {
   font-size: 18px;
   line-height: 0;
   color: var(--color-white);
+  transition: color .2s linear;
 }
 
 .header-enter__icon {
@@ -219,6 +227,10 @@ button {
 
 .header__enter:hover {
   color: var(--color--hover);
+}
+
+.header-enter__icon path {
+  transition: fill .2s linear;
 }
 
 .header-enter:hover .header-enter__icon path {
@@ -261,6 +273,11 @@ button {
   background: none;
   border: none;
   cursor: pointer;
+  transition: color .2s linear;
+}
+
+.header-menu__btn path {
+  transition: stroke .2s linear;
 }
 
 .header-menu__btn:focus {
@@ -313,44 +330,63 @@ button {
   border: none;
 }
 
+.simplebar-content-wrapper {
+  overflow: auto;
+}
+
 .header-menu__drop {
   position: absolute;
   top: 100%;
   display: none;
-  width: 220px;
-  height: 220px;
+  width: 300px;
+  height: 300px;
   padding: 40px 40px 40px 40px;
   font-size: 14px;
   line-height: 19px;
   font-weight: 600;
   color: var(--color-white);
   background: rgba(0, 0, 0, 0.4);
-  overflow-y: auto;
 }
 
 .header-menu__btn--active ~ .header-menu__drop {
   display: block;
 }
 
+.header-drop__list {
+  height: 100%;
+  width: 100%;
+}
+
 .simplebar-track.simplebar-vertical {
-  top: 40px;
-  right: 19px;
-  width: 2px;
+  top: 0;
   height: 220px;
+  width: 2px;
+  right: -19px;
+  background-color: #000;
 }
 
-.simplebar-scrollbar {
-  background-color: var(--color-violet);
+.simplebar-scrollbar::before {
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+opacity: 1;
+background-color: var(--color-violet);
+border-radius: 0;
 }
 
-.simplebar-track {
-   background-color: var(--color-black);
+.simplebar-track.simplebar-vertical .simplebar-scrollbar::before {
+  top: 0;
+  bottom: 0;
+}
+
+.simplebar-scrollbar.simplebar-visible::before {
+  opacity: 1;
 }
 
 .header-drop__item {
-  min-height: 40px;
-  padding: 10px 0 0 14px;
-  margin-bottom: 20px;
+  padding: 10px 0 11px 14px;
+  margin: 0 0 20px 0;
   background-repeat: no-repeat;
   cursor: pointer;
 }
@@ -450,6 +486,11 @@ button {
   width: 16.2%;
 }
 
+.search__btn path,
+.search__btn rect {
+  transition: fill .2s linear;
+}
+
 .header__search:focus .search__btn path {
   fill: #C283F3;
 }
@@ -481,6 +522,7 @@ button {
   left: 39px;
   top: 28px;
   background: var(--color-white);
+  transition: background .2s linear;
 }
 
 .search__input {
@@ -514,7 +556,7 @@ button {
 
 .main__slide1 {
   background-image: url(../img/primary/primary-background1.jpg);
-  animation-duration: 7s;
+  animation-duration: 37s;
   animation-name: slide1;
   animation-iteration-count: infinite;
   
@@ -561,7 +603,7 @@ button {
 .primary__description {
   max-width: 570px;
   padding: 0 0 0 5px;
-  margin: 0 0 92px 0;
+  margin: 0 0 91px 0;
   font-size: 18px;
   line-height: 30px;
   font-weight: 700;
@@ -576,6 +618,7 @@ button {
   color: var(--color-white);
   background-color: var(--color-violet);
   border: 2px solid var(--color-violet);
+  transition: border .2s linear;
 }
 
 .primary__button:focus:after {
@@ -748,6 +791,17 @@ button {
   border: 2px solid var(--color-border--focus);
 }
 
+
+.gallery__link:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  height: 1px;
+  transition: background-color .2s linear;
+}
+
 .gallery__link:hover:after {
   content: '';
   position: absolute;
@@ -755,7 +809,7 @@ button {
   top: 100%;
   width: 100%;
   height: 1px;
-  background: #9D5CD0;
+  background-color: #9D5CD0;
 }
 
 .gallery__link:active {
@@ -856,6 +910,7 @@ button {
   border: none;
   border-radius: 50%;
   cursor: pointer;
+  transition: filter .2s linear;
 }
 
 .lang__button:focus:before {
@@ -953,6 +1008,9 @@ button {
   border-top: 1px solid #CACACA;
   border-bottom: 1px solid #CACACA;
   cursor: pointer;
+  transition-property: border, color;
+  transition-duration: .2s;
+  transition-timing-function: linear;
 }
 
 .ui-accordion .ui-accordion-header:focus {
@@ -983,6 +1041,7 @@ button {
 	background: url(../img/catalog/catalog-accordion__arrow--closed.svg) 50% 50% no-repeat;
   background-color: #ECECEC;
   border-radius: 50%;
+  transition: background .2s linear;
 }
 
 .accordion .ui-accordion-header-active .ui-accordion-header-icon {
@@ -1025,8 +1084,11 @@ button {
 
 .accordion__btn {
   padding: 0 0 0 0;
-  border: none;
+  border: transparent;
   background-color: #e5e5e5;
+  transition-property: border, color;
+  transition-duration: .2s;
+  transition-timing-function: linear;
 }
 
 .accordion__btn:focus {
@@ -1104,6 +1166,7 @@ button {
   line-height: 28px;
   color: var(--color-violet);
   border-bottom: 1px solid var(--color-violet);
+  transition: font-weight .2s linear;
 }
 
 .event-item__link:focus {
@@ -1131,6 +1194,9 @@ button {
   margin-left: auto;
   margin-right: auto;
   color: var(--color-violet);
+  transition-property: color, background-color;
+  transition-duration: .2s;
+  transition-timing-function: linear;
 }
 
 .events__button:focus:after {
@@ -1244,8 +1310,16 @@ button {
   border: 2px solid var(--color-border--focus);
 }
 
+.publications-category__checkbox input[type="checkbox"] + label {
+  transition: color .2s linear;
+}
+
 .publications-category__checkbox input[type="checkbox"]:hover + label {
   color: var(--color--hover);
+}
+
+.publications-category__checkbox input[type="checkbox"] + label::before {
+  transition: border .2s linear;
 }
 
 .publications-category__checkbox input[type="checkbox"]:hover + label::before {
@@ -1324,6 +1398,7 @@ button {
   font-size: 16px;
   color: var(--color-white);
   background-color: transparent;
+  transition: background .2s linear;
 }
 
 .publications-slide__btn:focus::before {
@@ -1379,6 +1454,9 @@ button {
   border-radius: 50%;
   border: 1px solid var(--color-violet);
   cursor: pointer;
+  transition-property: border, background, color;
+  transition-duration: .2s;
+  transition-timing-function: linear;
 }
 
 .marker3 {
@@ -1388,6 +1466,7 @@ button {
 .projects__tooltip:hover .projects__marker {
   color: var(--color-white);
   background: #5b46a9;
+  border: 1px solid #5b46a9;
 }
 
 .projects__popup {
@@ -1399,7 +1478,7 @@ button {
   background: #CACACA;
   color: #FFFFFF;
   opacity: 0;
-  transition: opacity .3s ease-in-out;
+  transition: opacity .3s linear;
 }
 
 .popup1 {
@@ -1444,6 +1523,8 @@ button {
 .projects__link {
   color: var(--color-violet);
   letter-spacing: 0.3px;
+  border: transparent;
+  transition: border .2s linear;
 }
 
 .projects__link:focus {
@@ -1451,7 +1532,6 @@ button {
 }
 
 .projects__link:hover {
-  color: var(--color-violet);
   border-bottom: 1px solid var(--color-violet);
 }
 
@@ -1483,6 +1563,7 @@ button {
   background-repeat: no-repeat;
   background-size: 100% 100%;
   box-sizing: border-box;
+  transition: background-image .2s linear;
 }
 
 .partners__slider:focus {
@@ -1619,7 +1700,7 @@ button {
 }
 
 .contacts-form__input {
-  padding: 10px 195px 10px 23px;
+  padding: 10px 202px 10px 23px;
   margin: 0 0 23px 0;
   border: 1px solid #333;
   border-radius: 100px;
@@ -1634,6 +1715,9 @@ button {
   max-width: 157px;
   padding: 17px 0 17px 0;
   color: var(--color-violet);
+  transition-property: background, color;
+  transition-duration: .2s;
+  transition-timing-function: linear;
 }
 
 .contacts-form__button:focus::before {
@@ -1674,6 +1758,7 @@ button {
   margin-right: 12px;
   border: 2px solid #e5e5e5;
   border-radius: 50%;
+  transition: border .2s linear;
 }
 
 .contact-social__link:focus {
@@ -1757,6 +1842,10 @@ button {
 
 .footer-social__item:focus {
   border: 2px solid var(--color-border--focus);
+}
+
+.footer-social__icon path {
+  transition: fill .2s linear;
 }
 
 .footer-social__icon:hover path {
