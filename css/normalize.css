@@ -352,11 +352,6 @@
     display: none;
   }
 
-  div,
-  li {
-    box-sizing: border-box;
-  }
-
   p {
     margin: 0;
   }
