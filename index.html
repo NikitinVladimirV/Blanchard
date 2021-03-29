@@ -8,6 +8,7 @@
   <meta name="description" content="Blanchard-художественная галерея">
   <title>Blanchard-художественная галерея</title>
   <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <link rel="stylesheet" href="css/choices.min.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
@@ -26,26 +27,27 @@
   <script defer src="js/index.js"></script>
 </head>
 
-<body>
+<body class="body">
   <header class="header">
     <div class="header-container">
       <div class="header__background header__background--black">
         <div class="header__top container">
-          <a class="header__link" target="blank" href="https://blanchard.ru/about-us/our-story" aria-label="Логотип художественной галереи Бланчард">
-            <img class="logo header__logo" src="img/footer/Лого.svg" alt="Blanchard-художественная галерея">
+          <a class="header__link" target="blank" href="https://blanchard.ru/about-us/our-story"
+            aria-label="Логотип художественной галереи Бланчард">
+            <img class="logo header__logo img" src="img/footer/Лого.svg" alt="Blanchard-художественная галерея">
           </a>
           <nav class="header__nav header-nav">
-            <ul class="header__list">
-              <li class="header__item"><a class="header-nav__link" href="#about">О&nbsp;нас</a></li>
-              <li class="header__item"><a class="header-nav__link" href="#gallery">Галерея</a></li>
-              <li class="header__item"><a class="header-nav__link" href="#catalog">Каталог</a></li>
-              <li class="header__item"><a class="header-nav__link" href="#events">События</a></li>
-              <li class="header__item"><a class="header-nav__link" href="#publications">Издания</a></li>
-              <li class="header__item"><a class="header-nav__link" href="#projects">Проекты</a></li>
-              <li class="header__item"><a class="header-nav__link" href="#contacts">Контакты</a></li>
+            <ul class="header__list list">
+              <li class="header__item"><a class="header-nav__link link-style" href="#about">О&nbsp;нас</a></li>
+              <li class="header__item"><a class="header-nav__link link-style" href="#gallery">Галерея</a></li>
+              <li class="header__item"><a class="header-nav__link link-style" href="#catalog">Каталог</a></li>
+              <li class="header__item"><a class="header-nav__link link-style" href="#events">События</a></li>
+              <li class="header__item"><a class="header-nav__link link-style" href="#publications">Издания</a></li>
+              <li class="header__item"><a class="header-nav__link link-style" href="#projects">Проекты</a></li>
+              <li class="header__item"><a class="header-nav__link link-style" href="#contacts">Контакты</a></li>
             </ul>
           </nav>
-          <a class="header__enter header-enter" href="https://blanchard.ru/get-started" id="enter">
+          <a class="header__enter header-enter link-style" href="https://blanchard.ru/get-started" id="enter">
             <svg class="header-enter__icon" width="13" height="13" viewbox="0 0 13 13" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path
@@ -58,16 +60,21 @@
       </div>
       <div class="header__background header__background--opacity">
         <div class="header__menu header-menu container">
-          <ul class="header-menu__list">
+          <ul class="header-menu__list list">
             <li class="header-menu__item">
               <button class="header-menu__btn">
                 Реализм
-                <svg class="header-menu__icon" width="12" height="7" viewbox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="header-menu__icon" width="12" height="7" viewbox="0 0 12 7" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
                   <path d="M11 1L6 6.00001L0.999997 1" stroke="white" />
                 </svg>
               </button>
               <div class="header-menu__drop header-drop">
-                <ul class="header-drop__list" data-simplebar>
+                <ul class="header-drop__list list" data-simplebar>
+                  <li class="header-drop__item tintoretto">Тинторетто</li>
+                  <li class="header-drop__item fridrih">Фридрих</li>
+                  <li class="header-drop__item leonardo">Леонардо</li>
+                  <li class="header-drop__item verrokkyo">Верроккьо</li>
                   <li class="header-drop__item tintoretto">Тинторетто</li>
                   <li class="header-drop__item fridrih">Фридрих</li>
                   <li class="header-drop__item leonardo">Леонардо</li>
@@ -78,12 +85,13 @@
             <li class="header-menu__item">
               <button class="header-menu__btn">
                 Импрессионизм
-                <svg class="header-menu__icon" width="12" height="7" viewbox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="header-menu__icon" width="12" height="7" viewbox="0 0 12 7" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
                   <path d="M11 1L6 6.00001L0.999997 1" stroke="white" />
                 </svg>
               </button>
               <div class="header-menu__drop header-drop">
-                <ul class="header-drop__list" data-simplebar>
+                <ul class="header-drop__list list" data-simplebar>
                   <li class="header-drop__item mone">Моне</li>
                   <li class="header-drop__item sisley">Сислей</li>
                   <li class="header-drop__item mane">Мане</li>
@@ -94,12 +102,13 @@
             <li class="header-menu__item">
               <button class="header-menu__btn">
                 Постимпрессионизм
-                <svg class="header-menu__icon" width="12" height="7" viewbox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="header-menu__icon" width="12" height="7" viewbox="0 0 12 7" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
                   <path d="M11 1L6 6.00001L0.999997 1" stroke="white" />
                 </svg>
               </button>
               <div class="header-menu__drop header-drop">
-                <ul class="header-drop__list" data-simplebar>
+                <ul class="header-drop__list list" data-simplebar>
                   <li class="header-drop__item vangog">Ван Гог</li>
                   <li class="header-drop__item sezann">Сезанн</li>
                   <li class="header-drop__item gogen">Гоген</li>
@@ -110,12 +119,13 @@
             <li class="header-menu__item">
               <button class="header-menu__btn">
                 Авангард
-                <svg class="header-menu__icon" width="12" height="7" viewbox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="header-menu__icon" width="12" height="7" viewbox="0 0 12 7" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
                   <path d="M11 1L6 6.00001L0.999997 1" stroke="white" />
                 </svg>
               </button>
               <div class="header-menu__drop header-drop">
-                <ul class="header-drop__list" data-simplebar>
+                <ul class="header-drop__list list" data-simplebar>
                   <li class="header-drop__item kandinsky">Кандинский</li>
                   <li class="header-drop__item marinetti">Маринетти</li>
                   <li class="header-drop__item malevich">Малевич</li>
@@ -126,12 +136,13 @@
             <li class="header-menu__item">
               <button class="header-menu__btn">
                 Футуризм
-                <svg class="header-menu__icon" width="12" height="7" viewbox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="header-menu__icon" width="12" height="7" viewbox="0 0 12 7" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
                   <path d="M11 1L6 6.00001L0.999997 1" stroke="white" />
                 </svg>
               </button>
               <div class="header-menu__drop header-drop">
-                <ul class="header-drop__list" data-simplebar>
+                <ul class="header-drop__list list" data-simplebar>
                   <li class="header-drop__item karra">Карра</li>
                   <li class="header-drop__item pratella">Прателла</li>
                   <li class="header-drop__item severini">Северини</li>
@@ -141,7 +152,7 @@
             </li>
           </ul>
           <form class="header__search search" action="https://jsonplaceholder.typicode.com/posts" method="POST">
-            <button class="search__btn" type="submit" aria-label="Поиск">
+            <button class="search__btn button" type="submit" aria-label="Поиск">
               <svg class="search__icon" width="23" height="22" viewbox="0 0 23 22" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <rect width="6.8678" height="1.71695"
@@ -170,20 +181,20 @@
           </div>
         </div>
         <div class="primary__text container">
-          <h2 class="primary__title">Прикоснитесь к прекрасному</h2>
+          <h2 class="primary__title title-h2">Прикоснитесь к прекрасному</h2>
           <p class="primary__description">
             Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки для
             новых
             предложений.
           </p>
-          <a class="button primary__button" href="#contacts">Подписаться на рассылку</a>
+          <a class="button primary__button link-style" href="#contacts">Подписаться на рассылку</a>
         </div>
       </div>
     </section>
 
     <section class="about" id="about" aria-label="О нас">
       <div class="container about-container">
-        <h2 class="about__title">О нас</h2>
+        <h2 class="about__title title-h2">О нас</h2>
         <p class="about__description">
           Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет каждого
           участника как способного принимать собственные решения касаемо распределения внутренних резервов и ресурсов.
@@ -201,7 +212,7 @@
       <div class="container gallery-container">
         <div class="gallery__left">
           <div class="gallery__functional">
-            <h2 class="gallery__title">Галерея</h2>
+            <h2 class="gallery__title title-h2">Галерея</h2>
             <span class="gallery__textfilter">Фильтровать по:</span>
             <select class="gallery__select" name="filter" id="gallery__select">
               <option class="gallery__item" value="Автор">Автор</option>
@@ -210,80 +221,80 @@
             </select>
           </div>
           <p class="gallery__description">Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества
-            скачиваний <a class="gallery__link" href="#enter">авторизуйтесь,</a> либо воспользуйтесь лицензией.</p>
+            скачиваний <a class="gallery__link link-style" href="#enter">авторизуйтесь,</a> либо воспользуйтесь лицензией.</p>
         </div>
         <div class="swiper-container1">
           <div class="swiper__nav">
-            <div class="swiper-button-prev1 swiper-btn"><svg class="swiper-btn__icon swiper-btn__icon--left" width="11" height="12"
-                viewbox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6 11L0.999995 6L6 0.999998" stroke="var(--color-black)" />
+            <div class="swiper-button-prev1 swiper-btn"><svg class="swiper-btn__icon swiper-btn__icon--left" width="11"
+                height="12" viewbox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 11L0.999995 6L6 0.999998" stroke="var(--color-white)" />
               </svg></div>
             <div class="swiper-pagination1 pag-1"></div>
-            <div class="swiper-button-next1 swiper-btn"><svg class="swiper-btn__icon swiper-btn__icon--right" width="11" height="12"
-                viewbox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5 11L10 6L5 0.999998" stroke="var(--color-black)" />
+            <div class="swiper-button-next1 swiper-btn"><svg class="swiper-btn__icon swiper-btn__icon--right" width="11"
+                height="12" viewbox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 11L10 6L5 0.999998" stroke="var(--color-white)" />
               </svg></div>
           </div>
           <div class="swiper-wrapper">
-            <div class="swiper-slide card"><img class="gallery__img" src="img/gallery/gallery13.jpg"
+            <div class="swiper-slide card"><img class="gallery__img img" src="img/gallery/gallery13.jpg"
                 alt="Картина Фигура торса с розовым лицом, художник Казимир Малевич"></div>
-            <div class="swiper-slide card"><img class="gallery__img" src="img/gallery/gallery14.jpg"
+            <div class="swiper-slide card"><img class="gallery__img img" src="img/gallery/gallery14.jpg"
                 alt="Картина Суперматизм, художник Казимир Малевич"></div>
-            <div class="swiper-slide card"><img class="gallery__img" src="img/gallery/gallery15.jpg"
+            <div class="swiper-slide card"><img class="gallery__img img" src="img/gallery/gallery15.jpg"
                 alt="Картина Женщина с граблями, художник Казимир Малевич"></div>
-            <div class="swiper-slide card"><img class="gallery__img" src="img/gallery/gallery16.jpg"
+            <div class="swiper-slide card"><img class="gallery__img img" src="img/gallery/gallery16.jpg"
                 alt="Картина Женщина с ведрами, художник Казимир Малевич"></div>
-            <div class="swiper-slide card"><img class="gallery__img" src="img/gallery/gallery17.jpg"
+            <div class="swiper-slide card"><img class="gallery__img img" src="img/gallery/gallery17.jpg"
                 alt="Картина Уборка урожая, художник Казимир Малевич"></div>
-            <div class="swiper-slide card"><img class="gallery__img" src="img/gallery/gallery18.jpg"
+            <div class="swiper-slide card"><img class="gallery__img img" src="img/gallery/gallery18.jpg"
                 alt="Картина Суперматизм, художник Казимир Малевич"></div>
-            <div class="swiper-slide card"><img class="gallery__img" src="img/gallery/gallery1.jpg"
+            <div class="swiper-slide card"><img class="gallery__img img" src="img/gallery/gallery1.jpg"
                 alt="Картина Итальянский полдень, художник Карл Брюлов"></div>
-            <div class="swiper-slide card"><img class="gallery__img" src="img/gallery/gallery2.jpg"
+            <div class="swiper-slide card"><img class="gallery__img img" src="img/gallery/gallery2.jpg"
                 alt="Картина Цветы и плоды, художник Ян ван Хейсум"></div>
-            <div class="swiper-slide card"><img class="gallery__img" src="img/gallery/gallery3.jpg"
+            <div class="swiper-slide card"><img class="gallery__img img" src="img/gallery/gallery3.jpg"
                 alt="Картина Игра в жмурки, художник Жан Оноре"></div>
-            <div class="swiper-slide card"><img class="gallery__img" src="img/gallery/gallery4.jpg"
+            <div class="swiper-slide card"><img class="gallery__img img" src="img/gallery/gallery4.jpg"
                 alt="Картина Неизвестная, художник Иван Крамской"></div>
-            <div class="swiper-slide card"><img class="gallery__img" src="img/gallery/gallery5.jpg"
+            <div class="swiper-slide card"><img class="gallery__img img" src="img/gallery/gallery5.jpg"
                 alt="Картина Самсон и Далила, художник Питер Пауль"></div>
-            <div class="swiper-slide card"><img class="gallery__img" src="img/gallery/gallery6.jpg"
+            <div class="swiper-slide card"><img class="gallery__img img" src="img/gallery/gallery6.jpg"
                 alt="Картина Игра в кости, художник Генрих Семирадский"></div>
-            <div class="swiper-slide card"><img class="gallery__img" src="img/gallery/gallery7.jpg"
+            <div class="swiper-slide card"><img class="gallery__img img" src="img/gallery/gallery7.jpg"
                 alt="Картина Отплытие царицы Савской, художник Клод Лоррен"></div>
-            <div class="swiper-slide card"><img class="gallery__img" src="img/gallery/gallery8.jpg"
+            <div class="swiper-slide card"><img class="gallery__img img" src="img/gallery/gallery8.jpg"
                 alt="Картина Падение Икара, художник Питер Брейгель Старший"></div>
-            <div class="swiper-slide card"><img class="gallery__img" src="img/gallery/gallery9.jpg"
+            <div class="swiper-slide card"><img class="gallery__img img" src="img/gallery/gallery9.jpg"
                 alt="Картина Купальщицы на фоне горы Сент-Виктуар, художник Поль Сезанн"></div>
-            <div class="swiper-slide card"><img class="gallery__img" src="img/gallery/gallery10.jpg"
+            <div class="swiper-slide card"><img class="gallery__img img" src="img/gallery/gallery10.jpg"
                 alt="Картина Счастливая Аркадия, художник Константин Маковский"></div>
-            <div class="swiper-slide card"><img class="gallery__img" src="img/gallery/gallery11.jpg"
+            <div class="swiper-slide card"><img class="gallery__img img" src="img/gallery/gallery11.jpg"
                 alt="Картина Речной пейзаж с рыболовом, художник Верне Клод"></div>
-            <div class="swiper-slide card"><img class="gallery__img" src="img/gallery/gallery12.jpg"
+            <div class="swiper-slide card"><img class="gallery__img img" src="img/gallery/gallery12.jpg"
                 alt="Картина Весна, художник Сандро Боттичелли"></div>
-            <div class="swiper-slide card"><img class="gallery__img" src="img/gallery/gallery19.jpg"
+            <div class="swiper-slide card"><img class="gallery__img img" src="img/gallery/gallery19.jpg"
                 alt="Картина Плотник, художник Казимир Малевич"></div>
-            <div class="swiper-slide card"><img class="gallery__img" src="img/gallery/gallery20.jpg"
+            <div class="swiper-slide card"><img class="gallery__img img" src="img/gallery/gallery20.jpg"
                 alt="Картина Крестьянин в поле, художник Казимир Малевич"></div>
-            <div class="swiper-slide card"><img class="gallery__img" src="img/gallery/gallery21.jpg"
+            <div class="swiper-slide card"><img class="gallery__img img" src="img/gallery/gallery21.jpg"
                 alt="Картина Два крестьянина на фоне полей, художник Казимир Малевич"></div>
-            <div class="swiper-slide card"><img class="gallery__img" src="img/gallery/gallery22.jpg"
+            <div class="swiper-slide card"><img class="gallery__img img" src="img/gallery/gallery22.jpg"
                 alt="Картина Суперматизм. Желтое и черное, художник Казимир Малевич"></div>
-            <div class="swiper-slide card"><img class="gallery__img" src="img/gallery/gallery23.jpg"
+            <div class="swiper-slide card"><img class="gallery__img img" src="img/gallery/gallery23.jpg"
                 alt="Картина Суперматизм, художник Казимир Малевич"></div>
-            <div class="swiper-slide card"><img class="gallery__img" src="img/gallery/gallery24.jpg"
+            <div class="swiper-slide card"><img class="gallery__img img" src="img/gallery/gallery24.jpg"
                 alt="Картина Девушки в поле, художник Казимир Малевич"></div>
-            <div class="swiper-slide card"><img class="gallery__img" src="img/gallery/gallery25.jpg"
+            <div class="swiper-slide card"><img class="gallery__img img" src="img/gallery/gallery25.jpg"
                 alt="Картина Женщина с граблями, художник Казимир Малевич"></div>
-            <div class="swiper-slide card"><img class="gallery__img" src="img/gallery/gallery26.jpg"
+            <div class="swiper-slide card"><img class="gallery__img img" src="img/gallery/gallery26.jpg"
                 alt="Картина Конторка и комната, художник Казимир Малевич"></div>
-            <div class="swiper-slide card"><img class="gallery__img" src="img/gallery/gallery27.jpg"
+            <div class="swiper-slide card"><img class="gallery__img img" src="img/gallery/gallery27.jpg"
                 alt="Картина Суперматизм, художник Казимир Малевич"></div>
-            <div class="swiper-slide card"><img class="gallery__img" src="img/gallery/gallery28.jpg"
+            <div class="swiper-slide card"><img class="gallery__img img" src="img/gallery/gallery28.jpg"
                 alt="Картина Зимний пейзаж, художник Казимир Малевич"></div>
-            <div class="swiper-slide card"><img class="gallery__img" src="img/gallery/gallery29.jpg"
+            <div class="swiper-slide card"><img class="gallery__img img" src="img/gallery/gallery29.jpg"
                 alt="Картина Спортсмены, художник Казимир Малевич"></div>
-            <div class="swiper-slide card"><img class="gallery__img" src="img/gallery/gallery30.jpg"
+            <div class="swiper-slide card"><img class="gallery__img img" src="img/gallery/gallery30.jpg"
                 alt="Картина На жатву, художник Казимир Малевич"></div>
           </div>
         </div>
@@ -293,13 +304,18 @@
     <section class="catalog" id="catalog" aria-label="Каталог">
       <div class="container catalog-container">
         <div class="catalog__top">
-          <h2 class="catalog__title">Каталог</h2>
+          <h2 class="catalog__title title-h2">Каталог</h2>
           <div class="catalog__lang lang">
-            <button class="lang__button lang__france" data-path="france" aria-label="Выбор страны художника - Франция"></button>
-            <button class="lang__button lang__germany" data-path="germany" aria-label="Выбор страны художника - Германия"></button>
-            <button class="lang__button lang__italy" data-path="italy" aria-label="Выбор страны художника - Италия"></button>
-            <button class="lang__button lang__russia" data-path="russia" aria-label="Выбор страны художника - Россия"></button>
-            <button class="lang__button lang__belgium" data-path="belgium" aria-label="Выбор страны художника - Бельгия"></button>
+            <button class="lang__button lang__france" data-path="france"
+              aria-label="Выбор страны художника - Франция"></button>
+            <button class="lang__button lang__germany" data-path="germany"
+              aria-label="Выбор страны художника - Германия"></button>
+            <button class="lang__button lang__italy lang__button--active" data-path="italy"
+              aria-label="Выбор страны художника - Италия"></button>
+            <button class="lang__button lang__russia" data-path="russia"
+              aria-label="Выбор страны художника - Россия"></button>
+            <button class="lang__button lang__belgium" data-path="belgium"
+              aria-label="Выбор страны художника - Бельгия"></button>
           </div>
         </div>
         <p class="catalog__description">Акционеры крупнейших компаний, которые представляют собой яркий пример
@@ -309,98 +325,98 @@
           независимые элементы.
         </p>
 
-        <div class="catalog__bottom bottom-france" data-target="france">
-          <div class="catalog__biography biography catalog__biography--active" data-target="fuke">
-            <img class="catalog__portrait" src="img/catalog/fuke.jpg" alt="Жан Фуке">
-            <h3 class="biography__name">Жан Фуке</h3>
+        <div class="catalog__bottom bottom-france animate__animated animate__fadeIn" data-target="france">
+          <div class="catalog__biography biography catalog__biography--active animate__animated animate__fadeIn" data-target="fuke">
+            <img class="catalog__portrait img" src="img/catalog/fuke.jpg" alt="Жан Фуке">
+            <h3 class="biography__name title-h3">Жан Фуке</h3>
             <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
             <p class="biography__description">
               Один из ведущих французских художников.
             </p>
           </div>
-          <div class="catalog__biography biography" data-target="testar">
-            <img class="catalog__portrait" src="img/catalog/black.jpg" alt="Робине Тестар">
-            <h3 class="biography__name">Робине Тестар</h3>
+          <div class="catalog__biography biography animate__animated animate__fadeIn" data-target="testar">
+            <img class="catalog__portrait img" src="img/catalog/black.jpg" alt="Робине Тестар">
+            <h3 class="biography__name title-h3">Робине Тестар</h3>
             <span class="biography__date">XXXXг. — 1531г.</span>
             <p class="biography__description">
               Один из ведущих французских художников.
             </p>
           </div>
-          <div class="catalog__biography biography" data-target="dyumustye">
-            <img class="catalog__portrait" src="img/catalog/black.jpg" alt="Жоффруа Дюмустье">
-            <h3 class="biography__name">Жоффруа Дюмустье</h3>
+          <div class="catalog__biography biography animate__animated animate__fadeIn" data-target="dyumustye">
+            <img class="catalog__portrait img" src="img/catalog/black.jpg" alt="Жоффруа Дюмустье">
+            <h3 class="biography__name title-h3">Жоффруа Дюмустье</h3>
             <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
             <p class="biography__description">
               Один из ведущих французских художников.
             </p>
           </div>
-          <div class="catalog__biography biography" data-target="etyen">
-            <img class="catalog__portrait" src="img/catalog/black.jpg" alt="Этьен Дюмустье">
-            <h3 class="biography__name">Этьен Дюмустье</h3>
+          <div class="catalog__biography biography animate__animated animate__fadeIn" data-target="etyen">
+            <img class="catalog__portrait img" src="img/catalog/black.jpg" alt="Этьен Дюмустье">
+            <h3 class="biography__name title-h3">Этьен Дюмустье</h3>
             <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
             <p class="biography__description">
               Один из ведущих французских художников.
             </p>
           </div>
-          <div class="catalog__biography biography">
-            <img class="catalog__portrait" src="img/catalog/black.jpg" alt="">
-            <h3 class="biography__name">X</h3>
+          <div class="catalog__biography biography animate__animated animate__fadeIn">
+            <img class="catalog__portrait img" src="img/catalog/black.jpg" alt="">
+            <h3 class="biography__name title-h3">X</h3>
             <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
             <p class="biography__description">
               Один из ведущих французских художников.
             </p>
           </div>
-          <div class="catalog__biography biography">
-            <img class="catalog__portrait" src="img/catalog/black.jpg" alt="">
-            <h3 class="biography__name">X</h3>
+          <div class="catalog__biography biography animate__animated animate__fadeIn">
+            <img class="catalog__portrait img" src="img/catalog/black.jpg" alt="">
+            <h3 class="biography__name title-h3">X</h3>
             <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
             <p class="biography__description">
               Один из ведущих французских художников.
             </p>
           </div>
-          <div class="catalog__biography biography">
-            <img class="catalog__portrait" src="img/catalog/black.jpg" alt="">
-            <h3 class="biography__name">X</h3>
+          <div class="catalog__biography biography animate__animated animate__fadeIn">
+            <img class="catalog__portrait img" src="img/catalog/black.jpg" alt="">
+            <h3 class="biography__name title-h3">X</h3>
             <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
             <p class="biography__description">
               Один из ведущих французских художников.
             </p>
           </div>
-          <div class="catalog__biography biography">
-            <img class="catalog__portrait" src="img/catalog/black.jpg" alt="">
-            <h3 class="biography__name">X</h3>
+          <div class="catalog__biography biography animate__animated animate__fadeIn">
+            <img class="catalog__portrait img" src="img/catalog/black.jpg" alt="">
+            <h3 class="biography__name title-h3">X</h3>
             <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
             <p class="biography__description">
               Один из ведущих французских художников.
             </p>
           </div>
-          <div class="catalog__biography biography">
-            <img class="catalog__portrait" src="img/catalog/black.jpg" alt="">
-            <h3 class="biography__name">X</h3>
+          <div class="catalog__biography biography animate__animated animate__fadeIn">
+            <img class="catalog__portrait img" src="img/catalog/black.jpg" alt="">
+            <h3 class="biography__name title-h3">X</h3>
             <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
             <p class="biography__description">
               Один из ведущих французских художников.
             </p>
           </div>
-          <div class="catalog__biography biography">
-            <img class="catalog__portrait" src="img/catalog/black.jpg" alt="">
-            <h3 class="biography__name">X</h3>
+          <div class="catalog__biography biography animate__animated animate__fadeIn">
+            <img class="catalog__portrait img" src="img/catalog/black.jpg" alt="">
+            <h3 class="biography__name title-h3">X</h3>
             <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
             <p class="biography__description">
               Один из ведущих французских художников.
             </p>
           </div>
-          <div class="catalog__biography biography">
-            <img class="catalog__portrait" src="img/catalog/black.jpg" alt="">
-            <h3 class="biography__name">X</h3>
+          <div class="catalog__biography biography animate__animated animate__fadeIn">
+            <img class="catalog__portrait img" src="img/catalog/black.jpg" alt="">
+            <h3 class="biography__name title-h3">X</h3>
             <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
             <p class="biography__description">
               Один из ведущих французских художников.
             </p>
           </div>
-          <div class="catalog__biography biography">
-            <img class="catalog__portrait" src="img/catalog/black.jpg" alt="">
-            <h3 class="biography__name">X</h3>
+          <div class="catalog__biography biography animate__animated animate__fadeIn">
+            <img class="catalog__portrait img" src="img/catalog/black.jpg" alt="">
+            <h3 class="biography__name title-h3">X</h3>
             <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
             <p class="biography__description">
               Один из ведущих французских художников.
@@ -408,82 +424,22 @@
           </div>
           <div class="catalog__accordion">
             <div id="accordion1" class="accordion">
-              <h3 class="accordion__title">C 1400 по 1499 гг.</h3>
-              <ul class="accordion__list">
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="fuke">Жан
+              <h3 class="accordion__title title-h3">C 1400 по 1499 гг.</h3>
+              <ul class="accordion__list list">
+                <li class="accordion__item"><button class="accordion__btn accordion__tab accordion__tab--active" data-path="fuke">Жан
                     Фуке</button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="testar">Робине
                     Тестар</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="testar">Робине
-                    Тестар</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="testar">Робине
-                    Тестар</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="testar">Робине
-                    Тестар</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="testar">Робине
-                    Тестар</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="testar">Робине
-                    Тестар</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="testar">Робине
-                    Тестар</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="testar">Робине
-                    Тестар</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="testar">Робине
-                    Тестар</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="testar">Робине
-                    Тестар</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="testar">Робине
-                    Тестар</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="testar">Робине
-                    Тестар</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="testar">Робине
-                    Тестар</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="testar">Робине
-                    Тестар</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="testar">Робине
-                    Тестар</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="testar">Робине
-                    Тестар</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="testar">Робине
-                    Тестар</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="testar">Робине
-                    Тестар</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="testar">Робине
-                    Тестар</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="testar">Робине
-                    Тестар</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="testar">Робине
-                    Тестар</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="testar">Робине
-                    Тестар</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="testar">Робине
-                    Тестар</button></li>
               </ul>
-              <h3 class="accordion__title">C 1500 по 1599 гг.</h3>
-              <ul class="accordion__list">
+              <h3 class="accordion__title title-h3">C 1500 по 1599 гг.</h3>
+              <ul class="accordion__list list">
                 <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="dyumustye">Жоффруа
                     Дюмустье</button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="etyen">Этьен
                     Дюмустье</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="etyen">Этьен
-                    Дюмустье</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="etyen">Этьен
-                    Дюмустье</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="etyen">Этьен
-                    Дюмустье</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="etyen">Этьен
-                    Дюмустье</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="etyen">Этьен
-                    Дюмустье</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="etyen">Этьен
-                    Дюмустье</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="etyen">Этьен
-                    Дюмустье</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="etyen">Этьен
-                    Дюмустье</button></li>
               </ul>
-              <h3 class="accordion__title">C 1600 по 1699 гг.</h3>
-              <ul class="accordion__list">
+              <h3 class="accordion__title title-h3">C 1600 по 1699 гг.</h3>
+              <ul class="accordion__list list">
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
@@ -495,8 +451,8 @@
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
               </ul>
-              <h3 class="accordion__title">C 1700 по 1799 гг.</h3>
-              <ul class="accordion__list">
+              <h3 class="accordion__title title-h3">C 1700 по 1799 гг.</h3>
+              <ul class="accordion__list list">
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
@@ -508,8 +464,8 @@
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
               </ul>
-              <h3 class="accordion__title">C 1800 по 1899 гг.</h3>
-              <ul class="accordion__list">
+              <h3 class="accordion__title title-h3">C 1800 по 1899 гг.</h3>
+              <ul class="accordion__list list">
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
@@ -521,8 +477,8 @@
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
               </ul>
-              <h3 class="accordion__title">C 1900 по 1999 гг.</h3>
-              <ul class="accordion__list">
+              <h3 class="accordion__title title-h3">C 1900 по 1999 гг.</h3>
+              <ul class="accordion__list list">
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
@@ -534,8 +490,8 @@
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
               </ul>
-              <h3 class="accordion__title">C 2000 г.</h3>
-              <ul class="accordion__list">
+              <h3 class="accordion__title title-h3">C 2000 г.</h3>
+              <ul class="accordion__list list">
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
@@ -551,98 +507,98 @@
           </div>
         </div>
 
-        <div class="catalog__bottom bottom-germany" data-target="germany">
-          <div class="catalog__biography biography catalog__biography--active" data-target="volgemut">
-            <img class="catalog__portrait" src="img/catalog/volgemut.jpg" alt="Михаэль Вольгемут">
-            <h3 class="biography__name">Михаэль Вольгемут</h3>
+        <div class="catalog__bottom bottom-germany animate__animated animate__fadeIn" data-target="germany">
+          <div class="catalog__biography biography catalog__biography--active animate__animated animate__fadeIn" data-target="volgemut">
+            <img class="catalog__portrait img" src="img/catalog/volgemut.jpg" alt="Михаэль Вольгемут">
+            <h3 class="biography__name title-h3">Михаэль Вольгемут</h3>
             <span class="biography__date">1434г. — 30 ноября 1519г.</span>
             <p class="biography__description">
               Один из ведущих немецких художников.
             </p>
           </div>
-          <div class="catalog__biography biography" data-target="notke">
-            <img class="catalog__portrait" src="img/catalog/notke.jpg" alt="Бернт Нотке">
-            <h3 class="biography__name">Бернт Нотке</h3>
+          <div class="catalog__biography biography animate__animated animate__fadeIn" data-target="notke">
+            <img class="catalog__portrait img" src="img/catalog/notke.jpg" alt="Бернт Нотке">
+            <h3 class="biography__name title-h3">Бернт Нотке</h3>
             <span class="biography__date">1435г. — 12 мая 1509г.</span>
             <p class="biography__description">
               Один из ведущих немецких художников.
             </p>
           </div>
-          <div class="catalog__biography biography">
-            <img class="catalog__portrait" src="img/catalog/black.jpg" alt="">
-            <h3 class="biography__name">X</h3>
+          <div class="catalog__biography biography animate__animated animate__fadeIn">
+            <img class="catalog__portrait img" src="img/catalog/black.jpg" alt="">
+            <h3 class="biography__name title-h3">X</h3>
             <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
             <p class="biography__description">
               Один из ведущих немецких художников.
             </p>
           </div>
-          <div class="catalog__biography biography">
-            <img class="catalog__portrait" src="img/catalog/black.jpg" alt="">
-            <h3 class="biography__name">X</h3>
+          <div class="catalog__biography biography animate__animated animate__fadeIn">
+            <img class="catalog__portrait img" src="img/catalog/black.jpg" alt="">
+            <h3 class="biography__name title-h3">X</h3>
             <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
             <p class="biography__description">
               Один из ведущих немецких художников.
             </p>
           </div>
-          <div class="catalog__biography biography">
-            <img class="catalog__portrait" src="img/catalog/black.jpg" alt="">
-            <h3 class="biography__name">X</h3>
+          <div class="catalog__biography biography animate__animated animate__fadeIn">
+            <img class="catalog__portrait img" src="img/catalog/black.jpg" alt="">
+            <h3 class="biography__name title-h3">X</h3>
             <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
             <p class="biography__description">
               Один из ведущих немецких художников.
             </p>
           </div>
-          <div class="catalog__biography biography">
-            <img class="catalog__portrait" src="img/catalog/black.jpg" alt="">
-            <h3 class="biography__name">X</h3>
+          <div class="catalog__biography biography animate__animated animate__fadeIn">
+            <img class="catalog__portrait img" src="img/catalog/black.jpg" alt="">
+            <h3 class="biography__name title-h3">X</h3>
             <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
             <p class="biography__description">
               Один из ведущих немецких художников.
             </p>
           </div>
-          <div class="catalog__biography biography">
-            <img class="catalog__portrait" src="img/catalog/black.jpg" alt="">
-            <h3 class="biography__name">X</h3>
+          <div class="catalog__biography biography animate__animated animate__fadeIn">
+            <img class="catalog__portrait img" src="img/catalog/black.jpg" alt="">
+            <h3 class="biography__name title-h3">X</h3>
             <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
             <p class="biography__description">
               Один из ведущих немецких художников.
             </p>
           </div>
-          <div class="catalog__biography biography">
-            <img class="catalog__portrait" src="img/catalog/black.jpg" alt="">
-            <h3 class="biography__name">X</h3>
+          <div class="catalog__biography biography animate__animated animate__fadeIn">
+            <img class="catalog__portrait img" src="img/catalog/black.jpg" alt="">
+            <h3 class="biography__name title-h3">X</h3>
             <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
             <p class="biography__description">
               Один из ведущих немецких художников.
             </p>
           </div>
-          <div class="catalog__biography biography">
-            <img class="catalog__portrait" src="img/catalog/black.jpg" alt="">
-            <h3 class="biography__name">X</h3>
+          <div class="catalog__biography biography animate__animated animate__fadeIn">
+            <img class="catalog__portrait img" src="img/catalog/black.jpg" alt="">
+            <h3 class="biography__name title-h3">X</h3>
             <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
             <p class="biography__description">
               Один из ведущих немецких художников.
             </p>
           </div>
-          <div class="catalog__biography biography">
-            <img class="catalog__portrait" src="img/catalog/black.jpg" alt="">
-            <h3 class="biography__name">X</h3>
+          <div class="catalog__biography biography animate__animated animate__fadeIn">
+            <img class="catalog__portrait img" src="img/catalog/black.jpg" alt="">
+            <h3 class="biography__name title-h3">X</h3>
             <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
             <p class="biography__description">
               Один из ведущих немецких художников.
             </p>
           </div>
-          <div class="catalog__biography biography">
-            <img class="catalog__portrait" src="img/catalog/black.jpg" alt="">
-            <h3 class="biography__name">X</h3>
+          <div class="catalog__biography biography animate__animated animate__fadeIn">
+            <img class="catalog__portrait img" src="img/catalog/black.jpg" alt="">
+            <h3 class="biography__name title-h3">X</h3>
             <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
             <p class="biography__description">
               Один из ведущих немецких художников.
             </p>
           </div>
-          <div class="catalog__biography biography">
-            <img class="catalog__portrait" src="img/catalog/black.jpg" alt="">
-            <h3 class="biography__name">X</h3>
+          <div class="catalog__biography biography animate__animated animate__fadeIn">
+            <img class="catalog__portrait img" src="img/catalog/black.jpg" alt="">
+            <h3 class="biography__name title-h3">X</h3>
             <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
             <p class="biography__description">
               Один из ведущих немецких художников.
@@ -650,59 +606,15 @@
           </div>
           <div class="catalog__accordion">
             <div id="accordion2" class="accordion">
-              <h3 class="accordion__title">C 1400 по 1499 гг.</h3>
-              <ul class="accordion__list">
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="volgemut">Михаэль
+              <h3 class="accordion__title title-h3">C 1400 по 1499 гг.</h3>
+              <ul class="accordion__list list">
+                <li class="accordion__item"><button class="accordion__btn accordion__tab accordion__tab--active" data-path="volgemut">Михаэль
                     Вольгемут</button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="notke">Бернт
                     Нотке</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="notke">Бернт
-                    Нотке</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="notke">Бернт
-                    Нотке</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="notke">Бернт
-                    Нотке</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="notke">Бернт
-                    Нотке</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="notke">Бернт
-                    Нотке</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="notke">Бернт
-                    Нотке</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="notke">Бернт
-                    Нотке</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="notke">Бернт
-                    Нотке</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="notke">Бернт
-                    Нотке</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="notke">Бернт
-                    Нотке</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="notke">Бернт
-                    Нотке</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="notke">Бернт
-                    Нотке</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="notke">Бернт
-                    Нотке</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="notke">Бернт
-                    Нотке</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="notke">Бернт
-                    Нотке</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="notke">Бернт
-                    Нотке</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="notke">Бернт
-                    Нотке</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="notke">Бернт
-                    Нотке</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="notke">Бернт
-                    Нотке</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="notke">Бернт
-                    Нотке</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="notke">Бернт
-                    Нотке</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="notke">Бернт
-                    Нотке</button></li>
               </ul>
-              <h3 class="accordion__title">C 1500 по 1599 гг.</h3>
-              <ul class="accordion__list">
+              <h3 class="accordion__title title-h3">C 1500 по 1599 гг.</h3>
+              <ul class="accordion__list list">
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
@@ -714,8 +626,8 @@
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
               </ul>
-              <h3 class="accordion__title">C 1600 по 1699 гг.</h3>
-              <ul class="accordion__list">
+              <h3 class="accordion__title title-h3">C 1600 по 1699 гг.</h3>
+              <ul class="accordion__list list">
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
@@ -727,8 +639,8 @@
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
               </ul>
-              <h3 class="accordion__title">C 1700 по 1799 гг.</h3>
-              <ul class="accordion__list">
+              <h3 class="accordion__title title-h3">C 1700 по 1799 гг.</h3>
+              <ul class="accordion__list list">
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
@@ -740,8 +652,8 @@
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
               </ul>
-              <h3 class="accordion__title">C 1800 по 1899 гг.</h3>
-              <ul class="accordion__list">
+              <h3 class="accordion__title title-h3">C 1800 по 1899 гг.</h3>
+              <ul class="accordion__list list">
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
@@ -753,8 +665,8 @@
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
               </ul>
-              <h3 class="accordion__title">C 1900 по 1999 гг.</h3>
-              <ul class="accordion__list">
+              <h3 class="accordion__title title-h3">C 1900 по 1999 гг.</h3>
+              <ul class="accordion__list list">
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
@@ -766,8 +678,8 @@
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
               </ul>
-              <h3 class="accordion__title">C 2000 г.</h3>
-              <ul class="accordion__list">
+              <h3 class="accordion__title title-h3">C 2000 г.</h3>
+              <ul class="accordion__list list">
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
@@ -783,98 +695,98 @@
           </div>
         </div>
 
-        <div class="catalog__bottom bottom-italy catalog__bottom--active" data-target="italy">
-          <div class="catalog__biography biography" data-target="benedetto">
-            <img class="catalog__portrait" src="img/catalog/black.jpg" alt="">
-            <h3 class="biography__name">Бенедетто ди Биндо</h3>
+        <div class="catalog__bottom bottom-italy catalog__bottom--active animate__animated animate__fadeIn" data-target="italy">
+          <div class="catalog__biography biography catalog__biography--active animate__animated animate__fadeIn" data-target="benedetto">
+            <img class="catalog__portrait img" src="img/catalog/black.jpg" alt="">
+            <h3 class="biography__name title-h3">Бенедетто ди Биндо</h3>
             <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
             <p class="biography__description">
               Один из ведущих итальянских художников.
             </p>
           </div>
-          <div class="catalog__biography biography" data-target="bergonyone">
-            <img class="catalog__portrait" src="img/catalog/black.jpg" alt="">
-            <h3 class="biography__name">Бергоньоне, Амброджо</h3>
+          <div class="catalog__biography biography animate__animated animate__fadeIn" data-target="bergonyone">
+            <img class="catalog__portrait img" src="img/catalog/black.jpg" alt="">
+            <h3 class="biography__name title-h3">Бергоньоне, Амброджо</h3>
             <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
             <p class="biography__description">
               Один из ведущих итальянских художников.
             </p>
           </div>
-          <div class="catalog__biography biography" data-target="bissolo">
-            <img class="catalog__portrait" src="img/catalog/black.jpg" alt="">
-            <h3 class="biography__name">Биссоло, Франческо</h3>
+          <div class="catalog__biography biography animate__animated animate__fadeIn" data-target="bissolo">
+            <img class="catalog__portrait img" src="img/catalog/black.jpg" alt="">
+            <h3 class="biography__name title-h3">Биссоло, Франческо</h3>
             <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
             <p class="biography__description">
               Один из ведущих итальянских художников.
             </p>
           </div>
-          <div class="catalog__biography biography" data-target="boltraffio">
-            <img class="catalog__portrait" src="img/catalog/black.jpg" alt="">
-            <h3 class="biography__name">Больтраффио, Джованни</h3>
+          <div class="catalog__biography biography animate__animated animate__fadeIn" data-target="boltraffio">
+            <img class="catalog__portrait img" src="img/catalog/black.jpg" alt="">
+            <h3 class="biography__name title-h3">Больтраффио, Джованни</h3>
             <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
             <p class="biography__description">
               Один из ведущих итальянских художников.
             </p>
           </div>
-          <div class="catalog__biography biography" data-target="bonsinyori">
-            <img class="catalog__portrait" src="img/catalog/black.jpg" alt="">
-            <h3 class="biography__name">Бонсиньори, Франческо</h3>
+          <div class="catalog__biography biography animate__animated animate__fadeIn" data-target="bonsinyori">
+            <img class="catalog__portrait img" src="img/catalog/black.jpg" alt="">
+            <h3 class="biography__name title-h3">Бонсиньори, Франческо</h3>
             <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
             <p class="biography__description">
               Один из ведущих итальянских художников.
             </p>
           </div>
-          <div class="catalog__biography biography" data-target="bottichini">
-            <img class="catalog__portrait" src="img/catalog/black.jpg" alt="">
-            <h3 class="biography__name">Боттичини, Рафаэлло</h3>
+          <div class="catalog__biography biography animate__animated animate__fadeIn" data-target="bottichini">
+            <img class="catalog__portrait img" src="img/catalog/black.jpg" alt="">
+            <h3 class="biography__name title-h3">Боттичини, Рафаэлло</h3>
             <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
             <p class="biography__description">
               Один из ведущих итальянских художников.
             </p>
           </div>
-          <div class="catalog__biography biography" data-target="bramantino">
-            <img class="catalog__portrait" src="img/catalog/black.jpg" alt="">
-            <h3 class="biography__name">Брамантино</h3>
+          <div class="catalog__biography biography animate__animated animate__fadeIn" data-target="bramantino">
+            <img class="catalog__portrait img" src="img/catalog/black.jpg" alt="">
+            <h3 class="biography__name title-h3">Брамантино</h3>
             <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
             <p class="biography__description">
               Один из ведущих итальянских художников.
             </p>
           </div>
-          <div class="catalog__biography biography" data-target="brea">
-            <img class="catalog__portrait" src="img/catalog/black.jpg" alt="">
-            <h3 class="biography__name">Бреа, Людовико</h3>
+          <div class="catalog__biography biography animate__animated animate__fadeIn" data-target="brea">
+            <img class="catalog__portrait img" src="img/catalog/black.jpg" alt="">
+            <h3 class="biography__name title-h3">Бреа, Людовико</h3>
             <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
             <p class="biography__description">
               Один из ведущих итальянских художников.
             </p>
           </div>
-          <div class="catalog__biography biography" data-target="tuchchi">
-            <img class="catalog__portrait" src="img/catalog/black.jpg" alt="">
-            <h3 class="biography__name">Бьяджо д'Антонио Туччи</h3>
+          <div class="catalog__biography biography animate__animated animate__fadeIn" data-target="tuchchi">
+            <img class="catalog__portrait img" src="img/catalog/black.jpg" alt="">
+            <h3 class="biography__name title-h3">Бьяджо д'Антонио Туччи</h3>
             <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
             <p class="biography__description">
               Один из ведущих итальянских художников.
             </p>
           </div>
-          <div class="catalog__biography biography" data-target="vekkyetta">
-            <img class="catalog__portrait" src="img/catalog/black.jpg" alt="">
-            <h3 class="biography__name">Веккьетта</h3>
+          <div class="catalog__biography biography animate__animated animate__fadeIn" data-target="vekkyetta">
+            <img class="catalog__portrait img" src="img/catalog/black.jpg" alt="">
+            <h3 class="biography__name title-h3">Веккьетта</h3>
             <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
             <p class="biography__description">
               Один из ведущих итальянских художников.
             </p>
           </div>
-          <div class="catalog__biography biography" data-target="verrokkyo">
-            <img class="catalog__portrait" src="img/catalog/black.jpg" alt="">
-            <h3 class="biography__name">Андреа Верроккьо</h3>
+          <div class="catalog__biography biography animate__animated animate__fadeIn" data-target="verrokkyo">
+            <img class="catalog__portrait img" src="img/catalog/black.jpg" alt="">
+            <h3 class="biography__name title-h3">Андреа Верроккьо</h3>
             <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
             <p class="biography__description">
               Один из ведущих итальянских художников.
             </p>
           </div>
-          <div class="catalog__biography biography catalog__biography--active" data-target="domenico">
-            <img class="catalog__portrait" src="img/catalog/Domenico.jpg" alt="Доменико Гирландайо">
-            <h3 class="biography__name">Доменико Гирландайо</h3>
+          <div class="catalog__biography biography animate__animated animate__fadeIn" data-target="domenico">
+            <img class="catalog__portrait img" src="img/catalog/Domenico.jpg" alt="Доменико Гирландайо">
+            <h3 class="biography__name title-h3">Доменико Гирландайо</h3>
             <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
             <p class="biography__description">
               Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую
@@ -886,9 +798,9 @@
           </div>
           <div class="catalog__accordion">
             <div id="accordion3" class="accordion">
-              <h3 class="accordion__title">C 1400 по 1499 гг.</h3>
-              <ul class="accordion__list">
-                <li class="accordion__item"><button class="accordion__btn accordion__tab"
+              <h3 class="accordion__title title-h3">C 1400 по 1499 гг.</h3>
+              <ul class="accordion__list list">
+                <li class="accordion__item"><button class="accordion__btn accordion__tab accordion__tab--active"
                     data-path="benedetto">Бенедетто ди Биндо</button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"
                     data-path="bergonyone">Бергоньоне, Амброджо</button></li>
@@ -910,48 +822,36 @@
                     data-path="vekkyetta">Веккьетта</button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="verrokkyo">Андреа
                     Верроккьо</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="domenico">Доменико
+                <li class="accordion__item"><button class="accordion__btn accordion__tab"
+                    data-path="domenico">Доменико
                     Гирландайо</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="domenico">Беноццо
+                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="gotsoli">Беноццо
                     Гоццоли</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="domenico">Граначчи,
+                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="granachi">Граначчи,
                     Франческо</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="domenico">Грегорио
+                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="di-chekko">Грегорио
                     ди Чекко</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="domenico">Джованни
+                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="da-udine">Джованни
                     да Удине</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="domenico">Джованни
+                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="di-paolo">Джованни
                     ди Паоло</button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"
-                    data-path="domenico">Джорджони</button></li>
+                    data-path="dzhordzhoni">Джорджони</button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"
-                    data-path="domenico">Парентино, Бернардо</button></li>
+                    data-path="parentino">Парентино, Бернардо</button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"
-                    data-path="domenico">Пезеллино</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="domenico">Пьетро
+                    data-path="pezellino">Пезеллино</button></li>
+                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="perudzhino">Пьетро
                     Перуджино</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="domenico">Перуцци,
+                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="baldassare">Перуцци,
                     Бальдассаре</button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"
-                    data-path="domenico">Пизанелло</button></li>
+                    data-path="pizanello">Пизанелло</button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"
-                    data-path="domenico">Пинтуриккьо</button></li>
+                    data-path="pinturikkyo">Пинтуриккьо</button></li>
               </ul>
-              <h3 class="accordion__title">C 1500 по 1599 гг.</h3>
-              <ul class="accordion__list">
-                <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
-              </ul>
-              <h3 class="accordion__title">C 1600 по 1699 гг.</h3>
-              <ul class="accordion__list">
+              <h3 class="accordion__title title-h3">C 1500 по 1599 гг.</h3>
+              <ul class="accordion__list list">
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
@@ -963,8 +863,21 @@
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
               </ul>
-              <h3 class="accordion__title">C 1700 по 1799 гг.</h3>
+              <h3 class="accordion__title title-h3">C 1600 по 1699 гг.</h3>
               <ul class="accordion__list">
+                <li class="accordion__item list"><button class="accordion__btn accordion__tab"></button></li>
+                <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
+                <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
+                <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
+                <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
+                <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
+                <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
+                <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
+                <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
+                <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
+              </ul>
+              <h3 class="accordion__title title-h3">C 1700 по 1799 гг.</h3>
+              <ul class="accordion__list list">
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
@@ -976,8 +889,8 @@
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
               </ul>
-              <h3 class="accordion__title">C 1800 по 1899 гг.</h3>
-              <ul class="accordion__list">
+              <h3 class="accordion__title title-h3">C 1800 по 1899 гг.</h3>
+              <ul class="accordion__list list">
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
@@ -989,8 +902,8 @@
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
               </ul>
-              <h3 class="accordion__title">C 1900 по 1999 гг.</h3>
-              <ul class="accordion__list">
+              <h3 class="accordion__title title-h3">C 1900 по 1999 гг.</h3>
+              <ul class="accordion__list list">
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
@@ -1002,8 +915,8 @@
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
               </ul>
-              <h3 class="accordion__title">C 2000 г.</h3>
-              <ul class="accordion__list">
+              <h3 class="accordion__title title-h3">C 2000 г.</h3>
+              <ul class="accordion__list list">
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
@@ -1020,106 +933,106 @@
         </div>
 
 
-        <div class="catalog__bottom bottom-russia" data-target="russia">
-          <div class="catalog__biography biography catalog__biography--active" data-target="rublev">
-            <img class="catalog__portrait" src="img/catalog/rublev.jpg" alt="Андрей Рублёв">
-            <h3 class="biography__name">Андрей Рублёв</h3>
+        <div class="catalog__bottom bottom-russia animate__animated animate__fadeIn" data-target="russia">
+          <div class="catalog__biography biography animate__animated animate__fadeIn catalog__biography--active" data-target="rublev">
+            <img class="catalog__portrait img" src="img/catalog/rublev.jpg" alt="Андрей Рублёв">
+            <h3 class="biography__name title-h3">Андрей Рублёв</h3>
             <span class="biography__date">1360г. — 29 января 1430г.</span>
             <p class="biography__description">
               Один из ведущих русских художников.
             </p>
           </div>
-          <div class="catalog__biography biography" data-target="amvrosiy">
-            <img class="catalog__portrait" src="img/catalog/black.jpg" alt="Амвросий">
-            <h3 class="biography__name">Амвросий</h3>
+          <div class="catalog__biography biography animate__animated animate__fadeIn" data-target="amvrosiy">
+            <img class="catalog__portrait img" src="img/catalog/black.jpg" alt="Амвросий">
+            <h3 class="biography__name title-h3">Амвросий</h3>
             <span class="biography__date">ХХХХг. — 1494г.</span>
             <p class="biography__description">
               Один из ведущих русских художников.
             </p>
           </div>
-          <div class="catalog__biography biography">
-            <img class="catalog__portrait" src="img/catalog/black.jpg" alt="">
-            <h3 class="biography__name">X</h3>
+          <div class="catalog__biography biography animate__animated animate__fadeIn">
+            <img class="catalog__portrait img" src="img/catalog/black.jpg" alt="">
+            <h3 class="biography__name title-h3">X</h3>
             <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
             <p class="biography__description">
               Один из ведущих русских художников.
             </p>
           </div>
-          <div class="catalog__biography biography">
-            <img class="catalog__portrait" src="img/catalog/black.jpg" alt="">
-            <h3 class="biography__name">X</h3>
+          <div class="catalog__biography biography animate__animated animate__fadeIn">
+            <img class="catalog__portrait img" src="img/catalog/black.jpg" alt="">
+            <h3 class="biography__name title-h3">X</h3>
             <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
             <p class="biography__description">
               Один из ведущих русских художников.
             </p>
           </div>
-          <div class="catalog__biography biography">
-            <img class="catalog__portrait" src="img/catalog/black.jpg" alt="">
-            <h3 class="biography__name">X</h3>
+          <div class="catalog__biography biography animate__animated animate__fadeIn">
+            <img class="catalog__portrait img" src="img/catalog/black.jpg" alt="">
+            <h3 class="biography__name title-h3">X</h3>
             <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
             <p class="biography__description">
               Один из ведущих русских художников.
             </p>
           </div>
-          <div class="catalog__biography biography">
-            <img class="catalog__portrait" src="img/catalog/black.jpg" alt="">
-            <h3 class="biography__name">X</h3>
+          <div class="catalog__biography biography animate__animated animate__fadeIn">
+            <img class="catalog__portrait img" src="img/catalog/black.jpg" alt="">
+            <h3 class="biography__name title-h3">X</h3>
             <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
             <p class="biography__description">
               Один из ведущих русских художников.
             </p>
           </div>
-          <div class="catalog__biography biography">
-            <img class="catalog__portrait" src="img/catalog/black.jpg" alt="">
-            <h3 class="biography__name">X</h3>
+          <div class="catalog__biography biography animate__animated animate__fadeIn">
+            <img class="catalog__portrait img" src="img/catalog/black.jpg" alt="">
+            <h3 class="biography__name title-h3">X</h3>
             <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
             <p class="biography__description">
               Один из ведущих русских художников.
             </p>
           </div>
-          <div class="catalog__biography biography">
-            <img class="catalog__portrait" src="img/catalog/black.jpg" alt="">
-            <h3 class="biography__name">X</h3>
+          <div class="catalog__biography biography animate__animated animate__fadeIn">
+            <img class="catalog__portrait img" src="img/catalog/black.jpg" alt="">
+            <h3 class="biography__name title-h3">X</h3>
             <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
             <p class="biography__description">
               Один из ведущих русских художников.
             </p>
           </div>
-          <div class="catalog__biography biography">
-            <img class="catalog__portrait" src="img/catalog/black.jpg" alt="">
-            <h3 class="biography__name">X</h3>
+          <div class="catalog__biography biography animate__animated animate__fadeIn">
+            <img class="catalog__portrait img" src="img/catalog/black.jpg" alt="">
+            <h3 class="biography__name title-h3">X</h3>
             <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
             <p class="biography__description">
               Один из ведущих русских художников.
             </p>
           </div>
-          <div class="catalog__biography biography">
-            <img class="catalog__portrait" src="img/catalog/black.jpg" alt="">
-            <h3 class="biography__name">X</h3>
+          <div class="catalog__biography biography animate__animated animate__fadeIn">
+            <img class="catalog__portrait img" src="img/catalog/black.jpg" alt="">
+            <h3 class="biography__name title-h3">X</h3>
             <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
             <p class="biography__description">
               Один из ведущих русских художников.
             </p>
           </div>
-          <div class="catalog__biography biography">
-            <img class="catalog__portrait" src="img/catalog/black.jpg" alt="">
-            <h3 class="biography__name">X</h3>
+          <div class="catalog__biography biography animate__animated animate__fadeIn">
+            <img class="catalog__portrait img" src="img/catalog/black.jpg" alt="">
+            <h3 class="biography__name title-h3">X</h3>
             <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
             <p class="biography__description">
               Один из ведущих русских художников.
             </p>
           </div>
-          <div class="catalog__biography biography">
-            <img class="catalog__portrait" src="img/catalog/black.jpg" alt="">
-            <h3 class="biography__name">X</h3>
+          <div class="catalog__biography biography animate__animated animate__fadeIn">
+            <img class="catalog__portrait img" src="img/catalog/black.jpg" alt="">
+            <h3 class="biography__name title-h3">X</h3>
             <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
             <p class="biography__description">
               Один из ведущих русских художников.
             </p>
           </div>
-          <div class="catalog__biography biography">
-            <img class="catalog__portrait" src="img/catalog/black.jpg" alt="">
-            <h3 class="biography__name">X</h3>
+          <div class="catalog__biography biography animate__animated animate__fadeIn">
+            <img class="catalog__portrait img" src="img/catalog/black.jpg" alt="">
+            <h3 class="biography__name title-h3">X</h3>
             <span class="biography__date">2 июня 1448 — 11 января 1494.</span>
             <p class="biography__description">
               Один из ведущих русских художников.
@@ -1127,59 +1040,15 @@
           </div>
           <div class="catalog__accordion">
             <div id="accordion4" class="accordion">
-              <h3 class="accordion__title">C 1400 по 1499 гг.</h3>
-              <ul class="accordion__list">
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="rublev">Андрей
+              <h3 class="accordion__title title-h3">C 1400 по 1499 гг.</h3>
+              <ul class="accordion__list list">
+                <li class="accordion__item"><button class="accordion__btn accordion__tab accordion__tab--active" data-path="rublev">Андрей
                     Рублёв</button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"
                     data-path="amvrosiy">Амвросий</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab"
-                    data-path="amvrosiy">Амвросий</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab"
-                    data-path="amvrosiy">Амвросий</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab"
-                    data-path="amvrosiy">Амвросий</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab"
-                    data-path="amvrosiy">Амвросий</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab"
-                    data-path="amvrosiy">Амвросий</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab"
-                    data-path="amvrosiy">Амвросий</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab"
-                    data-path="amvrosiy">Амвросий</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab"
-                    data-path="amvrosiy">Амвросий</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab"
-                    data-path="amvrosiy">Амвросий</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab"
-                    data-path="amvrosiy">Амвросий</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab"
-                    data-path="amvrosiy">Амвросий</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab"
-                    data-path="amvrosiy">Амвросий</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab"
-                    data-path="amvrosiy">Амвросий</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab"
-                    data-path="amvrosiy">Амвросий</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab"
-                    data-path="amvrosiy">Амвросий</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab"
-                    data-path="amvrosiy">Амвросий</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab"
-                    data-path="amvrosiy">Амвросий</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab"
-                    data-path="amvrosiy">Амвросий</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab"
-                    data-path="amvrosiy">Амвросий</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab"
-                    data-path="amvrosiy">Амвросий</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab"
-                    data-path="amvrosiy">Амвросий</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab"
-                    data-path="amvrosiy">Амвросий</button></li>
               </ul>
-              <h3 class="accordion__title">C 1500 по 1599 гг.</h3>
-              <ul class="accordion__list">
+              <h3 class="accordion__title title-h3">C 1500 по 1599 гг.</h3>
+              <ul class="accordion__list list">
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
@@ -1191,8 +1060,8 @@
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
               </ul>
-              <h3 class="accordion__title">C 1600 по 1699 гг.</h3>
-              <ul class="accordion__list">
+              <h3 class="accordion__title title-h3">C 1600 по 1699 гг.</h3>
+              <ul class="accordion__list list">
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
@@ -1204,8 +1073,8 @@
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
               </ul>
-              <h3 class="accordion__title">C 1700 по 1799 гг.</h3>
-              <ul class="accordion__list">
+              <h3 class="accordion__title title-h3">C 1700 по 1799 гг.</h3>
+              <ul class="accordion__list list">
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
@@ -1217,8 +1086,8 @@
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
               </ul>
-              <h3 class="accordion__title">C 1800 по 1899 гг.</h3>
-              <ul class="accordion__list">
+              <h3 class="accordion__title title-h3">C 1800 по 1899 гг.</h3>
+              <ul class="accordion__list list">
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
@@ -1230,8 +1099,8 @@
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
               </ul>
-              <h3 class="accordion__title">C 1900 по 1999 гг.</h3>
-              <ul class="accordion__list">
+              <h3 class="accordion__title title-h3">C 1900 по 1999 гг.</h3>
+              <ul class="accordion__list list">
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
@@ -1243,8 +1112,8 @@
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
               </ul>
-              <h3 class="accordion__title">C 2000 г.</h3>
-              <ul class="accordion__list">
+              <h3 class="accordion__title title-h3">C 2000 г.</h3>
+              <ul class="accordion__list list">
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab"></button></li>
@@ -1260,106 +1129,106 @@
           </div>
         </div>
 
-        <div class="catalog__bottom bottom-belgium" data-target="belgium">
-          <div class="catalog__biography biography catalog__biography--active" data-target="zittov">
-            <img class="catalog__portrait" src="img/catalog/zittov.jpg" alt="Михель Зиттов">
-            <h3 class="biography__name">Михель Зиттов</h3>
+        <div class="catalog__bottom bottom-belgium animate__animated animate__fadeIn" data-target="belgium">
+          <div class="catalog__biography biography animate__animated animate__fadeIn catalog__biography--active" data-target="zittov">
+            <img class="catalog__portrait img" src="img/catalog/zittov.jpg" alt="Михель Зиттов">
+            <h3 class="biography__name title-h3">Михель Зиттов</h3>
             <span class="biography__date">1459г. — 21 декабря 1525г.</span>
             <p class="biography__description">
               Один из ведущих бельгийских художников.
             </p>
           </div>
-          <div class="catalog__biography biography" data-target="levina">
-            <img class="catalog__portrait" src="img/catalog/black.jpg" alt="Левина Теерлинк">
-            <h3 class="biography__name">Левина Теерлинк</h3>
+          <div class="catalog__biography biography animate__animated animate__fadeIn" data-target="levina">
+            <img class="catalog__portrait img" src="img/catalog/black.jpg" alt="Левина Теерлинк">
+            <h3 class="biography__name title-h3">Левина Теерлинк</h3>
             <span class="biography__date">1520г. — 23 июня 1576г.</span>
             <p class="biography__description">
               Один из ведущих бельгийских художников.
             </p>
           </div>
-          <div class="catalog__biography biography" data-target="vayriks">
-            <img class="catalog__portrait" src="img/catalog/black.jpg" alt="Вайрикс Антоний">
-            <h3 class="biography__name">Вайрикс Антоний</h3>
+          <div class="catalog__biography biography animate__animated animate__fadeIn" data-target="vayriks">
+            <img class="catalog__portrait img" src="img/catalog/black.jpg" alt="Вайрикс Антоний">
+            <h3 class="biography__name title-h3">Вайрикс Антоний</h3>
             <span class="biography__date">1555г. — 11 марта 1604г.</span>
             <p class="biography__description">
               Один из ведущих бельгийских художников.
             </p>
           </div>
-          <div class="catalog__biography biography" data-target="francua">
-            <img class="catalog__portrait" src="img/catalog/black.jpg" alt="Петер Франшуа">
-            <h3 class="biography__name">Петер Франшуа</h3>
+          <div class="catalog__biography biography animate__animated animate__fadeIn" data-target="francua">
+            <img class="catalog__portrait img" src="img/catalog/black.jpg" alt="Петер Франшуа">
+            <h3 class="biography__name title-h3">Петер Франшуа</h3>
             <span class="biography__date">20 октября 1606г. — 11 августа 1654г.</span>
             <p class="biography__description">
               Один из ведущих бельгийских художников.
             </p>
           </div>
-          <div class="catalog__biography biography" data-target="zhakuy">
-            <img class="catalog__portrait" src="img/catalog/black.jpg" alt="Жакуй д'Артуа">
-            <h3 class="biography__name">Жакуй д'Артуа</h3>
+          <div class="catalog__biography biography animate__animated animate__fadeIn" data-target="zhakuy">
+            <img class="catalog__portrait img" src="img/catalog/black.jpg" alt="Жакуй д'Артуа">
+            <h3 class="biography__name title-h3">Жакуй д'Артуа</h3>
             <span class="biography__date">1613г. — 1686г.</span>
             <p class="biography__description">
               Один из ведущих бельгийских художников.
             </p>
           </div>
-          <div class="catalog__biography biography" data-target="suve">
-            <img class="catalog__portrait" src="img/catalog/black.jpg" alt="Жозев-Бенуа Сюве">
-            <h3 class="biography__name">Жозев-Бенуа Сюве</h3>
+          <div class="catalog__biography biography animate__animated animate__fadeIn" data-target="suve">
+            <img class="catalog__portrait img" src="img/catalog/black.jpg" alt="Жозев-Бенуа Сюве">
+            <h3 class="biography__name title-h3">Жозев-Бенуа Сюве</h3>
             <span class="biography__date">3 января 1743г. — 9 февраля 1807г.</span>
             <p class="biography__description">
               Один из ведущих бельгийских художников.
             </p>
           </div>
-          <div class="catalog__biography biography" data-target="de-vis">
-            <img class="catalog__portrait" src="img/catalog/black.jpg" alt="Маттейс де Вис">
-            <h3 class="biography__name">Маттейс де Вис</h3>
+          <div class="catalog__biography biography animate__animated animate__fadeIn" data-target="de-vis">
+            <img class="catalog__portrait img" src="img/catalog/black.jpg" alt="Маттейс де Вис">
+            <h3 class="biography__name title-h3">Маттейс де Вис</h3>
             <span class="biography__date">22 марта 1702г. — 23 апреля 1765г.</span>
             <p class="biography__description">
               Один из ведущих бельгийских художников.
             </p>
           </div>
-          <div class="catalog__biography biography" data-target="de-byef">
-            <img class="catalog__portrait" src="img/catalog/black.jpg" alt="Эдуард де Бьеф">
-            <h3 class="biography__name">Эдуард де Бьеф</h3>
+          <div class="catalog__biography biography animate__animated animate__fadeIn" data-target="de-byef">
+            <img class="catalog__portrait img" src="img/catalog/black.jpg" alt="Эдуард де Бьеф">
+            <h3 class="biography__name title-h3">Эдуард де Бьеф</h3>
             <span class="biography__date">14 декабря 1808г. — 1881г.</span>
             <p class="biography__description">
               Один из ведущих бельгийских художников.
             </p>
           </div>
-          <div class="catalog__biography biography" data-target="bonye">
-            <img class="catalog__portrait" src="img/catalog/black.jpg" alt="Шарль Бонье">
-            <h3 class="biography__name">Шарль Бонье</h3>
+          <div class="catalog__biography biography animate__animated animate__fadeIn" data-target="bonye">
+            <img class="catalog__portrait img" src="img/catalog/black.jpg" alt="Шарль Бонье">
+            <h3 class="biography__name title-h3">Шарль Бонье</h3>
             <span class="biography__date">27 февраля 1814г. — 5 июля 1886г.</span>
             <p class="biography__description">
               Один из ведущих бельгийских художников.
             </p>
           </div>
-          <div class="catalog__biography biography" data-target="misho">
-            <img class="catalog__portrait" src="img/catalog/black.jpg" alt="Анри Мишо">
-            <h3 class="biography__name">Анри Мишо</h3>
+          <div class="catalog__biography biography animate__animated animate__fadeIn" data-target="misho">
+            <img class="catalog__portrait img" src="img/catalog/black.jpg" alt="Анри Мишо">
+            <h3 class="biography__name title-h3">Анри Мишо</h3>
             <span class="biography__date">24 мая 1899г. — 19 октября 1984г.</span>
             <p class="biography__description">
               Один из ведущих бельгийских художников.
             </p>
           </div>
-          <div class="catalog__biography biography" data-target="labis">
-            <img class="catalog__portrait" src="img/catalog/black.jpg" alt="Феликс Лабис">
-            <h3 class="biography__name">Феликс Лабис</h3>
+          <div class="catalog__biography biography animate__animated animate__fadeIn" data-target="labis">
+            <img class="catalog__portrait img" src="img/catalog/black.jpg" alt="Феликс Лабис">
+            <h3 class="biography__name title-h3">Феликс Лабис</h3>
             <span class="biography__date">9 марта 1905г. — 27 января 1982г.</span>
             <p class="biography__description">
               Один из ведущих бельгийских художников.
             </p>
           </div>
-          <div class="catalog__biography biography" data-target="bervuts">
-            <img class="catalog__portrait" src="img/catalog/black.jpg" alt="Фред Бервутс">
-            <h3 class="biography__name">Фред Бервутс</h3>
+          <div class="catalog__biography biography animate__animated animate__fadeIn" data-target="bervuts">
+            <img class="catalog__portrait img" src="img/catalog/black.jpg" alt="Фред Бервутс">
+            <h3 class="biography__name title-h3">Фред Бервутс</h3>
             <span class="biography__date">12 мая 1942 — </span>
             <p class="biography__description">
               Один из ведущих бельгийских художников.
             </p>
           </div>
-          <div class="catalog__biography biography" data-target="leemans">
-            <img class="catalog__portrait" src="img/catalog/black.jpg" alt="Хек Лееманс">
-            <h3 class="biography__name">Хек Лееманс</h3>
+          <div class="catalog__biography biography animate__animated animate__fadeIn" data-target="leemans">
+            <img class="catalog__portrait img" src="img/catalog/black.jpg" alt="Хек Лееманс">
+            <h3 class="biography__name title-h3">Хек Лееманс</h3>
             <span class="biography__date">28 января 1950 — </span>
             <p class="biography__description">
               Один из ведущих бельгийских художников.
@@ -1367,192 +1236,50 @@
           </div>
           <div class="catalog__accordion">
             <div id="accordion5" class="accordion">
-              <h3 class="accordion__title">C 1400 по 1499 гг.</h3>
-              <ul class="accordion__list">
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="zittov">Михель
-                    Зиттов</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="zittov">Михель
-                    Зиттов</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="zittov">Михель
-                    Зиттов</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="zittov">Михель
-                    Зиттов</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="zittov">Михель
-                    Зиттов</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="zittov">Михель
-                    Зиттов</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="zittov">Михель
-                    Зиттов</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="zittov">Михель
-                    Зиттов</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="zittov">Михель
-                    Зиттов</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="zittov">Михель
-                    Зиттов</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="zittov">Михель
-                    Зиттов</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="zittov">Михель
-                    Зиттов</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="zittov">Михель
-                    Зиттов</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="zittov">Михель
-                    Зиттов</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="zittov">Михель
-                    Зиттов</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="zittov">Михель
-                    Зиттов</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="zittov">Михель
-                    Зиттов</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="zittov">Михель
-                    Зиттов</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="zittov">Михель
-                    Зиттов</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="zittov">Михель
-                    Зиттов</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="zittov">Михель
-                    Зиттов</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="zittov">Михель
-                    Зиттов</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="zittov">Михель
-                    Зиттов</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="zittov">Михель
+              <h3 class="accordion__title title-h3">C 1400 по 1499 гг.</h3>
+              <ul class="accordion__list list">
+                <li class="accordion__item"><button class="accordion__btn accordion__tab accordion__tab--active" data-path="zittov">Михель
                     Зиттов</button></li>
               </ul>
-              <h3 class="accordion__title">C 1500 по 1599 гг.</h3>
-              <ul class="accordion__list">
+              <h3 class="accordion__title title-h3">C 1500 по 1599 гг.</h3>
+              <ul class="accordion__list list">
                 <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="levina">Левина
                     Теерлинк</button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="vayriks">Вайрикс
                     Антоний</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="vayriks">Вайрикс
-                    Антоний</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="vayriks">Вайрикс
-                    Антоний</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="vayriks">Вайрикс
-                    Антоний</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="vayriks">Вайрикс
-                    Антоний</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="vayriks">Вайрикс
-                    Антоний</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="vayriks">Вайрикс
-                    Антоний</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="vayriks">Вайрикс
-                    Антоний</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="vayriks">Вайрикс
-                    Антоний</button></li>
               </ul>
-              <h3 class="accordion__title">C 1600 по 1699 гг.</h3>
-              <ul class="accordion__list">
+              <h3 class="accordion__title title-h3">C 1600 по 1699 гг.</h3>
+              <ul class="accordion__list list">
                 <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="francua">Петер
                     Франшуа</button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="zhakuy">Жакуй
                     д'Артуа</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="zhakuy">Жакуй
-                    д'Артуа</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="zhakuy">Жакуй
-                    д'Артуа</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="zhakuy">Жакуй
-                    д'Артуа</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="zhakuy">Жакуй
-                    д'Артуа</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="zhakuy">Жакуй
-                    д'Артуа</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="zhakuy">Жакуй
-                    д'Артуа</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="zhakuy">Жакуй
-                    д'Артуа</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="zhakuy">Жакуй
-                    д'Артуа</button></li>
               </ul>
-              <h3 class="accordion__title">C 1700 по 1799 гг.</h3>
-              <ul class="accordion__list">
+              <h3 class="accordion__title title-h3">C 1700 по 1799 гг.</h3>
+              <ul class="accordion__list list">
                 <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="suve">Жозев-Бенуа
                     Сюве</button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="de-vis">Маттейс де
                     Вис</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="de-vis">Маттейс де
-                    Вис</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="de-vis">Маттейс де
-                    Вис</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="de-vis">Маттейс де
-                    Вис</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="de-vis">Маттейс де
-                    Вис</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="de-vis">Маттейс де
-                    Вис</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="de-vis">Маттейс де
-                    Вис</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="de-vis">Маттейс де
-                    Вис</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="de-vis">Маттейс де
-                    Вис</button></li>
               </ul>
-              <h3 class="accordion__title">C 1800 по 1899 гг.</h3>
-              <ul class="accordion__list">
+              <h3 class="accordion__title title-h3">C 1800 по 1899 гг.</h3>
+              <ul class="accordion__list list">
                 <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="de-byef">Эдуард де
                     Бьеф</button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="bonye">Шарль
                     Бонье</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="bonye">Шарль
-                    Бонье</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="bonye">Шарль
-                    Бонье</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="bonye">Шарль
-                    Бонье</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="bonye">Шарль
-                    Бонье</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="bonye">Шарль
-                    Бонье</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="bonye">Шарль
-                    Бонье</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="bonye">Шарль
-                    Бонье</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="bonye">Шарль
-                    Бонье</button></li>
               </ul>
-              <h3 class="accordion__title">C 1900 по 1999 гг.</h3>
-              <ul class="accordion__list">
+              <h3 class="accordion__title title-h3">C 1900 по 1999 гг.</h3>
+              <ul class="accordion__list list">
                 <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="misho">Анри
                     Мишо</button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="labis">Феликс
                     Лабис</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="labis">Феликс
-                    Лабис</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="labis">Феликс
-                    Лабис</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="labis">Феликс
-                    Лабис</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="labis">Феликс
-                    Лабис</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="labis">Феликс
-                    Лабис</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="labis">Феликс
-                    Лабис</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="labis">Феликс
-                    Лабис</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="labis">Феликс
-                    Лабис</button></li>
               </ul>
-              <h3 class="accordion__title">C 2000 г.</h3>
-              <ul class="accordion__list">
+              <h3 class="accordion__title title-h3">C 2000 г.</h3>
+              <ul class="accordion__list list">
                 <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="bervuts">Фред
                     Бервутс</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="leemans">Хек
-                    Лееманс</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="leemans">Хек
-                    Лееманс</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="leemans">Хек
-                    Лееманс</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="leemans">Хек
-                    Лееманс</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="leemans">Хек
-                    Лееманс</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="leemans">Хек
-                    Лееманс</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="leemans">Хек
-                    Лееманс</button></li>
-                <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="leemans">Хек
-                    Лееманс</button></li>
                 <li class="accordion__item"><button class="accordion__btn accordion__tab" data-path="leemans">Хек
                     Лееманс</button></li>
               </ul>
@@ -1564,84 +1291,84 @@
 
     <section class="events" id="events" aria-label="События">
       <div class="container events-container">
-        <h2 class="events__title">События</h2>
-        <ul class="events__list">
+        <h2 class="events__title title-h2">События</h2>
+        <ul class="events__list list">
           <li class="events__item event-item">
-            <img class="event-item__img" src="img/events/shchuseva.jpg" alt="Музей имени Щусева">
+            <img class="event-item__img img" src="img/events/shchuseva.jpg" alt="Музей имени Щусева">
             <div class="event-item__text">
               <span class="event-item__date">
                 Музей им. Щусева
                 <br>
                 с 20 марта по 30 апреля
               </span>
-              <h3 class="event-item__title">Книжная гравюра в живом восприятии</h3>
+              <h3 class="event-item__title title-h3">Книжная гравюра в живом восприятии</h3>
               <p class="event-item__description">
                 Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую
                 продолжили его брат Давид и сын Ридольфо.
               </p>
-              <a class="event-item__link" href="http://muar.ru/events/vystavki">Подробнее</a>
+              <a class="event-item__link link-style" href="http://muar.ru/events/vystavki">Подробнее</a>
             </div>
           </li>
           <li class="events__item event-item">
-            <img class="event-item__img" src="img/events/mmoma.jpg" alt="Московский музей современного искуства">
+            <img class="event-item__img img" src="img/events/mmoma.jpg" alt="Московский музей современного искуства">
             <div class="event-item__text">
               <span class="event-item__date">
                 ММОМА
                 <br>
                 24 марта 19:00
               </span>
-              <h3 class="event-item__title">«Открытая дискуссия». Дмитрий Петров и Сергей Ильин.</h3>
+              <h3 class="event-item__title title-h3">«Открытая дискуссия». Дмитрий Петров и Сергей Ильин.</h3>
               <p class="event-item__description">
                 Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого
                 факта.
               </p>
-              <a class="event-item__link" href="https://mmoma.ru/events/">Подробнее</a>
+              <a class="event-item__link link-style" href="https://mmoma.ru/events/">Подробнее</a>
             </div>
           </li>
           <li class="events__item event-item">
-            <img class="event-item__img" src="img/events/jewish.jpg" alt="Еврейский музей">
+            <img class="event-item__img img" src="img/events/jewish.jpg" alt="Еврейский музей">
             <div class="event-item__text">
               <span class="event-item__date">
                 Еврейский музей
                 <br>
                 с 31 марта по 21 апреля</span>
-              <h3 class="event-item__title">Выставка «Формация 2020»</h3>
+              <h3 class="event-item__title title-h3">Выставка «Формация 2020»</h3>
               <p class="event-item__description">
                 Идейные соображения высшего порядка, а также современная методология разработки играет важную роль в
                 формировании глубокомысленных рассуждений.
               </p>
-              <a class="event-item__link" href="https://www.jewish-museum.ru/events/">Подробнее</a>
+              <a class="event-item__link link-style" href="https://www.jewish-museum.ru/events/">Подробнее</a>
             </div>
           </li>
         </ul>
-        <ul class="events__list">
+        <ul class="events__list list">
           <li class="events__item event-item" id="hidden1">
-            <img class="event-item__img" src="img/events/tretyakovka.jpg" alt="Третьяковка на Крымском валу">
+            <img class="event-item__img img" src="img/events/tretyakovka.jpg" alt="Третьяковка на Крымском валу">
             <div class="event-item__text">
               <span class="event-item__date">
                 Третьяковка на Крымском валу
                 <br>
                 с 30 марта по 30 апреля</span>
-              <h3 class="event-item__title">XXIV Международная биеннале молодого искусства</h3>
+              <h3 class="event-item__title title-h3">XXIV Международная биеннале молодого искусства</h3>
               <p class="event-item__description">
                 Внезапно, реплицированные с зарубежных источников, современные исследования.
               </p>
-              <a class="event-item__link" href="https://www.tretyakovgallery.ru/events/">Подробнее</a>
+              <a class="event-item__link link-style" href="https://www.tretyakovgallery.ru/events/">Подробнее</a>
             </div>
           </li>
           <li class="events__item event-item" id="hidden2">
-            <img class="event-item__img" src="img/events/mmam.jpg" alt="Мультимедиа арт музей">
+            <img class="event-item__img img" src="img/events/mmam.jpg" alt="Мультимедиа арт музей">
             <div class="event-item__text">
               <span class="event-item__date">
                 ММАМ
                 <br>
                 с 8 апреля по 20 мая</span>
-              <h3 class="event-item__title">Джон Винзор. Фотографии из серии «Метафора серебра»</h3>
+              <h3 class="event-item__title title-h3">Джон Винзор. Фотографии из серии «Метафора серебра»</h3>
               <p class="event-item__description">
                 Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую
                 продолжили его брат Давид и сын Ридольфо.
               </p>
-              <a class="event-item__link" href="http://mamm-mdf.ru/events/">Подробнее</a>
+              <a class="event-item__link link-style" href="http://mamm-mdf.ru/events/">Подробнее</a>
             </div>
           </li>
         </ul>
@@ -1652,7 +1379,7 @@
     <section class="publications" id="publications" aria-label="Издания">
       <div class="container publications-container">
         <div class="publications__left">
-          <h2 class="publications__title">Издания</h2>
+          <h2 class="publications__title title-h2">Издания</h2>
           <div class="publications__category publications-category">
             <b class="publications-category__title">Категории</b>
             <div class="publications-category__checkbox">
@@ -1710,26 +1437,27 @@
               От
               <input class="filters-input__min filter-price" type="text" value="50" aria-label="Минимальная стоимость">
               до
-              <input class="filters-input__max filter-price" type="text" value="25 000" aria-label="Максимальная стоимость">
+              <input class="filters-input__max filter-price" type="text" value="25 000"
+                aria-label="Максимальная стоимость">
               руб.
             </div>
           </div>
         </div>
         <div class="swiper-container2">
           <div class="swiper__nav2">
-            <div class="swiper-button-prev2 swiper-btn"><svg class="swiper-btn__icon swiper-btn__icon--left" width="11" height="12"
-                viewbox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6 11L0.999995 6L6 0.999998" stroke="var(--color-black)" />
+            <div class="swiper-button-prev2 swiper-btn"><svg class="swiper-btn__icon swiper-btn__icon--left" width="11"
+                height="12" viewbox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 11L0.999995 6L6 0.999998" stroke="var(--color-white)" />
               </svg></div>
             <div class="swiper-pagination2"></div>
-            <div class="swiper-button-next2 swiper-btn"><svg class="swiper-btn__icon swiper-btn__icon--right" width="11" height="12"
-                viewbox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5 11L10 6L5 0.999998" stroke="var(--color-black)" />
+            <div class="swiper-button-next2 swiper-btn"><svg class="swiper-btn__icon swiper-btn__icon--right" width="11"
+                height="12" viewbox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 11L10 6L5 0.999998" stroke="var(--color-white)" />
               </svg></div>
           </div>
           <div class="swiper-wrapper">
             <div class="swiper-slide publications-slide">
-              <img class="publications-slide__img" src="img/publications/itten.jpg" alt="">
+              <img class="publications-slide__img img" src="img/publications/itten.jpg" alt="">
               <div class="publications-slide__description">
                 <div class="publications-slide__heading">
                   <b class="publications-slide__name">Искусство цвета</b>
@@ -1740,7 +1468,7 @@
               </div>
             </div>
             <div class="swiper-slide publications-slide">
-              <img class="publications-slide__img" src="img/publications/ruder.jpg" alt="">
+              <img class="publications-slide__img img" src="img/publications/ruder.jpg" alt="">
               <div class="publications-slide__heading">
                 <b class="publications-slide__name">Типографика</b>
                 <i class="publications-slide__cost">2 450 руб</i>
@@ -1749,7 +1477,7 @@
               <button class="publications-slide__btn button">Заказать</button>
             </div>
             <div class="swiper-slide publications-slide">
-              <img class="publications-slide__img" src="img/publications/gordon.jpg" alt="">
+              <img class="publications-slide__img img" src="img/publications/gordon.jpg" alt="">
               <div class="publications-slide__heading">
                 <b class="publications-slide__name">Книга про буквы</b>
                 <i class="publications-slide__cost">2 200 руб</i>
@@ -1758,7 +1486,7 @@
               <button class="publications-slide__btn button">Заказать</button>
             </div>
             <div class="swiper-slide publications-slide">
-              <img class="publications-slide__img" src="img/publications/krichevsky.jpg" alt="">
+              <img class="publications-slide__img img" src="img/publications/krichevsky.jpg" alt="">
               <div class="publications-slide__heading">
                 <b class="publications-slide__name">Николай Ильин</b>
                 <i class="publications-slide__cost">1 100 руб</i>
@@ -1767,7 +1495,7 @@
               <button class="publications-slide__btn button">Заказать</button>
             </div>
             <div class="swiper-slide publications-slide">
-              <img class="publications-slide__img" src="img/publications/muller-brockman.jpg" alt="">
+              <img class="publications-slide__img img" src="img/publications/muller-brockman.jpg" alt="">
               <div class="publications-slide__heading">
                 <b class="publications-slide__name">Модульные сетки в граф...</b>
                 <i class="publications-slide__cost">1 450 руб</i>
@@ -1776,7 +1504,7 @@
               <button class="publications-slide__btn button">Заказать</button>
             </div>
             <div class="swiper-slide publications-slide">
-              <img class="publications-slide__img" src="img/publications/heller.jpg" alt="">
+              <img class="publications-slide__img img" src="img/publications/heller.jpg" alt="">
               <div class="publications-slide__heading">
                 <b class="publications-slide__name">Эволюция графических ст...</b>
                 <i class="publications-slide__cost">3 200 руб</i>
@@ -1785,7 +1513,7 @@
               <button class="publications-slide__btn button">Заказать</button>
             </div>
             <div class="swiper-slide publications-slide">
-              <img class="publications-slide__img" src="img/publications/arnheim.jpg" alt="">
+              <img class="publications-slide__img img" src="img/publications/arnheim.jpg" alt="">
               <div class="publications-slide__heading">
                 <b class="publications-slide__name">Искусство и визуальное в...</b>
                 <i class="publications-slide__cost">2 200 руб</i>
@@ -1800,7 +1528,7 @@
 
     <section class="projects" id="projects" aria-label="Проекты">
       <div class="container projects-container">
-        <h2 class="projects__title">Проекты</h2>
+        <h2 class="projects__title title-h2">Проекты</h2>
         <p class="projects__description">
           Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно
           фиксирует необходимость своевременного выполнения сверхзадачи. А ещё независимые государства смешаны с не
@@ -1824,13 +1552,13 @@
           выводы, а также представители современных социальных резервов
           призывают нас к новым свершениям, которые, в свою очередь, должны быть смешаны с не уникальными данными до
           степени совершенной неузнаваемости. Подробнее:
-          <a class="projects__link" href="#about">blanchard-art.ru/projects/about</a>
+          <a class="projects__link link-style" href="#about">blanchard-art.ru/projects/about</a>
         </p>
         <div class="project__partners partners">
-          <h3 class="partners__title">Партнеры проектов:</h3>
+          <h3 class="partners__title title-h3">Партнеры проектов:</h3>
           <div class="swiper-container3">
-            <div class="swiper-button-prev3 swiper-btn"><svg class="swiper-btn__icon swiper-btn__icon--left" width="11" height="12"
-                viewbox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <div class="swiper-button-prev3 swiper-btn swiper-btn--light"><svg class="swiper-btn__icon swiper-btn__icon--left" width="11"
+                height="12" viewbox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M6 11L0.999995 6L6 0.999998" stroke="var(--color-black)" />
               </svg></div>
             <div class="swiper-wrapper">
@@ -1852,8 +1580,8 @@
               <a class="swiper-slide partners__slider partners__esadimg" target="blank"
                 href="https://www.esad-valenciennes.fr/"></a>
             </div>
-            <div class="swiper-button-next3 swiper-btn"><svg class="swiper-btn__icon swiper-btn__icon--right" width="11" height="12"
-                viewbox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <div class="swiper-button-next3 swiper-btn swiper-btn--light"><svg class="swiper-btn__icon swiper-btn__icon--right" width="11"
+                height="12" viewbox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M5 11L10 6L5 0.999998" stroke="var(--color-black)" />
               </svg></div>
           </div>
@@ -1862,38 +1590,49 @@
     </section>
 
     <section class="contacts" id="contacts" aria-label="Контакты">
-      <h2 class="container contacts__title">Контакты</h2>
+      <h2 class="container contacts__title title-h2">Контакты</h2>
       <div class="container contacts-container">
         <div class="contacts__left">
-          <h3 class="contacts__name">Шоурум №4</h3>
+          <h3 class="contacts__name title-h3">Шоурум №4</h3>
           <address class="contacts__address">Леонтьевский переулок, дом 5, строение 1</address>
           <form class="contacts__form contacts-form form" action="https://jsonplaceholder.typicode.com/posts"
             method="POST">
             <p class="contacts-form__heading">Заказать обратный звонок</p>
-            <input class="contacts-form__input" name="Имя" type="text" placeholder="Имя*" data-validate-field="name" aria-label="Введите имя">
+            <input class="contacts-form__input" name="Имя" type="text" placeholder="Имя*" data-validate-field="name"
+              aria-label="Введите имя">
             <input class="contacts-form__input" name="tel" type="tel" placeholder="Телефон*" data-validate-field="tel"
               data-validate-rules="phone" aria-label="Введите телефон">
             <button class="contacts-form__button button" type="submit">Заказать</button>
           </form>
           <div class="contacts__social contact-social">
-            <h3 class="contact-social__heading">Связаться в один клик</h3>
-            <a class="contact-social__link contact-social__whatsapp" target="blank" href="https://www.whatsapp.com/" aria-label="Вотсапп">
+            <h3 class="contact-social__heading title-h3">Связаться в один клик</h3>
+            <a class="contact-social__link contact-social__whatsapp" target="blank" href="https://www.whatsapp.com/"
+              aria-label="Вотсапп">
               <svg width="40" height="40" viewbox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M20 39.375C30.7005 39.375 39.375 30.7005 39.375 20C39.375 9.29948 30.7005 0.625 20 0.625C9.29948 0.625 0.625 9.29948 0.625 20C0.625 30.7005 9.29948 39.375 20 39.375Z" fill="#30BF39"/>
-                <path d="M25.8749 21.751C25.6249 21.626 24.3124 20.876 24.0624 20.8135C23.8124 20.6885 23.6249 20.6885 23.4374 20.9385C23.2499 21.1885 22.6874 21.8135 22.5624 21.9385C22.3749 22.126 22.2499 22.126 21.9999 22.001C21.7499 21.876 20.8749 21.5635 19.8749 20.5635C19.1249 19.8135 18.5624 18.9385 18.4374 18.626C18.3124 18.376 18.4374 18.1885 18.5624 18.0635C18.6874 17.9385 18.8124 17.751 18.9999 17.626C19.1874 17.501 19.1874 17.376 19.3124 17.1885C19.4374 17.001 19.3749 16.876 19.3124 16.6885C19.2499 16.501 18.7499 15.1885 18.5624 14.626C18.3749 14.0635 18.1249 14.1885 17.9999 14.126C17.8124 14.126 17.6874 14.0635 17.4999 14.0635C17.2499 14.0635 16.9374 14.1885 16.7499 14.376C16.4999 14.626 15.7499 15.251 15.7499 16.5635C15.7499 17.876 16.6249 19.251 16.7499 19.376C16.8749 19.5635 18.4999 22.4385 21.1874 23.626C23.8749 24.8135 23.8749 24.4385 24.3749 24.4385C24.8749 24.4385 25.9999 23.8135 26.2499 23.251C26.4999 22.626 26.4999 22.0635 26.4374 22.001C26.3124 22.001 26.1249 21.9385 25.8749 21.751ZM20.8749 28.1885C19.1249 28.1885 17.4999 27.6885 16.0624 26.751L12.6874 27.8135L13.8124 24.5635C12.7499 23.0635 12.1249 21.251 12.1249 19.376C12.1249 14.501 16.0624 10.5635 20.9374 10.5635C25.8124 10.5635 29.6874 14.501 29.6874 19.376C29.6874 24.251 25.7499 28.1885 20.8749 28.1885ZM20.8749 8.81348C15.0624 8.81348 10.3124 13.5635 10.3124 19.376C10.3124 21.3135 10.8124 23.1885 11.8124 24.8135L9.87489 30.501L15.7499 28.626C17.3124 29.501 19.0624 29.9385 20.8749 29.9385C26.6874 29.9385 31.4374 25.1885 31.4374 19.376C31.4374 13.5635 26.7499 8.81348 20.8749 8.81348Z" fill="white"/>
-                </svg>
+                <path
+                  d="M20 39.375C30.7005 39.375 39.375 30.7005 39.375 20C39.375 9.29948 30.7005 0.625 20 0.625C9.29948 0.625 0.625 9.29948 0.625 20C0.625 30.7005 9.29948 39.375 20 39.375Z"
+                  fill="#30BF39" />
+                <path
+                  d="M25.8749 21.751C25.6249 21.626 24.3124 20.876 24.0624 20.8135C23.8124 20.6885 23.6249 20.6885 23.4374 20.9385C23.2499 21.1885 22.6874 21.8135 22.5624 21.9385C22.3749 22.126 22.2499 22.126 21.9999 22.001C21.7499 21.876 20.8749 21.5635 19.8749 20.5635C19.1249 19.8135 18.5624 18.9385 18.4374 18.626C18.3124 18.376 18.4374 18.1885 18.5624 18.0635C18.6874 17.9385 18.8124 17.751 18.9999 17.626C19.1874 17.501 19.1874 17.376 19.3124 17.1885C19.4374 17.001 19.3749 16.876 19.3124 16.6885C19.2499 16.501 18.7499 15.1885 18.5624 14.626C18.3749 14.0635 18.1249 14.1885 17.9999 14.126C17.8124 14.126 17.6874 14.0635 17.4999 14.0635C17.2499 14.0635 16.9374 14.1885 16.7499 14.376C16.4999 14.626 15.7499 15.251 15.7499 16.5635C15.7499 17.876 16.6249 19.251 16.7499 19.376C16.8749 19.5635 18.4999 22.4385 21.1874 23.626C23.8749 24.8135 23.8749 24.4385 24.3749 24.4385C24.8749 24.4385 25.9999 23.8135 26.2499 23.251C26.4999 22.626 26.4999 22.0635 26.4374 22.001C26.3124 22.001 26.1249 21.9385 25.8749 21.751ZM20.8749 28.1885C19.1249 28.1885 17.4999 27.6885 16.0624 26.751L12.6874 27.8135L13.8124 24.5635C12.7499 23.0635 12.1249 21.251 12.1249 19.376C12.1249 14.501 16.0624 10.5635 20.9374 10.5635C25.8124 10.5635 29.6874 14.501 29.6874 19.376C29.6874 24.251 25.7499 28.1885 20.8749 28.1885ZM20.8749 8.81348C15.0624 8.81348 10.3124 13.5635 10.3124 19.376C10.3124 21.3135 10.8124 23.1885 11.8124 24.8135L9.87489 30.501L15.7499 28.626C17.3124 29.501 19.0624 29.9385 20.8749 29.9385C26.6874 29.9385 31.4374 25.1885 31.4374 19.376C31.4374 13.5635 26.7499 8.81348 20.8749 8.81348Z"
+                  fill="white" />
+              </svg>
             </a>
-            <a class="contact-social__link contact-social__telegramm" target="blank" href="https://telegram.org/" aria-label="Телеграмм">
+            <a class="contact-social__link contact-social__telegramm" target="blank" href="https://telegram.org/"
+              aria-label="Телеграмм">
               <svg width="40" height="40" viewbox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M20 40C31.0457 40 40 31.0457 40 20C40 8.95431 31.0457 0 20 0C8.95431 0 0 8.95431 0 20C0 31.0457 8.95431 40 20 40Z" fill="url(#paint0_linear)"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.05311 19.7889L20.7167 14.7649C26.271 12.4547 27.425 12.0534 28.1773 12.0402C28.3428 12.0373 28.7127 12.0783 28.9523 12.2727C29.1547 12.4369 29.2103 12.6587 29.237 12.8143C29.2636 12.9699 29.2968 13.3246 29.2704 13.6017C28.9694 16.7641 27.667 24.4386 27.0045 27.9806C26.7241 29.4794 26.1725 29.9819 25.6377 30.0311C24.4762 30.138 23.5943 29.2635 22.4694 28.5261L18.006 25.528C16.0314 24.2268 17.3114 23.5116 18.4368 22.3428C18.7313 22.0368 23.8486 17.3823 23.9476 16.96C23.9596 16.9072 23.9715 16.7104 23.8546 16.6064C23.7376 16.5024 23.565 16.5384 23.4404 16.5663C23.2639 16.6064 20.4519 18.465 15.0044 22.1423C14.2062 22.6904 13.4832 22.9575 12.8354 22.9435C12.1213 22.9281 10.7477 22.5397 9.72651 22.2078C8.47399 21.8007 7.47851 21.5854 7.56523 20.8939C7.61035 20.5338 8.10631 20.1655 9.05307 19.789L9.05311 19.7889Z" fill="white"/>
+                <path
+                  d="M20 40C31.0457 40 40 31.0457 40 20C40 8.95431 31.0457 0 20 0C8.95431 0 0 8.95431 0 20C0 31.0457 8.95431 40 20 40Z"
+                  fill="url(#paint0_linear)" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M9.05311 19.7889L20.7167 14.7649C26.271 12.4547 27.425 12.0534 28.1773 12.0402C28.3428 12.0373 28.7127 12.0783 28.9523 12.2727C29.1547 12.4369 29.2103 12.6587 29.237 12.8143C29.2636 12.9699 29.2968 13.3246 29.2704 13.6017C28.9694 16.7641 27.667 24.4386 27.0045 27.9806C26.7241 29.4794 26.1725 29.9819 25.6377 30.0311C24.4762 30.138 23.5943 29.2635 22.4694 28.5261L18.006 25.528C16.0314 24.2268 17.3114 23.5116 18.4368 22.3428C18.7313 22.0368 23.8486 17.3823 23.9476 16.96C23.9596 16.9072 23.9715 16.7104 23.8546 16.6064C23.7376 16.5024 23.565 16.5384 23.4404 16.5663C23.2639 16.6064 20.4519 18.465 15.0044 22.1423C14.2062 22.6904 13.4832 22.9575 12.8354 22.9435C12.1213 22.9281 10.7477 22.5397 9.72651 22.2078C8.47399 21.8007 7.47851 21.5854 7.56523 20.8939C7.61035 20.5338 8.10631 20.1655 9.05307 19.789L9.05311 19.7889Z"
+                  fill="white" />
                 <defs>
-                <lineargradient id="paint0_linear" x1="20" y1="0" x2="20" y2="39.7033" gradientunits="userSpaceOnUse">
-                <stop stop-color="#2AABEE"/>
-                <stop offset="1" stop-color="#229ED9"/>
-                </lineargradient>
+                  <lineargradient id="paint0_linear" x1="20" y1="0" x2="20" y2="39.7033" gradientunits="userSpaceOnUse">
+                    <stop offset="1" stop-color="#2AABEE" />
+                    <stop offset="1" stop-color="#229ED9" />
+                  </lineargradient>
                 </defs>
-                </svg>
+              </svg>
             </a>
           </div>
         </div>
@@ -1905,19 +1644,19 @@
   <footer class="footer">
     <div class="container footer-container">
       <a class="footer__link" target="blank" href="https://blanchard.ru/about-us/our-story">
-        <img class="logo footer__logo" src="img/footer/Лого.svg" alt="Blanchard-художественная галерея">
+        <img class="logo footer__logo img" src="img/footer/Лого.svg" alt="Blanchard-художественная галерея">
       </a>
       <div class="footer__social footer-social">
-        <a class="footer-social__item footer-social__vk" target="blank" href="https://vk.com/" aria-label="Вконтакте"><svg
-            class="footer-social__icon" width="46" height="46" viewbox="0 0 46 46" fill="none"
+        <a class="footer-social__item footer-social__vk" target="blank" href="https://vk.com/"
+          aria-label="Вконтакте"><svg class="footer-social__icon" width="46" height="46" viewbox="0 0 46 46" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <path
               d="M22.6983 0C10.1628 0 0 10.1623 0 22.6983C0 35.2343 10.1628 45.3966 22.6983 45.3966C35.2338 45.3966 45.3966 35.2343 45.3966 22.6983C45.3966 10.1623 35.2338 0 22.6983 0ZM34.2121 25.1532C35.27 26.1865 36.3893 27.159 37.339 28.2991C37.7598 28.8035 38.1564 29.325 38.4582 29.9116C38.8892 30.748 38.5 31.6652 37.7514 31.7149L33.1012 31.714C31.9002 31.8134 30.9445 31.329 30.1387 30.5079C29.4955 29.8535 28.8987 29.1546 28.2792 28.4779C28.0261 28.2002 27.7595 27.9388 27.4418 27.733C26.8079 27.3206 26.2571 27.4469 25.8939 28.1092C25.5238 28.7831 25.4393 29.5298 25.404 30.2799C25.3534 31.3764 25.0227 31.6629 23.9225 31.7145C21.5716 31.8245 19.341 31.4679 17.2679 30.2827C15.439 29.2373 14.0235 27.7618 12.79 26.0913C10.388 22.8348 8.54849 19.2607 6.89564 15.5839C6.52364 14.7559 6.79579 14.3128 7.70929 14.2956C9.227 14.2664 10.7447 14.2701 12.2624 14.2942C12.8801 14.304 13.2888 14.6574 13.5261 15.2403C14.3463 17.2581 15.3517 19.178 16.6117 20.9586C16.9474 21.4328 17.2902 21.9055 17.7783 22.2404C18.317 22.6101 18.7275 22.4879 18.9816 21.8865C19.1441 21.5043 19.2143 21.0956 19.2495 20.686C19.3703 19.283 19.3847 17.8805 19.1757 16.483C19.0457 15.6085 18.5539 15.0438 17.6821 14.8785C17.2382 14.7944 17.3032 14.63 17.5191 14.3764C17.8939 13.938 18.245 13.6668 18.9468 13.6668L24.2007 13.6659C25.0287 13.8284 25.2145 14.2 25.3269 15.0341L25.3315 20.8727C25.3218 21.1954 25.4936 22.1521 26.0732 22.3635C26.5376 22.5167 26.8441 22.1442 27.1219 21.8503C28.3818 20.5132 29.2795 18.9351 30.0834 17.3018C30.4382 16.5815 30.7443 15.8361 31.0415 15.0893C31.2626 14.5371 31.6062 14.2654 32.2295 14.2747L37.2888 14.2808C37.4379 14.2808 37.5893 14.2822 37.737 14.3077C38.5897 14.4535 38.8233 14.8204 38.5595 15.6522C38.1443 16.9591 37.3376 18.0476 36.549 19.139C35.7038 20.3075 34.8024 21.4351 33.9655 22.6087C33.1964 23.6815 33.2572 24.2216 34.2121 25.1532Z"
               fill="#CACACA" />
           </svg></a>
-        <a class="footer-social__item footer-social__instagram" target="blank" href="https://www.instagram.com/" aria-label="Инстаграмм"><svg
-            class="footer-social__icon" width="46" height="46" viewbox="0 0 46 46" fill="none"
-            xmlns="http://www.w3.org/2000/svg">
+        <a class="footer-social__item footer-social__instagram" target="blank" href="https://www.instagram.com/"
+          aria-label="Инстаграмм"><svg class="footer-social__icon" width="46" height="46" viewbox="0 0 46 46"
+            fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0)">
               <path
                 d="M18.7503 22.6981C18.7503 25.0976 20.6954 27.0427 23.0949 27.0427C25.4944 27.0427 27.4395 25.0976 27.4395 22.6981C27.4395 20.2986 25.4944 18.3535 23.0949 18.3535C20.6954 18.3535 18.7503 20.2986 18.7503 22.6981Z"
@@ -1935,8 +1674,8 @@
               </clippath>
             </defs>
           </svg></a>
-        <a class="footer-social__item footer-social__facebook" target="blank" href="https://www.facebook.com/" aria-label="Фейсбук"><svg
-            class="footer-social__icon" width="47" height="46" viewbox="0 0 47 46" fill="none"
+        <a class="footer-social__item footer-social__facebook" target="blank" href="https://www.facebook.com/"
+          aria-label="Фейсбук"><svg class="footer-social__icon" width="47" height="46" viewbox="0 0 47 46" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <path
               d="M23.4915 0.0908203C11.0074 0.0908203 0.793213 10.3233 0.793213 22.9259C0.793213 34.3206 9.10078 43.7782 19.9506 45.4874V29.5348H14.1852V22.9259H19.9506V17.8894C19.9506 12.1692 23.3326 9.02429 28.5305 9.02429C31.0046 9.02429 33.5922 9.45729 33.5922 9.45729V15.0863H30.7322C27.9176 15.0863 27.0324 16.8411 27.0324 18.6414V22.9259H33.3425L32.3211 29.5348H27.0324V45.4874C32.3811 44.6393 37.2516 41.8993 40.7647 37.7619C44.2778 33.6246 46.2019 28.3626 46.1898 22.9259C46.1898 10.3233 35.9755 0.0908203 23.4915 0.0908203Z"
