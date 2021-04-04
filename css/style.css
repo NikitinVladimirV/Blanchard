@@ -208,10 +208,8 @@
 
 .header__enter {
   min-width: max-content;
-  max-height: 25px;
-  padding: 13px 1px 0 5px;
+  padding: 3px 2px 0 4px;
   font-size: 18px;
-  line-height: 0;
   color: var(--color-white);
   border: 2px solid transparent;
   transition: color .2s linear;
@@ -1325,12 +1323,26 @@ input[type="checkbox"].focus-visible ~ span {
   border: 2px solid var(--color-border--focus);
 }
 
+.publications-category__span {
+  transition: color .2s linear;
+}
+
 .publications-category__span:hover {
   color: #C283F3;
 }
+
+.publications-category__span::before {
+  transition: border .2s linear;
+}
+
 .publications-category__span:hover::before {
   border: 1px solid #C283F3;
 }
+
+.publications-category__span::after {
+  transition: background-color .2s linear;
+}
+
 .publications-category__span:hover::after {
   background-color: #C283F3;
 }
@@ -1548,15 +1560,21 @@ input[type="checkbox"].focus-visible ~ span {
 .partners__img {
   width: 100%;
   transition: filter .2s linear;
-}
-
-.partners__img:hover {
   -webkit-filter: grayscale(100%);
   -moz-filter: grayscale(100%);
   -ms-filter: grayscale(100%);
   -o-filter: grayscale(100%);
   filter: grayscale(100%);
   filter: gray; /* IE 6-9 */
+}
+
+.partners__img:hover {
+  -webkit-filter: grayscale(0%);
+  -moz-filter: grayscale(0%);
+  -ms-filter: grayscale(0%);
+  -o-filter: grayscale(0%);
+  filter: grayscale(0%);
+  filter: none; /* IE 6-9 */
 }
 
 .swiper-button-prev3 {
@@ -1621,6 +1639,10 @@ input[type="checkbox"].focus-visible ~ span {
   font-size: 24px;
 }
 
+.contacts-form__label {
+  position: relative;
+}
+
 .contacts-form__input {
   padding: 10px 202px 10px 23px;
   margin-bottom: 23px;
@@ -1630,6 +1652,11 @@ input[type="checkbox"].focus-visible ~ span {
 
 .contacts-form__input::placeholder {
   color: #999;
+}
+
+.js-validate-error-label {
+  position: absolute;
+  top: 35px;
 }
 
 .contacts-form__button {
@@ -1682,11 +1709,6 @@ input[type="checkbox"].focus-visible ~ span {
   border: 2px solid transparent;
   border-radius: 50%;
   background-repeat: no-repeat;
-  transition: border .2s linear;
-}
-
-.contact-social__link:hover path {
-  stroke: var(--color-violet);
 }
 
 .contact-social__link:active path {
