@@ -168,4 +168,10 @@ window.addEventListener('DOMContentLoaded', function () {
       },
     },
   });
+  
+  document.querySelectorAll('.publications-category__span').forEach(function(x) {
+    x.addEventListener('click', function(event) {
+      event.target.classList.toggle('is-active')
+    })
+  })
 })
