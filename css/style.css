@@ -864,6 +864,94 @@ opacity: 1;
   display: block;
 }
 
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0,0,0, .7);
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s linear;
+}
+
+.modal__artist {
+  display: none;
+  max-width: 900px;
+  padding: 121px 50px 123px 450px;
+  color: #333;
+  background-color: var(--color-white);
+  background-repeat: no-repeat;
+  background-size: 44% 100%;
+}
+
+.modal-artist--13 {
+  background-image: url(/img/gallery/gallery13.jpg);
+}
+.modal-artist--14 {
+  background-image: url(/img/gallery/gallery14.jpg);
+}
+.modal-artist--15 {
+  background-image: url(/img/gallery/gallery15.jpg);
+}
+.modal-artist--16 {
+  background-image: url(/img/gallery/gallery16.jpg);
+}
+.modal-artist--17 {
+  background-image: url(/img/gallery/gallery17.jpg);
+}
+.modal-artist--18 {
+  background-image: url(/img/gallery/gallery18.jpg);
+}
+.modal-artist--1 {
+  background-image: url(/img/gallery/gallery1.jpg);
+}
+.modal-artist--2 {
+  background-image: url(/img/gallery/gallery2.jpg);
+}
+.modal-artist--3 {
+  background-image: url(/img/gallery/gallery3.jpg);
+}
+.modal-artist--4 {
+  background-image: url(/img/gallery/gallery4.jpg);
+}
+
+.modal-overlay--visible {
+  opacity: 1;
+  visibility: visible;
+  transition: all .3s linear;
+}
+
+.modal__artist--visible {
+  display: block;
+  
+}
+
+.modal-artist__name {
+  margin: 0;
+  line-height: 1;
+}
+
+.modal-artist__picture {
+  font-weight: 600;
+  line-height: 0;
+}
+
+.modal-artist__date {
+  display: block;
+  margin-bottom: 40px;
+  font-size: 12px;
+  line-height: 0;
+  color: #969696;
+}
+
 /* Catalog */
 .catalog-container {
   padding: 90px 0 42px 2px;
