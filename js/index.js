@@ -174,4 +174,5 @@ window.addEventListener('DOMContentLoaded', function () {
       event.target.classList.toggle('is-active')
     })
   })
+  window.addEventListener('focusin', event => console.log(new Date, event.target));
 })
