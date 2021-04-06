@@ -27,6 +27,10 @@ window.addEventListener('DOMContentLoaded', function () {
 
   const swiper = new Swiper('.swiper-container', {
     loop: true,
+    effect: 'fade',
+    autoplay: {
+      delay: 5000,
+    },
   });
 
   const swiper1 = new Swiper('.swiper-container1', {
