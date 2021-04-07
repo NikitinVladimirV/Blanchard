@@ -164,6 +164,10 @@
   padding: 28px 0 17px 3px;
 }
 
+.burger {
+  display: none;
+}
+
 .header__link {
   margin-right: 10.9%;
   border: 2px solid transparent;
@@ -887,34 +891,34 @@ opacity: 1;
 }
 
 .modal-artist--13 {
-  background-image: url(/img/gallery/gallery13.jpg);
+  background-image: url(../img/gallery/gallery13.jpg);
 }
 .modal-artist--14 {
-  background-image: url(/img/gallery/gallery14.jpg);
+  background-image: url(../img/gallery/gallery14.jpg);
 }
 .modal-artist--15 {
-  background-image: url(/img/gallery/gallery15.jpg);
+  background-image: url(../img/gallery/gallery15.jpg);
 }
 .modal-artist--16 {
-  background-image: url(/img/gallery/gallery16.jpg);
+  background-image: url(../img/gallery/gallery16.jpg);
 }
 .modal-artist--17 {
-  background-image: url(/img/gallery/gallery17.jpg);
+  background-image: url(../img/gallery/gallery17.jpg);
 }
 .modal-artist--18 {
-  background-image: url(/img/gallery/gallery18.jpg);
+  background-image: url(../img/gallery/gallery18.jpg);
 }
 .modal-artist--1 {
-  background-image: url(/img/gallery/gallery1.jpg);
+  background-image: url(../img/gallery/gallery1.jpg);
 }
 .modal-artist--2 {
-  background-image: url(/img/gallery/gallery2.jpg);
+  background-image: url(../img/gallery/gallery2.jpg);
 }
 .modal-artist--3 {
-  background-image: url(/img/gallery/gallery3.jpg);
+  background-image: url(../img/gallery/gallery3.jpg);
 }
 .modal-artist--4 {
-  background-image: url(/img/gallery/gallery4.jpg);
+  background-image: url(../img/gallery/gallery4.jpg);
 }
 
 .modal-overlay--visible {
@@ -1903,4 +1907,39 @@ input[type="checkbox"].focus-visible ~ span {
 
 .focus-visible {
   border: 2px solid var(--color-border--focus);
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 1919px) {
+  /* Header */
+  .header__top {
+    padding: 0 0 0 0;
+  }
+
+  .header__nav {
+    display: none;
+  }
+
+  .header__enter {
+    display: none;
+  }
+
+  .header__background--opacity {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  .header-menu__list {
+    display: none;
+  }
 }
