@@ -164,3 +164,12 @@ window.addEventListener('DOMContentLoaded', function () {
     });
     // window.addEventListener('focusin', event => console.log(new Date, event.target));
   })
+  
+  // https://jsonplaceholder.typicode.com/posts
+
+  
+  // document.querySelectorAll('.publications-category__span').forEach(function(x) {
+  //   x.addEventListener('click', function(event) {
+  //     event.target.classList.toggle('is-active')
+  //   })
+  // })

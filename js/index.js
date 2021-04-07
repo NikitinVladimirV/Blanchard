@@ -28,8 +28,9 @@ window.addEventListener('DOMContentLoaded', function () {
   const swiper = new Swiper('.swiper-container', {
     loop: true,
     effect: 'fade',
+    speed: 4000,
     autoplay: {
-      delay: 5000,
+      delay: 2000,
     },
   });
 
@@ -172,12 +173,6 @@ window.addEventListener('DOMContentLoaded', function () {
       },
     },
   });
-  
-  document.querySelectorAll('.publications-category__span').forEach(function(x) {
-    x.addEventListener('click', function(event) {
-      event.target.classList.toggle('is-active')
-    })
-  })
 
   const btns = document.querySelectorAll('.card');
   const modalOverlay = document.querySelector('.modal-overlay');
@@ -206,6 +201,6 @@ window.addEventListener('DOMContentLoaded', function () {
       });
     };
   });
-  
-  window.addEventListener('focusin', event => console.log(new Date, event.target));
+
+  // window.addEventListener('focusin', event => console.log(new Date, event.target));
 })

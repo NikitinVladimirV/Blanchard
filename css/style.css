@@ -551,7 +551,7 @@ opacity: 1;
 }
 
 .swiper-wrapper {
-  --animate-duration: 10s;
+  --animate-duration: 20s;
 }
 
 .swiper-slide1 {
@@ -1400,7 +1400,17 @@ input[type="checkbox"] ~ span {
   border: 2px solid transparent;
 }
 
+.publications-category__label input[type="checkbox"]:checked + span {
+  color: var(--color-3F3);
+}
+
 .publications-category__label input[type="checkbox"]:checked + span::after {
+  background-color: var(--color-3F3);
+  opacity: 1;
+}
+
+.publications-category__label input[type="checkbox"]:checked + span::before {
+  border: 1px solid var(--color-3F3);
   opacity: 1;
 }
 
@@ -1429,18 +1439,6 @@ input[type="checkbox"].focus-visible ~ span {
 }
 
 .publications-category__span:hover::after {
-  background-color: var(--color-3F3);
-}
-
-.publications-category__span.is-active {
-  color: var(--color-3F3);
-}
-
-.publications-category__span.is-active::before {
-  border: 1px solid var(--color-3F3);
-}
-
-.publications-category__span.is-active::after {
   background-color: var(--color-3F3);
 }
 
