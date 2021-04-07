@@ -58,6 +58,11 @@
   background-color: var(--color-white);
 }
 
+.overflow {
+  overflow: hidden;
+  padding-right: 17px;
+}
+
 .section-title {
   font-size: 48px;
   font-weight: 400;

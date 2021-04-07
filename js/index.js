@@ -177,6 +177,7 @@ window.addEventListener('DOMContentLoaded', function () {
   const btns = document.querySelectorAll('.card');
   const modalOverlay = document.querySelector('.modal-overlay');
   const modals = document.querySelectorAll('.modal__artist');
+  const body = document.querySelector('.body');
 
   btns.forEach((el) => {
     el.addEventListener('click', (e) => {
@@ -188,14 +189,16 @@ window.addEventListener('DOMContentLoaded', function () {
 
       document.querySelector(`[data-target="${path}"]`).classList.add('modal__artist--visible');
       modalOverlay.classList.add('modal-overlay--visible');
+      body.classList.add('overflow');
     });
   });
 
   modalOverlay.addEventListener('click', (e) => {
-    console.log(e.target);
+    // console.log(e.target);
 
     if (e.target == modalOverlay) {
       modalOverlay.classList.remove('modal-overlay--visible');
+      body.classList.remove('overflow');
       modals.forEach((el) => {
         el.classList.remove('modal__artist--visible');
       });
