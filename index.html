@@ -33,9 +33,9 @@
       <div class="header__background header__background--black">
         <div class="header__top container">
           <button class="burger">
-            <span></span>
-            <span></span>
-            <span></span>
+            <span class="burger__top"></span>
+            <span class="burger__top"></span>
+            <span class="burger__top"></span>
           </button>
           <a class="header__link" target="blank" href="https://blanchard.ru/about-us/our-story"
             aria-label="Логотип художественной галереи Бланчард">
@@ -1730,18 +1730,32 @@
         <div class="contacts__left">
           <h3 class="contacts__name subtitle">Шоурум <span class="contacts__number">№</span>4</h3>
           <address class="contacts__address">Леонтьевский переулок, дом 5, строение 1</address>
-          <form class="contacts__form contacts-form form" action="https://jsonplaceholder.typicode.com/posts" method="POST">
+
+
+
+
+
+
+
+          <form class="contacts__form contacts-form form" action="mail.php" enctype="multipart/form-data" method="POST">
+            <input type="hidden" name="admin_email[]" value="vreservoir@rambler.ru">
+            <input type="hidden" name="form_subject" value="Тема письма">
             <p class="contacts-form__heading">Заказать обратный звонок</p>
             <label class="contacts-form__label">
-              <input class="contacts-form__input" name="name" type="text" placeholder="Имя*" data-validate-field="name"
-                aria-label="Введите имя">
+              <input class="contacts-form__input" name="name" type="text" placeholder="Имя*" data-validate-field="name" aria-label="Введите имя">
             </label>
             <label class="contacts-form__label">
-              <input class="contacts-form__input" name="tel" type="tel" placeholder="Телефон*" data-validate-field="tel"
-                data-validate-rules="phone" aria-label="Введите телефон">
+              <input class="contacts-form__input" name="tel" type="tel" placeholder="Телефон*" data-validate-field="tel" aria-label="Введите телефон">
             </label>
             <button class="contacts-form__button button" type="submit">Заказать</button>
           </form>
+
+
+
+
+
+
+
           <div class="contacts__social contact-social">
             <h3 class="contact-social__heading subtitle">Связаться в один клик</h3>
             <a class="contact-social__link contact-social__whatsapp" target="blank" href="https://www.whatsapp.com/"

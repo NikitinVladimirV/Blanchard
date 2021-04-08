@@ -154,25 +154,56 @@ window.addEventListener('DOMContentLoaded', function () {
     myMap.controls.remove('rulerControl');
   }
 
-  var selector = document.querySelector("input[type='tel']");
-  var im = new Inputmask("+7(999)999-99-99");
+  let selector = document.querySelectorAll('input[type="tel"]');
+  let im = new Inputmask('+7 (999) 999-99-99');
   im.mask(selector);
-  new JustValidate('.form', {
-    rules: {
-      name: {
-        required: true,
-        minLength: 2,
-        maxLength: 30
-      },
-      tel: {
-        required: true,
-        function: (name, value) => {
-          const phone = selector.inputmask.unmaskedvalue()
-          return Number(phone) && phone.length === 10
-        },
-      },
-    },
-  });
+
+    let validateForms = function(selector, rules, successModal, yaGoal) {
+      new window.JustValidate(selector, {
+        rules: rules,
+        submitHandler: function(form) {
+          let formData = new FormData(form);
+
+          let xhr = new XMLHttpRequest();
+
+          xhr.onreadystatechange = function() {
+            if(xhr.readyState === 4) {
+              if(xhr.status === 200) {
+                console.log('Отправлено');
+              }
+            }
+          }
+
+          xhr.open('POST', '../mail.php', true);
+          xhr.send(formData);
+
+          form.reset();
+        }
+      });
+    }
+
+  validateForms('.form', { email: {required: true, email: true}, tel: {required: true} }, '.thanks-popup', 'send goal');
+
+  // var selector = document.querySelector("input[type='tel']");
+  // var im = new Inputmask("+7(999)999-99-99");
+  // im.mask(selector);
+
+  // new JustValidate('.form', {
+  //   rules: {
+  //     name: {
+  //       required: true,
+  //       minLength: 2,
+  //       maxLength: 30
+  //     },
+  //     tel: {
+  //       required: true,
+  //       function: (name, value) => {
+  //         const phone = selector.inputmask.unmaskedvalue()
+  //         return Number(phone) && phone.length === 10
+  //       },
+  //     },
+  //   },
+  // });
 
   const btns = document.querySelectorAll('.card');
   const modalOverlay = document.querySelector('.modal-overlay');
