@@ -1,62 +1,55 @@
-<?
-require_once 'PHPMailer/PHPMailerAutoload.php';
+<?php
 
-$admin_email = array();
-foreach ( $_POST["admin_email"] as $key => $value ) {
-  array_push($admin_email, $value);
-}
+$method = $_SERVER['REQUEST_METHOD'];
 
-$form_subject = trim($_POST{"form_subject"});
+var_dump($_POST);
+var_dump($_GET);
 
-$mail = new PHPMailer;
-$mail->CharSet = 'UTF-8';
-
-
-
+//Script Foreach
 $c = true;
-$message = '';
-foreach ( $_POST as $key => $value ) {
-  if ( $value != "" && $key != "admin_email" && $key != "form_subject" ) {
-    if (is_array($value)) {
-      $val_text = '';
-      foreach ($value as $val) {
-        if ($val && $val != '') {
-          $val_text .= ($val_text==''?'':', ').$val;
-        }
-      }
-      $value = $val_text;
-    }
-    $massage .= "
-    " . ( ($c = !$c) ? '<tr>':'<tr>' ) . "
-    <td style='padding: 10px; width: auto;'><b>$key:</b></td>
-    <td style='padding: 10px;width: 100%;'>$value</td>
-    </tr>
-    ";
-  }
+if ( $method === 'POST' ) {
+
+	$project_name = trim($_POST["project_name"]);
+	$admin_email  = trim($_POST["admin_email"]);
+	$form_subject = trim($_POST["form_subject"]);
+
+	foreach ( $_POST as $key => $value ) {
+		if ( $value != "" && $key != "project_name" && $key != "admin_email" && $key != "form_subject" ) {
+			$message .= "
+			" . ( ($c = !$c) ? '<tr>':'<tr style="background-color: #f8f8f8;">' ) . "
+				<td style='padding: 10px; border: #e9e9e9 1px solid;'><b>$key</b></td>
+				<td style='padding: 10px; border: #e9e9e9 1px solid;'>$value</td>
+			</tr>
+			";
+		}
+	}
+} else if ( $method === 'GET' ) {
+
+	$project_name = trim($_GET["project_name"]);
+	$admin_email  = trim($_GET["admin_email"]);
+	$form_subject = trim($_GET["form_subject"]);
+
+	foreach ( $_GET as $key => $value ) {
+		if ( $value != "" && $key != "project_name" && $key != "admin_email" && $key != "form_subject" ) {
+			$message .= "
+			" . ( ($c = !$c) ? '<tr>':'<tr style="background-color: #f8f8f8;">' ) . "
+				<td style='padding: 10px; border: #e9e9e9 1px solid;'><b>$key</b></td>
+				<td style='padding: 10px; border: #e9e9e9 1px solid;'>$value</td>
+			</tr>
+			";
+		}
+	}
 }
-$massage = "<table style='width: 50%;'>$massage</table>";
 
+$message = "<table style='width: 100%;'>$message</table>";
 
-//От кого
-$mail->setForm('adm@' . $_SERVER['HTTP_HOST'], 'Your best site');
-
-//Кому
-foreach ( $admin_email as $key => $value ) {
-  $mail->addAddress($value);
+function adopt($text) {
+	return '=?UTF-8?B?'.Base64_encode($text).'?=';
 }
-//Тема письма
-$mail->Subject = $form_subject;
 
-//Тело письма
-$body = $massage;
-// $mail->isHTML(true); это если прям верстка
-$mail->msgHTML($body);
+$headers = "MIME-Version: 1.0" . PHP_EOL .
+"Content-Type: text/html; charset=utf-8" . PHP_EOL .
+'From: '.adopt($project_name).' <'.$admin_email.'>' . PHP_EOL .
+'Reply-To: '.$admin_email.'' . PHP_EOL;
 
-//Приложения
-if ($_FILES){
-  foreach ( $_FILES['file']['tmp_name'] as $key => $value ) {
-    $mail->addAttachment($value, $_FILES['file']['name'][$key]);
-  }
-}
-$mail->send();
-?>
+mail($admin_email, adopt($form_subject), $message, $headers );
