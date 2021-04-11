@@ -74,9 +74,9 @@ window.addEventListener('DOMContentLoaded', function () {
   // });
 
   const swiper2 = new Swiper('.swiper-container2', {
-    slidesPerView: 3,
+    slidesPerView: 2,
     slidesPerGroup: 1,
-    spaceBetween: 50,
+    spaceBetween: 49,
     pagination: {
       el: '.swiper-pagination2',
       type: 'fraction',
@@ -85,15 +85,28 @@ window.addEventListener('DOMContentLoaded', function () {
       nextEl: '.swiper-button-next2',
       prevEl: '.swiper-button-prev2',
     },
+    breakpoints: {
+      1920: {
+        slidesPerView: 3,
+        slidesPerGroup: 1,
+        spaceBetween: 50,
+      }
+    }
   });
 
   const swiper3 = new Swiper('.swiper-container3', {
-    slidesPerView: 3,
+    slidesPerView: 2,
     spaceBetween: 50,
     navigation: {
       nextEl: '.swiper-button-next3',
       prevEl: '.swiper-button-prev3',
     },
+    breakpoints: {
+      1920: {
+        slidesPerView: 3,
+        spaceBetween: 50,
+      }
+    }
   });
 
   const element = document.querySelector('#gallery__select');
