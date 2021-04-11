@@ -25,6 +25,17 @@ window.addEventListener('DOMContentLoaded', function () {
     }
   });
 
+  document.querySelector('.burger').addEventListener('click', function() {
+    document.querySelector('.header__nav').classList.remove('hidden')
+    document.querySelector('.header__enter').classList.remove('hidden')
+    document.querySelector('.burger').classList.add('visible')
+  })
+  document.querySelector('.header__nav').addEventListener('click', function() {
+    document.querySelector('.header__nav').classList.add('hidden')
+    document.querySelector('.header__enter').classList.add('hidden')
+    document.querySelector('.burger').classList.remove('visible')
+  })
+
   const swiper = new Swiper('.swiper-container', {
     loop: true,
     effect: 'fade',

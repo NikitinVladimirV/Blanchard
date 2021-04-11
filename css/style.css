@@ -1936,22 +1936,17 @@ input[type="checkbox"].focus-visible ~ span {
   }
 
   .burger {
-    /* z-index: 1; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 40px;
     height: 32px;
-    padding: 0 0 0 0;
+    padding: 0;
     margin-right: 328px;
     margin-bottom: 11px;
     border: 2px solid transparent;
     background-color: transparent;
     cursor: pointer;
-  }
-
-  .burger:focus {
-
   }
 
   .burger__line {
@@ -1983,7 +1978,6 @@ input[type="checkbox"].focus-visible ~ span {
     bottom: -668px;
     left: 0;
     z-index: 2;
-    display: none;
     width: 100%;
     padding: 96px 0 51px 48px;
     background-color: rgba(0, 0, 0, 0.7);
@@ -2009,6 +2003,14 @@ input[type="checkbox"].focus-visible ~ span {
     transform: rotate(-45deg);
   }
 
+  .hidden {
+    display: none;
+  }
+
+  .visible {
+    visibility: hidden;
+  }
+
   .header__list {
     display: flex;
     flex-direction: column;
@@ -2027,7 +2029,6 @@ input[type="checkbox"].focus-visible ~ span {
     font-weight: 600;
     border: 2px solid var(--color-violet);
     border-radius: 100px;
-    display: none;
   }
 
   .header__background--opacity {
@@ -2041,7 +2042,6 @@ input[type="checkbox"].focus-visible ~ span {
 
   .header__menu {
     visibility: visible;
-    /* padding: 34px 4px 0 943px; */
   }
 
   .header-menu__list {
@@ -2052,14 +2052,11 @@ input[type="checkbox"].focus-visible ~ span {
     position: absolute;
     top: 34px;
     right: 46px;
-    /* display: flex; */
     padding-right: 0;
   }
 
   .search__btn {
-    padding: 0 0 0 0;
-    /* border: 2px solid transparent;
-    background-color: transparent; */
+    padding: 0;
   }
 
   .search__btn::after {
@@ -2069,7 +2066,6 @@ input[type="checkbox"].focus-visible ~ span {
   .search__icon {
     width: 31px;
     height: 31px;
-    padding: 0 0 0 0;
   }
 
   .search__input {
@@ -2163,7 +2159,7 @@ input[type="checkbox"].focus-visible ~ span {
 
   .swiper-button-prev1 {
     margin-right: 14px;
-}
+  }
 
   .swiper-pagination1 {
     margin-right: 14px;
@@ -2323,6 +2319,10 @@ input[type="checkbox"].focus-visible ~ span {
   }
 
   /* Project */
+  .projects-container {
+    padding-bottom: 40px;
+  }
+
   .projects__title {
     padding-left: 2px;
   }
@@ -2354,14 +2354,10 @@ input[type="checkbox"].focus-visible ~ span {
     left: 8px;
   }
 
-  .swiper-wrapper {
-    max-height: 131px;
-  }
-
   .partners__slider {
     height: 131px;
     min-height: 131px;
-}
+  }
 
   .swiper-button-next3 {
     top: 104px;
@@ -2374,15 +2370,21 @@ input[type="checkbox"].focus-visible ~ span {
   }
 
   /* Contacts */
+  .contacts-container {
+    max-width: 100%;
+    padding-right: 0;
+    padding-left: calc((100vw - 974px) / 2);
+  }
+
   .contacts__title {
-    padding-top: 43px;
+    padding-top: 57px;
     padding-left: 45px;
   }
 
   .contacts__left {
     display: flex;
     flex-direction: column;
-    padding: 99px 0 94px 4px;
+    padding: 99px 0 94px 23px;
     margin-right: 101px;
   }
 
@@ -2393,7 +2395,7 @@ input[type="checkbox"].focus-visible ~ span {
   .contact-social__link {
     width: 64px;
     height: 64px;
-    margin-right: 26px;
+    margin-right: 22px;
   }
 
   .contact-social__link svg {
@@ -2431,6 +2433,6 @@ input[type="checkbox"].focus-visible ~ span {
 
 
 
-@media (max-width: 1023px) {
+/* @media (max-width: 1023px) {
 
-}
+} */
