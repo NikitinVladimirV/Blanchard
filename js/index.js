@@ -35,10 +35,11 @@ window.addEventListener('DOMContentLoaded', function () {
   });
 
   const swiper1 = new Swiper('.swiper-container1', {
-    slidesPerView: 3,
+    slidesPerView: 2,
     slidesPerGroup: 1,
     slidesPerColumn: 2,
-    spaceBetween: 50,
+    spaceBetween: 34,
+
     pagination: {
       el: '.swiper-pagination1',
       type: 'fraction',
@@ -47,7 +48,30 @@ window.addEventListener('DOMContentLoaded', function () {
       nextEl: '.swiper-button-next1',
       prevEl: '.swiper-button-prev1',
     },
+    breakpoints: {
+      1920: {
+        slidesPerView: 3,
+        slidesPerGroup: 1,
+        slidesPerColumn: 2,
+        spaceBetween: 50,
+      }
+    }
   });
+
+  // const swiper1 = new Swiper('.swiper-container1', {
+  //   slidesPerView: 3,
+  //   slidesPerGroup: 1,
+  //   slidesPerColumn: 2,
+  //   spaceBetween: 50,
+  //   pagination: {
+  //     el: '.swiper-pagination1',
+  //     type: 'fraction',
+  //   },
+  //   navigation: {
+  //     nextEl: '.swiper-button-next1',
+  //     prevEl: '.swiper-button-prev1',
+  //   },
+  // });
 
   const swiper2 = new Swiper('.swiper-container2', {
     slidesPerView: 3,
