@@ -87,7 +87,7 @@ window.addEventListener('DOMContentLoaded', function () {
   const swiper2 = new Swiper('.swiper-container2', {
     slidesPerView: 2,
     slidesPerGroup: 1,
-    spaceBetween: 49,
+    spaceBetween: 34,
     pagination: {
       el: '.swiper-pagination2',
       type: 'fraction',
@@ -97,6 +97,11 @@ window.addEventListener('DOMContentLoaded', function () {
       prevEl: '.swiper-button-prev2',
     },
     breakpoints: {
+      1024: {
+        slidesPerView: 2,
+        slidesPerGroup: 1,
+        spaceBetween: 49,
+      },
       1920: {
         slidesPerView: 3,
         slidesPerGroup: 1,
@@ -107,12 +112,16 @@ window.addEventListener('DOMContentLoaded', function () {
 
   const swiper3 = new Swiper('.swiper-container3', {
     slidesPerView: 2,
-    spaceBetween: 50,
+    spaceBetween: 34,
     navigation: {
       nextEl: '.swiper-button-next3',
       prevEl: '.swiper-button-prev3',
     },
     breakpoints: {
+      1024: {
+        slidesPerView: 2,
+        spaceBetween: 50,
+      },
       1920: {
         slidesPerView: 3,
         spaceBetween: 50,
@@ -179,7 +188,13 @@ window.addEventListener('DOMContentLoaded', function () {
     })
   })
 
-  $('#events__btn').click(function () { $('#hidden1, #hidden2, #hidden3').show(); $('#events__btn').hide(); });
+  // $('#events__btn').click(function () { $('#hidden1, #hidden2, #hidden3').show(); $('#events__btn').hide(); });
+
+  document.querySelector('.events__button').addEventListener('click', function() {
+    document.querySelector('.events__list').classList.add('wrap')
+    document.querySelector('.events__button').classList.add('hidden')
+  })
+
   ymaps.ready(init);
   function init() {
     var myMap = new ymaps.Map("map", {
