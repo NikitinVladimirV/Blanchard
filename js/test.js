@@ -143,7 +143,7 @@ window.addEventListener('DOMContentLoaded', function () {
     }
     //Маскирование полей контакты
     var selector = document.querySelector("input[type='tel']");
-    var im = new Inputmask("+7(999)999-99-99"); 
+    var im = new Inputmask("+7(999)999-99-99");
     im.mask(selector);
     //Валидация форм контакты
     new JustValidate('.form', {
@@ -157,19 +157,26 @@ window.addEventListener('DOMContentLoaded', function () {
           required: true,
           function: (name, value) => {
             const phone = selector.inputmask.unmaskedvalue()
-            return Number(phone) && phone.length === 10 
+            return Number(phone) && phone.length === 10
           },
         },
       },
     });
     // window.addEventListener('focusin', event => console.log(new Date, event.target));
   })
-  
+
   // https://jsonplaceholder.typicode.com/posts
 
-  
+
   // document.querySelectorAll('.publications-category__span').forEach(function(x) {
   //   x.addEventListener('click', function(event) {
   //     event.target.classList.toggle('is-active')
   //   })
   // })
+
+  document.querySelectorAll('.publications-category__label').forEach(function(select) {
+    select.addEventListener('click', function(check) {
+      check.target.classList.toggle('publications-category__label--checked')
+    })
+  });
+
