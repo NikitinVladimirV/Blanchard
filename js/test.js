@@ -180,3 +180,9 @@ window.addEventListener('DOMContentLoaded', function () {
     })
   });
 
+
+  // $(".search__btn").focus(function(){
+  //   $(".search__input").toggleClass("active").focus;
+  //   $(this).toggleClass("animate");
+  //   $(".search__input").val("");
+  // });

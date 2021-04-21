@@ -60,7 +60,6 @@
 
 .overflow {
   overflow: hidden;
-  padding-right: 17px;
 }
 
 .section-title {
@@ -264,7 +263,7 @@
 .header__menu {
   display: flex;
   justify-content: space-between;
-  padding: 20px 4px 16px 1px;
+  padding: 20px 4px 9px 1px;
 
 }
 
@@ -518,7 +517,7 @@ opacity: 1;
   content: '';
   position: absolute;
   left: 41px;
-  top: 84%;
+  top: 69%;
   width: 84%;
   height: 1px;
   background: var(--color-white);
@@ -527,7 +526,7 @@ opacity: 1;
 
 .search__input {
   width: 100%;
-  padding: 0 0 2px 0;
+  padding: 0 0 10px 0;
   color: var(--color-white);
   font-size: 18px;
   border: 2px solid transparent;
@@ -1232,7 +1231,6 @@ opacity: 1;
 
 .events__list {
   display: flex;
-  padding-left: 2px;
   margin-bottom: 25px;
   overflow: hidden;
 }
@@ -1388,6 +1386,10 @@ opacity: 1;
 
 .publications-category__title {
   padding-left: 3px;
+}
+
+.publications-category__arrow {
+  display: none;
 }
 
 .publications-category__label {
@@ -1938,6 +1940,33 @@ input[type="checkbox"].focus-visible ~ span {
   border: 2px solid var(--color-border--focus);
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 1919px) {
   .container {
     max-width: 1024px;
@@ -2069,7 +2098,118 @@ input[type="checkbox"].focus-visible ~ span {
     display: none;
   }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   .header__search {
+    position: absolute;
+    top: 34px;
+    right: 46px;
+    padding-right: 0;
+    display: flex;
+    justify-content: flex-end;
+    width: 261px;
+    height: 40px;
+  }
+  .search__input {
+    width: 0;
+    padding: 0;
+    border-width: 0px;
+    background-color: #18171B;
+    transition: width 0.5s linear;
+  }
+  .search__input::placeholder {
+    color: transparent;
+  }
+  .search__btn {
+    width: 35px;
+    height: 35px;
+    padding: 0 0 36px 0;
+    padding-bottom: 36px;
+  }
+
+
+
+
+
+
+
+
+
+  /* .search__btn::before {
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: 42px;
+    z-index: 1;
+    width: 83%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.85);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .5s linear;
+  } */
+
+
+
+
+
+
+
+  .search__btn::after {
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: 42px;
+    z-index: 1;
+    width: 83%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.85);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .5s linear;
+  }
+
+  .search__icon {
+    width: 31px;
+    height: 31px;
+  }
+  .search__input--active {
+    width: 218px;
+  }
+  .search__btn--active {
+    background-color: #18171B;
+  }
+  .search__btn--active::after {
+    transform: scaleX(1);
+  }
+
+
+
+
+
+
+
+
+
+
+
+  /* .header__search {
     position: absolute;
     top: 34px;
     right: 46px;
@@ -2090,8 +2230,37 @@ input[type="checkbox"].focus-visible ~ span {
   }
 
   .search__input {
+    position: relative;
     display: none;
+    padding: 0 20px 2px 0;
+    background-color: #18171B;
   }
+
+  .search__input::placeholder {
+    color: transparent;
+  }
+
+  .search__btn:focus ~ .search__input,
+  .search__btn:active ~ .search__input {
+    display: block;
+  }
+
+  .search__btn:focus,
+  .search__btn:active {
+    background-color: #18171B;
+  }
+
+  .search__btn:focus::before,
+  .search__btn:active::before {
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: 42px;
+    z-index: 1;
+    width: 83%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.85);
+  } */
 
   /* Primary */
   .primary {
@@ -2190,6 +2359,39 @@ input[type="checkbox"].focus-visible ~ span {
     height: calc((100% - 96px) / 2);
   }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .modal__artist {
+    /* position: absolute; */
+    /* top: 135px;
+    left: 382px; */
+    max-width: 590px;
+    padding: 122px 50px 90px 315px;
+    background-size: 45% 100%;
+  }
+
+
+
+
+
+
+
+
+
+
   /* Catalog */
   .catalog-container {
     padding-top: 97px;
@@ -2249,7 +2451,7 @@ input[type="checkbox"].focus-visible ~ span {
     padding-left: 3px;
   }
 
-  .events__list {
+  .swiper-container4 {
     padding-left: 6px;
   }
 
@@ -2471,6 +2673,66 @@ input[type="checkbox"].focus-visible ~ span {
     margin-right: 200px;
   }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .header__search {
+    top: 28px;
+    width: 100%;
+    height: 45px;
+  }
+  .search__input {
+    background-color: var(--color-black);
+  }
+  .search__btn {
+    padding: 7px 0 36px 0;
+  }
+  .search__btn::before {
+    content: url(../img/header/X-768.svg);
+    position: absolute;
+    right: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .5s linear;
+  }
+  .search__btn::after {
+    top: 37px;
+    left: 136px;
+    width: 576px;
+  }
+  .search__input--active {
+    width: 641px;
+  }
+  .search__btn--active {
+    background-color: var(--color-black);
+  }
+  .search__btn--active::before {
+    transform: scaleX(1);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   /* About */
   .about__title {
     padding-left: 6px;
@@ -2519,6 +2781,46 @@ input[type="checkbox"].focus-visible ~ span {
     bottom: 70px;
     left: 48px;
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .modal__artist {
+    /* position: absolute; */
+    /* top: 126px;
+    left: 53px; */
+    max-width: 661px;
+    padding: 122px 63px 122px 348px;
+    background-size: 45% 100%;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   /* Catalog */
   .catalog-container {
@@ -2599,7 +2901,7 @@ input[type="checkbox"].focus-visible ~ span {
   /* Publications */
   .publications-container {
     flex-direction: column;
-    padding-bottom: 58px;
+    padding-bottom: 51px;
   }
 
   .publications__category {
@@ -2721,8 +3023,6 @@ input[type="checkbox"].focus-visible ~ span {
 
 
 
-
-
 @media (max-width: 767px) {
   .section-title {
     font-size: 28px;
@@ -2759,14 +3059,112 @@ input[type="checkbox"].focus-visible ~ span {
     width: 97px;
   }
 
-  .header__search {
-    top: 13px;
-    right: 12px;
+  .header__nav {
+    bottom: -310px;
+    padding: 48px 0 0 15px;
   }
 
+  .header-nav__link {
+    font-size: 16px;
+    line-height: 32px;
+  }
+
+  .header__nav::before {
+    top: 21px;
+    width: 20px;
+    height: 2px;
+  }
+
+  .header__nav::after {
+    top: 21px;
+    width: 20px;
+    height: 2px;
+  }
+
+  .header__enter {
+    top: 288px;
+    left: 15px    ;
+    padding: 2px 29px;
+    font-size: 12px;
+  }
+
+  .header-enter__icon {
+    width: 9px;
+    height: 9px;
+  }
+
+
+
+
+
+
+
+
+  .header__search {
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 75px;
+  }
+  .search__btn {
+    z-index: 1;
+    padding: 7px 0 64px 0;
+  }
   .search__icon {
     width: 17px;
     height: 16px;
+  }
+  .search__input {
+    background-color: var(--color-black);
+  }
+  .search__btn::before {
+    content: url(../img/header/X-320.svg);
+    top: 6px;
+    left: 288px;
+  }
+  .search__btn::after {
+    top: 50px;
+    left: 70px;
+    width: 180px;
+    background-color: #c4c4c4;
+  }
+  .search__input--active {
+    width: 78%;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(40px);
+  }
+  .search__btn--active {
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(40px);
+    padding: 27px 21px 44px 47px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .header__menu {
+    padding: 0;
   }
 
   /* Primary */
@@ -2862,6 +3260,14 @@ input[type="checkbox"].focus-visible ~ span {
     height: 371px;
   }
 
+  .card::before {
+    bottom: 8px;
+  }
+
+  .card::after {
+    bottom: -15px;
+  }
+
   .gallery__img {
     height: 100%;
   }
@@ -2881,6 +3287,13 @@ input[type="checkbox"].focus-visible ~ span {
     left: 13px;
     padding: 0 10px 0 2px;
     font-weight: 600;
+  }
+
+  .modal__artist {
+    /* left: 15px; */
+    max-width: 290px;
+    padding: 217px 20px 26px 20px;
+    background-size: 290px 200px;
   }
 
   /* Catalog */
@@ -3073,6 +3486,7 @@ input[type="checkbox"].focus-visible ~ span {
     position: absolute;
     top: 16px;
     right: 0;
+    display: block;
   }
 
   .publications-category__checkbox {
@@ -3262,7 +3676,7 @@ input[type="checkbox"].focus-visible ~ span {
 
   .contacts__left {
     padding-top: 0;
-    padding-bottom: 18px;
+    padding-bottom: 20px;
     margin-right: 0;
   }
 
@@ -3319,7 +3733,9 @@ input[type="checkbox"].focus-visible ~ span {
   }
 
   .contact-social__link {
-    margin-right: 2px;
+    width: 54px;
+    height: 54px;
+    margin-right: 12px;
   }
 
   .contact-social__link svg {
@@ -3352,14 +3768,5 @@ input[type="checkbox"].focus-visible ~ span {
     padding-left: 0;
     margin-right: 0;
   }
-
-
-
-
-
-
-
-
-
 }
 

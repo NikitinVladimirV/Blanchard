@@ -419,6 +419,12 @@ window.addEventListener('DOMContentLoaded', function () {
     };
   });
 
+  // Header search
+  document.querySelector('.search__btn').addEventListener('focus', function() {
+    document.querySelector('.search__input').classList.toggle('search__input--active')
+    document.querySelector('.search__btn').classList.toggle('search__btn--active')
+  });
+
   //Where focus
-  // window.addEventListener('focusin', event => console.log(new Date, event.target));
+  window.addEventListener('focusin', event => console.log(new Date, event.target));
 })
