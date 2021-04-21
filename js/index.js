@@ -28,14 +28,9 @@ window.addEventListener('DOMContentLoaded', function () {
 
   // Burger
   document.querySelector('.burger').addEventListener('click', function() {
-    document.querySelector('.header__nav').classList.remove('hidden')
-    document.querySelector('.header__enter').classList.remove('hidden')
-    document.querySelector('.burger').classList.add('visible')
-  })
-  document.querySelector('.header__nav').addEventListener('click', function() {
-    document.querySelector('.header__nav').classList.add('hidden')
-    document.querySelector('.header__enter').classList.add('hidden')
-    document.querySelector('.burger').classList.remove('visible')
+    document.querySelector('.burger').classList.toggle('burger--open')
+    document.querySelector('.header__nav').classList.toggle('header__nav--hidden')
+    document.querySelector('.header__enter').classList.toggle('header__enter--hidden')
   })
 
   // Swiper main
@@ -339,9 +334,16 @@ window.addEventListener('DOMContentLoaded', function () {
 
   // Header search
   document.querySelector('.search__btn').addEventListener('focus', function() {
-    document.querySelector('.search__input').classList.toggle('search__input--active')
-    document.querySelector('.search__btn').classList.toggle('search__btn--active')
-    document.querySelector('.header__search').classList.toggle('header__search--active')
+    document.querySelector('.search__input').classList.add('search__input--active')
+    document.querySelector('.search__btn').classList.add('search__btn--active')
+    document.querySelector('.header__search').classList.add('header__search--active')
+    document.querySelector('.search__close').classList.add('search__close--active')
+  });
+  document.querySelector('.search__close').addEventListener('click', function() {
+    document.querySelector('.search__input').classList.remove('search__input--active')
+    document.querySelector('.search__btn').classList.remove('search__btn--active')
+    document.querySelector('.header__search').classList.remove('header__search--active')
+    document.querySelector('.search__close').classList.remove('search__close--active')
   });
 
   //Where focus

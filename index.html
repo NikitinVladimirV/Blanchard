@@ -32,16 +32,12 @@
     <div class="header-container">
       <div class="header__background header__background--black">
         <div class="header__top container">
-          <div class="burger" tabindex="1">
-            <div class="burger__line burger__line--top"></div>
-            <div class="burger__line burger__line--center"></div>
-            <div class="burger__line burger__line--bottom"></div>
-          </div>
+          <button class="burger"></button>
           <a class="header__link" target="blank" href="https://blanchard.ru/about-us/our-story"
             aria-label="Логотип художественной галереи Бланчард">
             <img class="logo header__logo img" src="img/footer/Лого.svg" alt="Blanchard-художественная галерея">
           </a>
-          <nav class="header__nav header-nav hidden">
+          <nav class="header__nav header-nav header__nav--hidden">
             <ul class="header__list list">
               <li class="header__item"><a class="header-nav__link link-style" href="#about">О&nbsp;нас</a></li>
               <li class="header__item"><a class="header-nav__link link-style" href="#gallery">Галерея</a></li>
@@ -52,7 +48,7 @@
               <li class="header__item"><a class="header-nav__link link-style" href="#contacts">Контакты</a></li>
             </ul>
           </nav>
-          <a class="header__enter header-enter hidden link-style" href="https://blanchard.ru/get-started" id="enter">
+          <a class="header__enter header-enter header__enter--hidden link-style" href="https://blanchard.ru/get-started" id="enter">
             <svg class="header-enter__icon" width="13" height="13" viewbox="0 0 13 13" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <path
@@ -154,16 +150,17 @@
           </ul>
           <form class="header__search search" action="https://jsonplaceholder.typicode.com/posts" method="POST">
               <button class="search__btn" type="submit" aria-label="Поиск">
-              <svg class="search__icon" width="23" height="22" viewbox="0 0 23 22" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <rect width="6.8678" height="1.71695"
-                  transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white" />
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z"
-                  fill="white" />
-              </svg>
+                <svg class="search__icon" width="23" height="22" viewbox="0 0 23 22" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <rect width="6.8678" height="1.71695"
+                    transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z"
+                    fill="white" />
+                </svg>
             </button>
             <input class="search__input" type="search" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
+            <div class="search__close"></div>
           </form>
         </div>
       </div>
