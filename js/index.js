@@ -20,7 +20,6 @@ window.addEventListener('DOMContentLoaded', function () {
       e.currentTarget.closest('li').querySelector('.header-menu__btn').classList.toggle('header-menu__btn--active');
     });
   });
-
   document.addEventListener('click', (e) => {
     if (!e.target.classList.contains('header-menu__btn') && !e.target.classList.contains('header-menu__btn')) {
       button.forEach(el => { el.classList.remove(('header-menu__btn--active')) })
@@ -55,7 +54,6 @@ window.addEventListener('DOMContentLoaded', function () {
     slidesPerGroup: 1,
     slidesPerColumn: 1,
     spaceBetween: 0,
-
     pagination: {
       el: '.swiper-pagination1',
       type: 'fraction',
@@ -80,14 +78,9 @@ window.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-
-
-
   // Swiper events
   const slider = document.querySelector('.swiper-container4');
-
   let mySwiper;
-
   function mobileSlider() {
     if (window.innerWidth <=767 && slider.dataset.mobile == 'false') {
       mySwiper = new Swiper(slider, {
@@ -101,33 +94,23 @@ window.addEventListener('DOMContentLoaded', function () {
         loop: true,
         slideClass: 'events__item',
       });
-
       slider.dataset.mobile = 'true';
     }
-
     if (window.innerWidth > 767) {
       slider.dataset.mobile = 'false';
-
       if (slider.classList.contains('swiper-container-initialized')) {
         mySwiper.destroy();
       }
     }
   }
-
   mobileSlider();
-
   window.addEventListener('resize', () => {
     mobileSlider();
   })
 
-
-
-
   // Swiper publications
   const slider2 = document.querySelector('.swiper-container2');
-
   let mySwiper2;
-
   function desktopSlider() {
     if (window.innerWidth >= 768 && slider2.dataset.desktop == 'false') {
       mySwiper2 = new Swiper(slider2, {
@@ -155,57 +138,19 @@ window.addEventListener('DOMContentLoaded', function () {
           }
         }
       });
-
       slider2.dataset.desktop = 'true';
     }
-
     if (window.innerWidth < 767) {
       slider2.dataset.desktop = 'false';
-
       if (slider2.classList.contains('swiper-container-initialized')) {
         mySwiper2.destroy();
       }
     }
   }
-
   desktopSlider();
-
   window.addEventListener('resize', () => {
     desktopSlider();
   })
-
-
-
-
-
-
-
-
-  // const swiper2 = new Swiper('.swiper-container2', {
-  //   slidesPerView: 2,
-  //   slidesPerGroup: 1,
-  //   spaceBetween: 34,
-  //   pagination: {
-  //     el: '.swiper-pagination2',
-  //     type: 'fraction',
-  //   },
-  //   navigation: {
-  //     nextEl: '.swiper-button-next2',
-  //     prevEl: '.swiper-button-prev2',
-  //   },
-  //   breakpoints: {
-  //     1024: {
-  //       slidesPerView: 2,
-  //       slidesPerGroup: 1,
-  //       spaceBetween: 49,
-  //     },
-  //     1920: {
-  //       slidesPerView: 3,
-  //       slidesPerGroup: 1,
-  //       spaceBetween: 50,
-  //     }
-  //   }
-  // });
 
   // Swiper project
   const swiper3 = new Swiper('.swiper-container3', {
@@ -306,7 +251,6 @@ window.addEventListener('DOMContentLoaded', function () {
   document.querySelector('.publications-category__title').addEventListener('click', function() {
     document.querySelector('.publications-category__checkbox').classList.toggle('publications-category__checkbox--open')
   });
-
   document.querySelectorAll('.publications-category__label').forEach(function(el) {
     el.addEventListener('click', function(event) {
       event.target.classList.toggle('publications-category__span--checked')
@@ -340,76 +284,50 @@ window.addEventListener('DOMContentLoaded', function () {
   let selector = document.querySelectorAll('input[type="tel"]');
   let im = new Inputmask('+7 (999) 999-99-99');
   im.mask(selector);
-
     let validateForms = function(selector, rules, successModal, yaGoal) {
       new window.JustValidate(selector, {
         rules: rules,
         submitHandler: function(form) {
           let formData = new FormData(form);
-
           let xhr = new XMLHttpRequest();
-
           xhr.onreadystatechange = function() {
             if(xhr.readyState === 4) {
               if(xhr.status === 200) {
                 console.log('Отправлено');
+                document.querySelector('.contacts__modal').classList.add('contacts__modal--visible')
+                document.querySelector('.modal__window').classList.add('modal__window--visible')
+                document.querySelector('.contacts__modal').addEventListener('click', function() {
+                  document.querySelector('.contacts__modal').classList.remove('contacts__modal--visible')
+                  document.querySelector('.modal__window').classList.remove('modal__window--visible')
+                })
               }
             }
           }
-
           xhr.open('POST', '../mail.php', true);
           xhr.send(formData);
-
           form.reset();
         }
       });
     }
-
   validateForms('.form', { email: {required: true, email: true}, tel: {required: true} }, '.thanks-popup', 'send goal');
-
-  // var selector = document.querySelector("input[type='tel']");
-  // var im = new Inputmask("+7(999)999-99-99");
-  // im.mask(selector);
-
-  // new JustValidate('.form', {
-  //   rules: {
-  //     name: {
-  //       required: true,
-  //       minLength: 2,
-  //       maxLength: 30
-  //     },
-  //     tel: {
-  //       required: true,
-  //       function: (name, value) => {
-  //         const phone = selector.inputmask.unmaskedvalue()
-  //         return Number(phone) && phone.length === 10
-  //       },
-  //     },
-  //   },
-  // });
 
   // Gallery__modal
   const btns = document.querySelectorAll('.card');
   const modalOverlay = document.querySelector('.modal-overlay');
   const modals = document.querySelectorAll('.modal__artist');
   const body = document.querySelector('.body');
-
   btns.forEach((el) => {
     el.addEventListener('click', (e) => {
       let path = e.currentTarget.getAttribute('data-path');
-
       modals.forEach((el) => {
         el.classList.remove('modal__artist--visible');
       });
-
       document.querySelector(`[data-target="${path}"]`).classList.add('modal__artist--visible');
       modalOverlay.classList.add('modal-overlay--visible');
       body.classList.add('overflow');
     });
   });
-
   modalOverlay.addEventListener('click', (e) => {
-
     if (e.target == modalOverlay) {
       modalOverlay.classList.remove('modal-overlay--visible');
       body.classList.remove('overflow');
@@ -423,8 +341,9 @@ window.addEventListener('DOMContentLoaded', function () {
   document.querySelector('.search__btn').addEventListener('focus', function() {
     document.querySelector('.search__input').classList.toggle('search__input--active')
     document.querySelector('.search__btn').classList.toggle('search__btn--active')
+    document.querySelector('.header__search').classList.toggle('header__search--active')
   });
 
   //Where focus
-  window.addEventListener('focusin', event => console.log(new Date, event.target));
+  // window.addEventListener('focusin', event => console.log(new Date, event.target));
 })

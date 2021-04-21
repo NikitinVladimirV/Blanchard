@@ -939,7 +939,6 @@ opacity: 1;
 
 .modal__artist--visible {
   display: block;
-
 }
 
 .modal-artist__name {
@@ -1702,7 +1701,6 @@ input[type="checkbox"].focus-visible ~ span {
   -ms-filter: grayscale(100%);
   -o-filter: grayscale(100%);
   filter: grayscale(100%);
-  filter: gray; /* IE 6-9 */
 }
 
 .partners__img:hover {
@@ -1711,7 +1709,6 @@ input[type="checkbox"].focus-visible ~ span {
   -ms-filter: grayscale(0%);
   -o-filter: grayscale(0%);
   filter: grayscale(0%);
-  filter: none; /* IE 6-9 */
 }
 
 .swiper-button-prev3 {
@@ -1869,6 +1866,46 @@ input[type="checkbox"].focus-visible ~ span {
   display: none;
 }
 
+.contacts__modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s linear;
+}
+
+.modal__window {
+  display: none;
+  width: 700px;
+  height: 300px;
+  text-align: center;
+  font-size: 65px;
+  line-height: 100px;
+  font-weight: 600;
+  color: var(--color-violet);
+  border: 5px solid var(--color-violet);
+  border-radius: 20px;
+  background: var(--color-black);
+}
+
+.contacts__modal--visible {
+  opacity: 1;
+  visibility: visible;
+  transition: all .3s linear;
+}
+
+.modal__window--visible {
+  display: block;
+}
+
 /* Footer */
 .footer {
   background-color: black;
@@ -1939,33 +1976,6 @@ input[type="checkbox"].focus-visible ~ span {
 .focus-visible {
   border: 2px solid var(--color-border--focus);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @media (max-width: 1919px) {
   .container {
@@ -2098,24 +2108,6 @@ input[type="checkbox"].focus-visible ~ span {
     display: none;
   }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   .header__search {
     position: absolute;
     top: 34px;
@@ -2126,6 +2118,7 @@ input[type="checkbox"].focus-visible ~ span {
     width: 261px;
     height: 40px;
   }
+
   .search__input {
     width: 0;
     padding: 0;
@@ -2133,9 +2126,11 @@ input[type="checkbox"].focus-visible ~ span {
     background-color: #18171B;
     transition: width 0.5s linear;
   }
+
   .search__input::placeholder {
     color: transparent;
   }
+
   .search__btn {
     width: 35px;
     height: 35px;
@@ -2143,34 +2138,6 @@ input[type="checkbox"].focus-visible ~ span {
     padding-bottom: 36px;
   }
 
-
-
-
-
-
-
-
-
-  /* .search__btn::before {
-    content: '';
-    position: absolute;
-    top: 30px;
-    left: 42px;
-    z-index: 1;
-    width: 83%;
-    height: 1px;
-    background-color: rgba(255, 255, 255, 0.85);
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform .5s linear;
-  } */
-
-
-
-
-
-
-
   .search__btn::after {
     content: '';
     position: absolute;
@@ -2189,78 +2156,18 @@ input[type="checkbox"].focus-visible ~ span {
     width: 31px;
     height: 31px;
   }
+
   .search__input--active {
     width: 218px;
   }
+
   .search__btn--active {
     background-color: #18171B;
   }
+
   .search__btn--active::after {
     transform: scaleX(1);
   }
-
-
-
-
-
-
-
-
-
-
-
-  /* .header__search {
-    position: absolute;
-    top: 34px;
-    right: 46px;
-    padding-right: 0;
-  }
-
-  .search__btn {
-    padding: 0;
-  }
-
-  .search__btn::after {
-    content: none;
-  }
-
-  .search__icon {
-    width: 31px;
-    height: 31px;
-  }
-
-  .search__input {
-    position: relative;
-    display: none;
-    padding: 0 20px 2px 0;
-    background-color: #18171B;
-  }
-
-  .search__input::placeholder {
-    color: transparent;
-  }
-
-  .search__btn:focus ~ .search__input,
-  .search__btn:active ~ .search__input {
-    display: block;
-  }
-
-  .search__btn:focus,
-  .search__btn:active {
-    background-color: #18171B;
-  }
-
-  .search__btn:focus::before,
-  .search__btn:active::before {
-    content: '';
-    position: absolute;
-    top: 30px;
-    left: 42px;
-    z-index: 1;
-    width: 83%;
-    height: 1px;
-    background-color: rgba(255, 255, 255, 0.85);
-  } */
 
   /* Primary */
   .primary {
@@ -2359,38 +2266,11 @@ input[type="checkbox"].focus-visible ~ span {
     height: calc((100% - 96px) / 2);
   }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   .modal__artist {
-    /* position: absolute; */
-    /* top: 135px;
-    left: 382px; */
     max-width: 590px;
     padding: 122px 50px 90px 315px;
     background-size: 45% 100%;
   }
-
-
-
-
-
-
-
-
-
 
   /* Catalog */
   .catalog-container {
@@ -2653,8 +2533,6 @@ input[type="checkbox"].focus-visible ~ span {
   }
 }
 
-
-
 @media (max-width: 1023px) {
   .container {
     max-width: 768px;
@@ -2673,30 +2551,24 @@ input[type="checkbox"].focus-visible ~ span {
     margin-right: 200px;
   }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
   .header__search {
     top: 28px;
-    width: 100%;
+    width: 63%;
     height: 45px;
   }
+
+  .header__search--active {
+    width: 100%;
+  }
+
   .search__input {
     background-color: var(--color-black);
   }
+
   .search__btn {
     padding: 7px 0 36px 0;
   }
+
   .search__btn::before {
     content: url(../img/header/X-768.svg);
     position: absolute;
@@ -2705,33 +2577,24 @@ input[type="checkbox"].focus-visible ~ span {
     transform-origin: right;
     transition: transform .5s linear;
   }
+
   .search__btn::after {
     top: 37px;
     left: 136px;
     width: 576px;
   }
+
   .search__input--active {
     width: 641px;
   }
+
   .search__btn--active {
     background-color: var(--color-black);
   }
+
   .search__btn--active::before {
     transform: scaleX(1);
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   /* About */
   .about__title {
@@ -2782,45 +2645,11 @@ input[type="checkbox"].focus-visible ~ span {
     left: 48px;
   }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
   .modal__artist {
-    /* position: absolute; */
-    /* top: 126px;
-    left: 53px; */
     max-width: 661px;
     padding: 122px 63px 122px 348px;
     background-size: 45% 100%;
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   /* Catalog */
   .catalog-container {
@@ -3009,20 +2838,6 @@ input[type="checkbox"].focus-visible ~ span {
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media (max-width: 767px) {
   .section-title {
     font-size: 28px;
@@ -3040,6 +2855,7 @@ input[type="checkbox"].focus-visible ~ span {
     padding-top: 10px;
     padding-bottom: 0;
   }
+
   .burger {
     padding-left: 3px;
     margin-right: 73px;
@@ -3093,75 +2909,51 @@ input[type="checkbox"].focus-visible ~ span {
     height: 9px;
   }
 
-
-
-
-
-
-
-
   .header__search {
     top: 0;
     right: 0;
-    width: 100%;
+    /* width: 100%; */
     height: 75px;
   }
+
   .search__btn {
     z-index: 1;
-    padding: 7px 0 64px 0;
+    padding: 13px 10px 64px 0;
   }
+
   .search__icon {
     width: 17px;
     height: 16px;
   }
+
   .search__input {
     background-color: var(--color-black);
   }
+
   .search__btn::before {
     content: url(../img/header/X-320.svg);
     top: 6px;
     left: 288px;
   }
+
   .search__btn::after {
     top: 50px;
     left: 70px;
     width: 180px;
     background-color: #c4c4c4;
   }
+
   .search__input--active {
     width: 78%;
     background-color: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(40px);
   }
+
   .search__btn--active {
     background-color: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(40px);
     padding: 27px 21px 44px 47px;
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   .header__menu {
     padding: 0;
@@ -3260,14 +3052,6 @@ input[type="checkbox"].focus-visible ~ span {
     height: 371px;
   }
 
-  .card::before {
-    bottom: 8px;
-  }
-
-  .card::after {
-    bottom: -15px;
-  }
-
   .gallery__img {
     height: 100%;
   }
@@ -3290,7 +3074,6 @@ input[type="checkbox"].focus-visible ~ span {
   }
 
   .modal__artist {
-    /* left: 15px; */
     max-width: 290px;
     padding: 217px 20px 26px 20px;
     background-size: 290px 200px;
@@ -3625,19 +3408,14 @@ input[type="checkbox"].focus-visible ~ span {
     margin-bottom: 10px;
   }
 
-
-
   .partners__title {
     padding-left: 4px;
     margin-bottom: 9px;
     font-size: 18px;
   }
 
-
-
   .swiper-container3 {
     width: 200px;
-    /* width: 195px; */
     padding: 0;
   }
 
@@ -3659,7 +3437,6 @@ input[type="checkbox"].focus-visible ~ span {
     top: 60px;
     right: 5px;
   }
-
 
   /* Contacts */
   .contacts-container {
@@ -3769,4 +3546,3 @@ input[type="checkbox"].focus-visible ~ span {
     margin-right: 0;
   }
 }
-

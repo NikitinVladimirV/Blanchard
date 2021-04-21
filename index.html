@@ -32,11 +32,11 @@
     <div class="header-container">
       <div class="header__background header__background--black">
         <div class="header__top container">
-          <button class="burger">
+          <div class="burger" tabindex="1">
             <div class="burger__line burger__line--top"></div>
             <div class="burger__line burger__line--center"></div>
             <div class="burger__line burger__line--bottom"></div>
-          </button>
+          </div>
           <a class="header__link" target="blank" href="https://blanchard.ru/about-us/our-story"
             aria-label="Логотип художественной галереи Бланчард">
             <img class="logo header__logo img" src="img/footer/Лого.svg" alt="Blanchard-художественная галерея">
@@ -152,10 +152,8 @@
               </div>
             </li>
           </ul>
-
           <form class="header__search search" action="https://jsonplaceholder.typicode.com/posts" method="POST">
-            <div class="search__btn" type="submit" aria-label="Поиск" tabindex="0">
-            <!-- <button class="search__btn" type="submit" aria-label="Поиск"> -->
+              <button class="search__btn" type="submit" aria-label="Поиск">
               <svg class="search__icon" width="23" height="22" viewbox="0 0 23 22" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <rect width="6.8678" height="1.71695"
@@ -164,8 +162,7 @@
                   d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z"
                   fill="white" />
               </svg>
-            </div>
-            <!-- </button> -->
+            </button>
             <input class="search__input" type="search" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
           </form>
         </div>
@@ -431,7 +428,6 @@
           нанотехнологии и по сей день остаются уделом либералов, которые жаждут быть функционально разнесены на
           независимые элементы.
         </p>
-
         <div class="catalog__bottom bottom-france animate__animated animate__fadeIn" data-target="france">
           <div class="catalog__biography biography catalog__biography--active animate__animated animate__fadeIn"
             data-target="fuke">
@@ -615,7 +611,6 @@
             </div>
           </div>
         </div>
-
         <div class="catalog__bottom bottom-germany animate__animated animate__fadeIn" data-target="germany">
           <div class="catalog__biography biography catalog__biography--active animate__animated animate__fadeIn"
             data-target="volgemut">
@@ -805,7 +800,6 @@
             </div>
           </div>
         </div>
-
         <div class="catalog__bottom bottom-italy catalog__bottom--active animate__animated animate__fadeIn"
           data-target="italy">
           <div class="catalog__biography biography catalog__biography--active animate__animated animate__fadeIn"
@@ -1044,8 +1038,6 @@
             </div>
           </div>
         </div>
-
-
         <div class="catalog__bottom bottom-russia animate__animated animate__fadeIn" data-target="russia">
           <div class="catalog__biography biography animate__animated animate__fadeIn catalog__biography--active"
             data-target="rublev">
@@ -1243,7 +1235,6 @@
             </div>
           </div>
         </div>
-
         <div class="catalog__bottom bottom-belgium animate__animated animate__fadeIn" data-target="belgium">
           <div class="catalog__biography biography animate__animated animate__fadeIn catalog__biography--active"
             data-target="zittov">
@@ -1488,7 +1479,7 @@
               </div>
             </li>
           </ul>
-        <div class="swiper-pagination events__pag"></div>
+          <div class="swiper-pagination events__pag"></div>
         </div>
         <!-- <ul class="events__list list">
           <li class="events__item event-item">
@@ -1579,94 +1570,154 @@
         <div class="publications__left">
           <h2 class="publications__title section-title">Издания</h2>
           <div class="publications__category publications-category">
-            <b class="publications-category__title">Категории<svg class="publications-category__arrow" width="12" height="7" viewbox="0 0 12 7" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path d="M11 1L6 6.00001L0.999997 1" stroke="white" />
-            </svg></b>
-
+            <b class="publications-category__title">Категории<svg class="publications-category__arrow" width="12"
+                height="7" viewbox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11 1L6 6.00001L0.999997 1" stroke="white" />
+              </svg></b>
             <div class="publications-category__checkbox">
               <label class="publications-category__label" for="checkbox_1">
                 <input class="publications-category__input" type="checkbox" id="checkbox_1">
-                <span class="publications-category__span">Бестселлеры<svg class="publications-category__cross" width="13" height="12" viewbox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z" fill="#ffffff"/>
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z" fill="#ffffff"/>
+                <span class="publications-category__span">Бестселлеры<svg class="publications-category__cross"
+                    width="13" height="12" viewbox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
+                      fill="#ffffff" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z"
+                      fill="#ffffff" />
                   </svg></span>
               </label>
               <label class="publications-category__label" for="checkbox_2">
                 <input class="publications-category__input" type="checkbox" id="checkbox_2">
-                <span class="publications-category__span">Искусство<svg class="publications-category__cross" width="13" height="12" viewbox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z" fill="#ffffff"/>
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z" fill="#ffffff"/>
+                <span class="publications-category__span">Искусство<svg class="publications-category__cross" width="13"
+                    height="12" viewbox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
+                      fill="#ffffff" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z"
+                      fill="#ffffff" />
                   </svg></span>
               </label>
               <label class="publications-category__label" for="checkbox_3">
                 <input class="publications-category__input" type="checkbox" id="checkbox_3">
-                <span class="publications-category__span">Архитектура<svg class="publications-category__cross" width="13" height="12" viewbox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z" fill="#ffffff"/>
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z" fill="#ffffff"/>
+                <span class="publications-category__span">Архитектура<svg class="publications-category__cross"
+                    width="13" height="12" viewbox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
+                      fill="#ffffff" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z"
+                      fill="#ffffff" />
                   </svg></span>
               </label>
               <label class="publications-category__label" for="checkbox_4">
                 <input class="publications-category__input" type="checkbox" id="checkbox_4">
-                <span class="publications-category__span">Дизайн<svg class="publications-category__cross" width="13" height="12" viewbox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z" fill="#ffffff"/>
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z" fill="#ffffff"/>
+                <span class="publications-category__span">Дизайн<svg class="publications-category__cross" width="13"
+                    height="12" viewbox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
+                      fill="#ffffff" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z"
+                      fill="#ffffff" />
                   </svg></span>
               </label>
               <label class="publications-category__label" for="checkbox_5">
                 <input class="publications-category__input" type="checkbox" id="checkbox_5">
-                <span class="publications-category__span">Мода<svg class="publications-category__cross" width="13" height="12" viewbox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z" fill="#ffffff"/>
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z" fill="#ffffff"/>
+                <span class="publications-category__span">Мода<svg class="publications-category__cross" width="13"
+                    height="12" viewbox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
+                      fill="#ffffff" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z"
+                      fill="#ffffff" />
                   </svg></span>
               </label>
               <label class="publications-category__label" for="checkbox_6">
                 <input class="publications-category__input" type="checkbox" id="checkbox_6">
-                <span class="publications-category__span">Детям<svg class="publications-category__cross" width="13" height="12" viewbox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z" fill="#ffffff"/>
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z" fill="#ffffff"/>
+                <span class="publications-category__span">Детям<svg class="publications-category__cross" width="13"
+                    height="12" viewbox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
+                      fill="#ffffff" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z"
+                      fill="#ffffff" />
                   </svg></span>
               </label>
               <label class="publications-category__label" for="checkbox_7">
                 <input class="publications-category__input" type="checkbox" id="checkbox_7">
-                <span class="publications-category__span">Художественная литература<svg class="publications-category__cross" width="13" height="12" viewbox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z" fill="#ffffff"/>
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z" fill="#ffffff"/>
+                <span class="publications-category__span">Художественная литература<svg
+                    class="publications-category__cross" width="13" height="12" viewbox="0 0 13 12" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
+                      fill="#ffffff" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z"
+                      fill="#ffffff" />
                   </svg></span>
               </label>
               <label class="publications-category__label" for="checkbox_8">
                 <input class="publications-category__input" type="checkbox" id="checkbox_8">
-                <span class="publications-category__span">Публицистика<svg class="publications-category__cross" width="13" height="12" viewbox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z" fill="#ffffff"/>
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z" fill="#ffffff"/>
+                <span class="publications-category__span">Публицистика<svg class="publications-category__cross"
+                    width="13" height="12" viewbox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
+                      fill="#ffffff" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z"
+                      fill="#ffffff" />
                   </svg></span>
               </label>
               <label class="publications-category__label" for="checkbox_9">
                 <input class="publications-category__input" type="checkbox" id="checkbox_9">
-                <span class="publications-category__span">Путеводители<svg class="publications-category__cross" width="13" height="12" viewbox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z" fill="#ffffff"/>
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z" fill="#ffffff"/>
+                <span class="publications-category__span">Путеводители<svg class="publications-category__cross"
+                    width="13" height="12" viewbox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
+                      fill="#ffffff" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z"
+                      fill="#ffffff" />
                   </svg></span>
               </label>
               <label class="publications-category__label" for="checkbox_10">
                 <input class="publications-category__input" type="checkbox" id="checkbox_10">
-                <span class="publications-category__span">Философия<svg class="publications-category__cross" width="13" height="12" viewbox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z" fill="#ffffff"/>
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z" fill="#ffffff"/>
+                <span class="publications-category__span">Философия<svg class="publications-category__cross" width="13"
+                    height="12" viewbox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
+                      fill="#ffffff" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z"
+                      fill="#ffffff" />
                   </svg></span>
               </label>
               <label class="publications-category__label" for="checkbox_11">
                 <input class="publications-category__input" type="checkbox" id="checkbox_11">
-                <span class="publications-category__span">Учебная литература<svg class="publications-category__cross" width="13" height="12" viewbox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z" fill="#ffffff"/>
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z" fill="#ffffff"/>
+                <span class="publications-category__span">Учебная литература<svg class="publications-category__cross"
+                    width="13" height="12" viewbox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
+                      fill="#ffffff" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z"
+                      fill="#ffffff" />
                   </svg></span>
               </label>
               <label class="publications-category__label" for="checkbox_12">
                 <input class="publications-category__input" type="checkbox" id="checkbox_12">
-                <span class="publications-category__span">Журналы и газеты<svg class="publications-category__cross" width="13" height="12" viewbox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z" fill="#ffffff"/>
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z" fill="#ffffff"/>
+                <span class="publications-category__span">Журналы и газеты<svg class="publications-category__cross"
+                    width="13" height="12" viewbox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M0.501981 11.4789L11.502 0.000216305L12.002 0.521973L1.00198 12.0006L0.501981 11.4789Z"
+                      fill="#ffffff" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M0.500026 9.03416e-05L11.5 11.4787L11 12.0005L2.74963e-05 0.521847L0.500026 9.03416e-05Z"
+                      fill="#ffffff" />
                   </svg></span>
               </label>
             </div>
@@ -1781,24 +1832,16 @@
     <section class="projects" id="projects">
       <div class="container projects-container">
         <h2 class="projects__title section-title">Проекты</h2>
-
-
-
-
         <div class="projects__description">
           Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно
           фиксирует необходимость своевременного выполнения сверхзадачи. А ещё независимые государства смешаны с не
           уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус бесполезности.
           Прежде всего, постоянное информационно-пропагандистское
-
-
           <div class="projects__tooltip">
             <button class="projects__btn" aria-labelledby="tooltip-1">i</button>
             <div class="projects__popup" role="tooltip" id="tooltip-1">Пример современных тенденций - современная
               методология разработки</div>
           </div>
-
-
           обеспечение нашей деятельности однозначно фиксирует
           необходимость экономической целесообразности принимаемых решений. И нет сомнений, что действия
           представителей оппозиции могут быть рассмотрены
@@ -1872,10 +1915,12 @@
             <input type="hidden" name="form_subject" value="Blanchard">
             <p class="contacts-form__heading">Заказать обратный звонок</p>
             <label class="contacts-form__label">
-              <input class="contacts-form__input" name="name" type="text" placeholder="Имя*" data-validate-field="name" aria-label="Введите имя">
+              <input class="contacts-form__input" name="name" type="text" placeholder="Имя*" data-validate-field="name"
+                aria-label="Введите имя">
             </label>
             <label class="contacts-form__label">
-              <input class="contacts-form__input" name="tel" type="tel" placeholder="Телефон*" data-validate-field="tel" aria-label="Введите телефон">
+              <input class="contacts-form__input" name="tel" type="tel" placeholder="Телефон*" data-validate-field="tel"
+                aria-label="Введите телефон">
             </label>
             <button class="contacts-form__button button" type="submit">Заказать</button>
           </form>
@@ -1912,6 +1957,9 @@
           </div>
         </div>
         <div class="contacts__map" id="map"></div>
+      </div>
+      <div class="contacts__modal modal">
+        <div class="modal__window">Ваше сообщение отправлено!</div>
       </div>
     </section>
   </main>
@@ -1960,5 +2008,4 @@
     </div>
   </footer>
 </body>
-
 </html>
