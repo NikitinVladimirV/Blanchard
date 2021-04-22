@@ -242,7 +242,7 @@ window.addEventListener('DOMContentLoaded', function () {
     document.querySelector('.events__button').classList.add('hidden')
   });
 
-  // Events__category
+  // Publications__category
   document.querySelector('.publications-category__title').addEventListener('click', function() {
     document.querySelector('.publications-category__checkbox').classList.toggle('publications-category__checkbox--open')
   });
@@ -347,5 +347,5 @@ window.addEventListener('DOMContentLoaded', function () {
   });
 
   //Where focus
-  // window.addEventListener('focusin', event => console.log(new Date, event.target));
+  window.addEventListener('focusin', event => console.log(new Date, event.target));
 })

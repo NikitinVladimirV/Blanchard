@@ -1096,8 +1096,10 @@ opacity: 1;
   font-size: 24px;
   line-height: 32px;
   font-weight: 600;
-  border-bottom: 1px solid #CACACA;
   border-top: 1px solid transparent;
+  border-right: 2px solid transparent;
+  border-bottom: 1px solid #CACACA;
+  border-left: 2px solid transparent;
   cursor: pointer;
   transition-property: border, color;
   transition-duration: .2s;
@@ -1936,7 +1938,6 @@ input[type="checkbox"].focus-visible ~ span {
 
 .footer__link:active .logo {
   border-bottom: 1px solid var(--color-violet);
-
 }
 
 .footer__social {
@@ -2011,8 +2012,16 @@ input[type="checkbox"].focus-visible ~ span {
     transition: background-image .3s linear;
   }
 
+  .burger:active {
+    background-image: url(../img/header/Burger-1024--active.svg);
+  }
+
   .burger--open {
     background-image: url(../img/header/X-1024.svg);
+  }
+
+  .burger--open:active {
+    background-image: url(../img/header/X-1024--active.svg);
   }
 
   .logo {
@@ -2852,8 +2861,16 @@ input[type="checkbox"].focus-visible ~ span {
     background-position: 2px 0;
   }
 
+  .burger:active {
+    background-image: url(../img/header/Burger-320--active.svg);
+  }
+
   .burger--open {
     background-image: url(../img/header/X-320.svg);
+  }
+
+  .burger--open:active {
+    background-image: url(../img/header/X-320--active.svg);
   }
 
   .header__link {
@@ -3254,7 +3271,19 @@ input[type="checkbox"].focus-visible ~ span {
     padding: 2px 0 4px 1px;
     margin-bottom: 3px;
     border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid transparent;
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid transparent;
+  }
+
+  .publications-category__title:active {
+    color: var(--color-3A4);
+    border-top: 1px solid var(--color-3A4);
+    border-bottom: 1px solid var(--color-3A4);
+  }
+
+  .publications-category__title:active path {
+    stroke: var(--color-3A4);
   }
 
   .publications-category__arrow {
@@ -3273,6 +3302,7 @@ input[type="checkbox"].focus-visible ~ span {
   }
 
   .publications-category__label {
+    /* position: relative; */
     width: 100%;
     margin-right: 0;
   }
@@ -3285,7 +3315,6 @@ input[type="checkbox"].focus-visible ~ span {
   .publications-category__checkbox .publications-category__span {
     display: none;
   }
-
 
   .publications-category__checkbox--open .publications-category__span {
     display: flex;
@@ -3307,8 +3336,26 @@ input[type="checkbox"].focus-visible ~ span {
 
   .publications-category__cross {
     position: absolute;
+    z-index: 0;
+    display: none;
+    top: 10px;
+    left: 280px;
+  }
+
+  .publications-category__span--checked .publications-category__cross {
     display: block;
-    left: 278px;
+  }
+
+  .publications-category__checkbox--open .publications-category__cross {
+    display: block;
+  }
+
+  .publications-category__span:active path{
+    fill: var(--color-3A4);
+  }
+
+  .publications-category__label input[type="checkbox"]:checked + span path{
+    fill: var(--color-3F3);
   }
 
   .publications__filter {
