@@ -27,7 +27,7 @@ window.addEventListener('DOMContentLoaded', function () {
   });
 
   // Burger
-  document.querySelector('.burger').addEventListener('click', function() {
+  document.querySelector('.burger').addEventListener('click', function () {
     document.querySelector('.burger').classList.toggle('burger--open')
     document.querySelector('.header__nav').classList.toggle('header__nav--hidden')
     document.querySelector('.header__enter').classList.toggle('header__enter--hidden')
@@ -77,7 +77,7 @@ window.addEventListener('DOMContentLoaded', function () {
   const slider = document.querySelector('.swiper-container4');
   let mySwiper;
   function mobileSlider() {
-    if (window.innerWidth <=767 && slider.dataset.mobile == 'false') {
+    if (window.innerWidth <= 767 && slider.dataset.mobile == 'false') {
       mySwiper = new Swiper(slider, {
         slidesPerView: 1,
         spaceBetween: 10,
@@ -237,17 +237,17 @@ window.addEventListener('DOMContentLoaded', function () {
   // $('#events__btn').click(function () { $('#hidden1, #hidden2, #hidden3').show(); $('#events__btn').hide(); });
 
   // Events__picture
-  document.querySelector('.events__button').addEventListener('click', function() {
+  document.querySelector('.events__button').addEventListener('click', function () {
     document.querySelector('.events__list').classList.add('wrap')
     document.querySelector('.events__button').classList.add('hidden')
   });
 
   // Publications__category
-  document.querySelector('.publications-category__title').addEventListener('click', function() {
+  document.querySelector('.publications-category__title').addEventListener('click', function () {
     document.querySelector('.publications-category__checkbox').classList.toggle('publications-category__checkbox--open')
   });
-  document.querySelectorAll('.publications-category__label').forEach(function(el) {
-    el.addEventListener('click', function(event) {
+  document.querySelectorAll('.publications-category__label').forEach(function (el) {
+    el.addEventListener('click', function (event) {
       event.target.classList.toggle('publications-category__span--checked')
     })
   })
@@ -279,32 +279,32 @@ window.addEventListener('DOMContentLoaded', function () {
   let selector = document.querySelectorAll('input[type="tel"]');
   let im = new Inputmask('+7 (999) 999-99-99');
   im.mask(selector);
-    let validateForms = function(selector, rules, successModal, yaGoal) {
-      new window.JustValidate(selector, {
-        rules: rules,
-        submitHandler: function(form) {
-          let formData = new FormData(form);
-          let xhr = new XMLHttpRequest();
-          xhr.onreadystatechange = function() {
-            if(xhr.readyState === 4) {
-              if(xhr.status === 200) {
-                console.log('Отправлено');
-                document.querySelector('.contacts__modal').classList.add('contacts__modal--visible')
-                document.querySelector('.modal__window').classList.add('modal__window--visible')
-                document.querySelector('.contacts__modal').addEventListener('click', function() {
-                  document.querySelector('.contacts__modal').classList.remove('contacts__modal--visible')
-                  document.querySelector('.modal__window').classList.remove('modal__window--visible')
-                })
-              }
+  let validateForms = function (selector, rules, successModal, yaGoal) {
+    new window.JustValidate(selector, {
+      rules: rules,
+      submitHandler: function (form) {
+        let formData = new FormData(form);
+        let xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState === 4) {
+            if (xhr.status === 200) {
+              console.log('Отправлено');
+              document.querySelector('.contacts__modal').classList.add('contacts__modal--visible')
+              document.querySelector('.modal__window').classList.add('modal__window--visible')
+              document.querySelector('.contacts__modal').addEventListener('click', function () {
+                document.querySelector('.contacts__modal').classList.remove('contacts__modal--visible')
+                document.querySelector('.modal__window').classList.remove('modal__window--visible')
+              })
             }
           }
-          xhr.open('POST', '../mail.php', true);
-          xhr.send(formData);
-          form.reset();
         }
-      });
-    }
-  validateForms('.form', { email: {required: true, email: true}, tel: {required: true} }, '.thanks-popup', 'send goal');
+        xhr.open('POST', '../mail.php', true);
+        xhr.send(formData);
+        form.reset();
+      }
+    });
+  }
+  validateForms('.form', { email: { required: true, email: true }, tel: { required: true } }, '.thanks-popup', 'send goal');
 
   // Gallery__modal
   const btns = document.querySelectorAll('.card');
@@ -333,13 +333,13 @@ window.addEventListener('DOMContentLoaded', function () {
   });
 
   // Header search
-  document.querySelector('.search__btn').addEventListener('focus', function() {
+  document.querySelector('.search__btn').addEventListener('focus', function () {
     document.querySelector('.search__input').classList.add('search__input--active')
     document.querySelector('.search__btn').classList.add('search__btn--active')
     document.querySelector('.header__search').classList.add('header__search--active')
     document.querySelector('.search__close').classList.add('search__close--active')
   });
-  document.querySelector('.search__close').addEventListener('click', function() {
+  document.querySelector('.search__close').addEventListener('click', function () {
     document.querySelector('.search__input').classList.remove('search__input--active')
     document.querySelector('.search__btn').classList.remove('search__btn--active')
     document.querySelector('.header__search').classList.remove('header__search--active')
