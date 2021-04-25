@@ -64,7 +64,7 @@ window.addEventListener('DOMContentLoaded', function () {
         slidesPerColumn: 2,
         spaceBetween: 34,
       },
-      1920: {
+      1210: {
         slidesPerView: 3,
         slidesPerGroup: 1,
         slidesPerColumn: 2,
@@ -126,7 +126,7 @@ window.addEventListener('DOMContentLoaded', function () {
             slidesPerGroup: 1,
             spaceBetween: 49,
           },
-          1920: {
+          1210: {
             slidesPerView: 3,
             slidesPerGroup: 1,
             spaceBetween: 50,
@@ -164,7 +164,7 @@ window.addEventListener('DOMContentLoaded', function () {
         slidesPerView: 2,
         spaceBetween: 50,
       },
-      1920: {
+      1210: {
         slidesPerView: 3,
         spaceBetween: 50,
       }

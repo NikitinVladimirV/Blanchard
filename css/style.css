@@ -200,7 +200,7 @@
 
 .header__list {
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   margin: 0;
 }
 
@@ -1983,109 +1983,44 @@ input[type="checkbox"].focus-visible ~ span {
   border: 2px solid var(--color-border--focus);
 }
 
-@media (max-width: 1510px) {
+
+@media (max-width: 1610px) {
   .container {
-    max-width: 1024px;
+    max-width: 1200px;
     padding-right: 30px;
     padding-left: 30px;
   }
 
   /* Header */
-  .header__list {
-    flex-wrap:nowrap
-  }
-
   .header__link {
     margin-right: 3%;
   }
 
-  .header__nav {
-    margin-right: 1%;
-    padding-top: 5px;
-  }
-
   .header__item {
-    margin-right: 2%;
-  }
-
-  .header__menu {
-    position: relative;
-  }
-
-  .header-menu__list {
-    width: 67%;
-    flex-wrap: nowrap;
+    margin-right: 3%;
   }
 
   .header-menu__item:not(:last-child) {
-    margin-right: 1%;
+    margin-right: 5%;
   }
 
-  .contacts-container {
-    max-width: 100%;
-    padding-right: 0;
-    padding-left: calc((100vw - 1024px) / 2);
+  /* Gallery */
+  .gallery__description {
+    padding: 0 0 0 2px;
   }
 
   /* Events */
-  .events-container {
-    padding-top: 57px;
-    padding-bottom: 80px;
-    padding-right: 50px;
-    padding-left: 44px;
-  }
-
-  .events__title {
-    padding-left: 3px;
-  }
-
-  .swiper-container4 {
-    padding-left: 6px;
-  }
-
-  .events__item {
-    max-width: 290px;
-  }
-
   .events__item:not(:nth-child(3n)) {
-    margin-right: 27px;
+    margin-right: 140px;
   }
 
-  .event-item__img {
-    height: 200px;
-  }
-
-  .event-item__text {
-    min-height: 463px;
-    padding: 4px 17px 41px 34px;
-  }
-
-  .event-item__date {
-    margin-bottom: 5px;
-  }
-
-  .event-item__title {
-    margin-bottom: 3px;
-    line-height: 33px;
-  }
-
-  .event-item__description {
-    padding-right: 15px;
-  }
-
-  .event-item__link {
-    max-width: 38%;
-  }
-
-  .events__button {
-    padding: 18px 33px 17px 33px;
-    margin: 0 auto;
+  /* Projects */
+  .projects__description {
+    padding: 0 0 0 3px;
   }
 }
 
-
-
-@media (max-width: 1118px) {
+@media (max-width: 1210px) {
   .container {
     max-width: 1024px;
     margin: 0 auto;
@@ -2412,7 +2347,7 @@ input[type="checkbox"].focus-visible ~ span {
   }
 
   /* Events */
-  /* .events-container {
+  .events-container {
     padding-top: 57px;
     padding-bottom: 80px;
   }
@@ -2462,7 +2397,7 @@ input[type="checkbox"].focus-visible ~ span {
   .events__button {
     padding: 18px 33px 17px 33px;
     margin: 0 auto;
-  } */
+  }
 
   /* Publications */
   .publications-container {
