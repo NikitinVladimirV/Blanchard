@@ -77,7 +77,7 @@ window.addEventListener('DOMContentLoaded', function () {
   const slider = document.querySelector('.swiper-container4');
   let mySwiper;
   function mobileSlider() {
-    if (window.innerWidth <= 767 && slider.dataset.mobile == 'false') {
+    if (window.innerWidth <= 321 && slider.dataset.mobile == 'false') {
       mySwiper = new Swiper(slider, {
         slidesPerView: 1,
         spaceBetween: 10,
@@ -91,7 +91,7 @@ window.addEventListener('DOMContentLoaded', function () {
       });
       slider.dataset.mobile = 'true';
     }
-    if (window.innerWidth > 767) {
+    if (window.innerWidth > 321) {
       slider.dataset.mobile = 'false';
       if (slider.classList.contains('swiper-container-initialized')) {
         mySwiper.destroy();
@@ -237,10 +237,18 @@ window.addEventListener('DOMContentLoaded', function () {
   // $('#events__btn').click(function () { $('#hidden1, #hidden2, #hidden3').show(); $('#events__btn').hide(); });
 
   // Events__picture
+  // document.querySelector('.events__button').addEventListener('click', function () {
+  //   document.querySelector('.events__list').classList.add('wrap')
+  //   document.querySelector('.events__button').classList.add('hidden')
+  // });
+
   document.querySelector('.events__button').addEventListener('click', function () {
-    document.querySelector('.events__list').classList.add('wrap')
-    document.querySelector('.events__button').classList.add('hidden')
-  });
+      document.querySelectorAll('.events__item').forEach(function (visible) {
+        visible.classList.add('visible')
+      })
+      document.querySelector('.events__button').classList.add('events__hidden')
+  })
+
 
   // Publications__category
   document.querySelector('.publications-category__title').addEventListener('click', function () {
