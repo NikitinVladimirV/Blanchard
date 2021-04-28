@@ -885,6 +885,7 @@ opacity: 1;
   justify-content: center;
   height: 100vh;
   width: 100%;
+  /* padding: 0 510px 0 510px; */
   background-color: rgba(0,0,0, .7);
   opacity: 0;
   visibility: hidden;
@@ -2018,7 +2019,7 @@ input[type="checkbox"].focus-visible ~ span {
 
 
 
-
+/* 1610px 11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111 */
 @media (max-width: 1610px) {
   .container {
     padding-right: 30px;
@@ -2027,7 +2028,8 @@ input[type="checkbox"].focus-visible ~ span {
 
   /* Header */
   .header__link {
-    margin-right: 10%;
+    /* margin-right: 10%; */
+    margin-right: auto;
     /* margin-right: 4%; */
   }
 
@@ -2037,7 +2039,7 @@ input[type="checkbox"].focus-visible ~ span {
 
   /* Events */
   .events__item {
-    max-width: 31.3%;
+    max-width: 30.4%;
   }
 }
 
@@ -2048,12 +2050,7 @@ input[type="checkbox"].focus-visible ~ span {
 
 
 
-
-
-
-
-
-
+/* 1024px 11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111 */
 @media (max-width: 1209px) {
   .container {
     max-width: 100%;
@@ -2069,7 +2066,7 @@ input[type="checkbox"].focus-visible ~ span {
 
   .header__top {
     align-items: center;
-    padding: 27px 50px 15px 48px;
+    padding: 27px 88px 15px 48px;
   }
 
   .burger {
@@ -2078,7 +2075,8 @@ input[type="checkbox"].focus-visible ~ span {
     width: 40px;
     height: 32px;
     padding: 0;
-    margin-right: 328px;
+    /* margin-right: 328px; */
+    margin-right: auto;
     margin-bottom: 11px;
     border: 2px solid transparent;
     background-image: url(../img/header/Burger-1024.svg);
@@ -2398,6 +2396,10 @@ input[type="checkbox"].focus-visible ~ span {
     padding-left: 6px;
   }
 
+  .events__item {
+    max-width: 31.3%;
+  }
+
   .events__item:not(:nth-child(3n)) {
     margin-right: 27px;
   }
@@ -2593,6 +2595,13 @@ input[type="checkbox"].focus-visible ~ span {
   }
 }
 
+
+
+
+
+
+
+/* 768px 111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111 */
 @media (max-width: 1023px) {
   .container {
     /* max-width: 768px; */
@@ -2604,12 +2613,12 @@ input[type="checkbox"].focus-visible ~ span {
   /* Header */
   .header__top {
     align-items: center;
-    padding: 27px 50px 15px 48px;
+    padding: 27px 90px 15px 48px;
   }
 
-  .burger {
+  /* .burger {
     margin-right: 29.7%;
-  }
+  } */
 
   .header__menu {
     margin-right: 46px;
@@ -2724,6 +2733,7 @@ input[type="checkbox"].focus-visible ~ span {
 
   .modal__artist {
     max-width: 661px;
+    /* width: 100%; */
     padding: 122px 63px 122px 348px;
     background-size: 45% 100%;
   }
@@ -2932,6 +2942,13 @@ input[type="checkbox"].focus-visible ~ span {
   }
 }
 
+
+
+
+
+
+
+/* 320px !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 @media (max-width: 767px) {
   .section-title {
     font-size: 28px;
@@ -2947,12 +2964,13 @@ input[type="checkbox"].focus-visible ~ span {
   /* Header */
   .header__top {
     padding-top: 10px;
+    padding-right: 36px;
     padding-bottom: 0;
   }
 
   .burger {
     padding-left: 3px;
-    margin-right: 24.2%;
+    /* margin-right: 24.2%; */
     /* margin-right: 73px; */
     width: 27px;
     height: 19px;
@@ -3153,6 +3171,7 @@ input[type="checkbox"].focus-visible ~ span {
     flex-direction: column-reverse;
     max-width: 296px;
     height: 421px;
+    margin: 0 auto 10px;
     padding-top: 0;
     padding-left: 3px;
   }
@@ -3182,8 +3201,13 @@ input[type="checkbox"].focus-visible ~ span {
     font-weight: 600;
   }
 
+  .modal-overlay {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
   .modal__artist {
-    max-width: 290px;
+    /* max-width: 290px; */
     padding: 217px 20px 26px 20px;
     background-size: 290px 200px;
   }
@@ -3288,7 +3312,9 @@ input[type="checkbox"].focus-visible ~ span {
   .swiper-container4 {
     position: relative;
     width: 100%;
+    width: 300px;
     padding: 0 5px 25px 5px;
+    margin: 0 auto;
     overflow: hidden;
   }
 
@@ -3513,12 +3539,13 @@ input[type="checkbox"].focus-visible ~ span {
   .publications-slide {
     max-width: 130px;
     flex-shrink: 0;
+    margin-right: 30px;
     margin-bottom: 43px;
   }
 
-  .publications-slide:not(:nth-child(2n)) {
+  /* .publications-slide:not(:nth-child(2n)) {
     margin-right: 30px;
-  }
+  } */
 
   .publications-slide__img {
     height: 143px;
@@ -3708,6 +3735,12 @@ input[type="checkbox"].focus-visible ~ span {
 
   .footer__link {
     padding-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 474px) {
+  .publications-slide:nth-child(2n) {
     margin-right: 0;
   }
 }

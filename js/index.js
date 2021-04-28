@@ -77,7 +77,7 @@ window.addEventListener('DOMContentLoaded', function () {
   const slider = document.querySelector('.swiper-container4');
   let mySwiper;
   function mobileSlider() {
-    if (window.innerWidth <= 321 && slider.dataset.mobile == 'false') {
+    if (window.innerWidth <= 767 && slider.dataset.mobile == 'false') {
       mySwiper = new Swiper(slider, {
         slidesPerView: 1,
         spaceBetween: 10,
@@ -91,7 +91,7 @@ window.addEventListener('DOMContentLoaded', function () {
       });
       slider.dataset.mobile = 'true';
     }
-    if (window.innerWidth > 321) {
+    if (window.innerWidth > 767) {
       slider.dataset.mobile = 'false';
       if (slider.classList.contains('swiper-container-initialized')) {
         mySwiper.destroy();
