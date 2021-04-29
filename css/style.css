@@ -2709,6 +2709,7 @@ input[type="checkbox"].focus-visible ~ span {
     height: 750px;
     padding-top: 24px;
     padding-left: 6px;
+    margin: 0 auto 10px;
   }
 
   .swiper__nav {
@@ -3171,7 +3172,7 @@ input[type="checkbox"].focus-visible ~ span {
     flex-direction: column-reverse;
     max-width: 296px;
     height: 421px;
-    margin: 0 auto 10px;
+    /* margin: 0 auto 10px; */
     padding-top: 0;
     padding-left: 3px;
   }
@@ -3209,7 +3210,7 @@ input[type="checkbox"].focus-visible ~ span {
   .modal__artist {
     /* max-width: 290px; */
     padding: 217px 20px 26px 20px;
-    background-size: 290px 200px;
+    background-size: 100% 200px;
   }
 
   /* Catalog */
@@ -3401,6 +3402,7 @@ input[type="checkbox"].focus-visible ~ span {
   .publications-container {
     height: auto;
     padding-top: 37px;
+    padding-right: 14px;
     padding-left: 13px;
     padding-bottom: 0;
   }
@@ -3414,7 +3416,7 @@ input[type="checkbox"].focus-visible ~ span {
   }
 
   .publications-category {
-    padding: 14px 5px 0 0;
+    padding: 14px 0 0 0;
     margin-bottom: 18px;
   }
 
@@ -3491,7 +3493,8 @@ input[type="checkbox"].focus-visible ~ span {
     z-index: 0;
     display: none;
     top: 10px;
-    left: 280px;
+    /* left: 96%; */
+    right: 0;
   }
 
   .publications-category__span--checked .publications-category__cross {
@@ -3511,6 +3514,7 @@ input[type="checkbox"].focus-visible ~ span {
   }
 
   .publications__filter {
+    width: min-content;
     padding: 0 17px 0px 2px;
   }
 
@@ -3537,7 +3541,8 @@ input[type="checkbox"].focus-visible ~ span {
   }
 
   .publications-slide {
-    max-width: 130px;
+    /* max-width: 130px; */
+    width: 40.7vw;
     flex-shrink: 0;
     margin-right: 30px;
     margin-bottom: 43px;
