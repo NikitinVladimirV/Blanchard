@@ -2587,9 +2587,10 @@ input[type="checkbox"].focus-visible ~ span {
   }
 
   .header-search__btn {
+    right: 5px;
     display: block;
-    width: 20px;
-    height: 20px;
+    width: 31px;
+    height: 31px;
     padding: 0;
     background-image: url(../img/header/Search.svg);
     background-repeat: no-repeat;
