@@ -234,14 +234,7 @@ window.addEventListener('DOMContentLoaded', function () {
     })
   })
 
-  // $('#events__btn').click(function () { $('#hidden1, #hidden2, #hidden3').show(); $('#events__btn').hide(); });
-
   // Events__picture
-  // document.querySelector('.events__button').addEventListener('click', function () {
-  //   document.querySelector('.events__list').classList.add('wrap')
-  //   document.querySelector('.events__button').classList.add('hidden')
-  // });
-
   document.querySelector('.events__button').addEventListener('click', function () {
       document.querySelectorAll('.events__item').forEach(function (visible) {
         visible.classList.add('visible')
@@ -318,6 +311,7 @@ window.addEventListener('DOMContentLoaded', function () {
   const btns = document.querySelectorAll('.card');
   const modalOverlay = document.querySelector('.modal-overlay');
   const modals = document.querySelectorAll('.modal__artist');
+  const cross = document.querySelectorAll('.modal__cross')
   const body = document.querySelector('.body');
   btns.forEach((el) => {
     el.addEventListener('click', (e) => {
@@ -339,19 +333,24 @@ window.addEventListener('DOMContentLoaded', function () {
       });
     };
   });
+  cross.forEach((el) => {
+    el.addEventListener('click', (e) => {
+      modalOverlay.classList.remove('modal-overlay--visible');
+      body.classList.remove('overflow');
+      modals.forEach((el) => {
+        el.classList.remove('modal__artist--visible');
+      });
+    });
+  })
 
   // Header search
-  document.querySelector('.search__btn').addEventListener('focus', function () {
-    document.querySelector('.search__input').classList.add('search__input--active')
-    document.querySelector('.search__btn').classList.add('search__btn--active')
+  document.querySelector('.header-search__btn').addEventListener('focus', function () {
     document.querySelector('.header__search').classList.add('header__search--active')
-    document.querySelector('.search__close').classList.add('search__close--active')
+    document.querySelector('.header-search__btn').classList.add('header-search__btn--active')
   });
-  document.querySelector('.search__close').addEventListener('click', function () {
-    document.querySelector('.search__input').classList.remove('search__input--active')
-    document.querySelector('.search__btn').classList.remove('search__btn--active')
-    document.querySelector('.header__search').classList.remove('header__search--active')
-    document.querySelector('.search__close').classList.remove('search__close--active')
+  document.querySelector('.header-search__btn').addEventListener('click', function () {
+    document.querySelector('.header__search').classList.toggle('header__search--active')
+    document.querySelector('.header-search__btn').classList.toggle('header-search__btn--active')
   });
 
   //Where focus
