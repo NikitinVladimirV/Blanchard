@@ -1212,9 +1212,10 @@ opacity: 1;
 
 .accordion__btn {
   padding: 0;
+  color: #333333;
   border: 2px solid transparent;
   background-color: transparent;
-  cursor: pointer;
+  text-decoration: none;
   transition-property: border, color;
   transition-duration: .2s;
   transition-timing-function: linear;
@@ -3263,6 +3264,10 @@ input[type="checkbox"].focus-visible ~ span {
 
   .swiper-container-initialized .event-item__img {
     min-width: 290px;
+  }
+
+  .events__item {
+    display: block;
   }
 
   .event-item__text {

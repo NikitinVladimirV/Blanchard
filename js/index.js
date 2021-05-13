@@ -1,6 +1,6 @@
 window.addEventListener('DOMContentLoaded', function () {
   // Smooth Scroll
-  const anchors = document.querySelectorAll('.header-nav__link, .projects__link, .primary__button')
+  const anchors = document.querySelectorAll('.header-nav__link, .projects__link, .primary__button, .accordion__btn')
   for (let anchor of anchors) {
     anchor.addEventListener('click', function (e) {
       e.preventDefault()
@@ -48,7 +48,7 @@ window.addEventListener('DOMContentLoaded', function () {
     slidesPerView: 1,
     slidesPerGroup: 1,
     slidesPerColumn: 1,
-    spaceBetween: 0,
+    spaceBetween: 5,
     pagination: {
       el: '.swiper-pagination1',
       type: 'fraction',
