@@ -896,11 +896,13 @@ opacity: 1;
 .modal__artist {
   display: none;
   max-width: 900px;
+  max-height: 90%;
   padding: 121px 50px 123px 450px;
   color: #333;
   background-color: var(--color-white);
   background-repeat: no-repeat;
   background-size: 44% 100%;
+  overflow: auto;
 }
 
 .modal-artist--13 {
@@ -971,7 +973,7 @@ opacity: 1;
   display: block;
   margin-bottom: 40px;
   font-size: 12px;
-  line-height: 0;
+  line-height: 1;
   color: #969696;
 }
 
@@ -3655,6 +3657,12 @@ input[type="checkbox"].focus-visible ~ span {
 }
 
 @media (max-width: 474px) {
+  /* Gallery */
+  .modal-artist__date {
+    margin-bottom: 20px;
+  }
+
+  /* Publications */
   .publications-slide:nth-child(2n) {
     margin-right: 0;
   }
