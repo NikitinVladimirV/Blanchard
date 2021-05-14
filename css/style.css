@@ -124,7 +124,7 @@
 }
 
 .swiper-btn:active {
-  border: 2px solid #D1A9F0;
+  border: 2px solid var(--color-9F0);
   background: var(--color-3A4);
 }
 
@@ -401,7 +401,7 @@ opacity: 1;
 }
 
 .header-drop__item:active {
-  border: 2px solid #D1A9F0;
+  border: 2px solid var(--color-9F0);
   background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4));
 }
 
@@ -1481,7 +1481,7 @@ input[type="checkbox"].focus-visible ~ span {
 }
 
 .publications-category__span:hover {
-  color: #C283F3;
+  color: var(--color--hover);
 }
 
 .publications-category__span::before {
@@ -1908,6 +1908,20 @@ input[type="checkbox"].focus-visible ~ span {
 
 .modal__window {
   display: none;
+  width: 50%;
+  height: 300px;
+  text-align: center;
+  font-size: 23px;
+  line-height: 70px;
+  font-weight: 600;
+  color: var(--color-black);
+  border: 5px solid var(--color-black);
+  border-radius: 20px;
+  background: var(--color-white);
+}
+
+/* .modal__window {
+  display: none;
   width: 700px;
   height: 300px;
   text-align: center;
@@ -1918,7 +1932,7 @@ input[type="checkbox"].focus-visible ~ span {
   border: 5px solid var(--color-violet);
   border-radius: 20px;
   background: var(--color-black);
-}
+} */
 
 .contacts__modal--visible {
   opacity: 1;
