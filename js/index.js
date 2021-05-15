@@ -1,10 +1,12 @@
 window.addEventListener('DOMContentLoaded', function () {
   // Smooth Scroll
-  const anchors = document.querySelectorAll('.header-nav__link, .projects__link, .primary__button, .accordion__btn')
+  const anchors = document.querySelectorAll('.header-nav__link, .projects__link, .primary__button, .accordion__btn, .accordion__tab--active')
   for (let anchor of anchors) {
     anchor.addEventListener('click', function (e) {
       e.preventDefault()
+
       const blockID = anchor.getAttribute('href').substr(1)
+
       document.getElementById(blockID).scrollIntoView({
         behavior: 'smooth',
         block: 'start'
@@ -216,6 +218,8 @@ window.addEventListener('DOMContentLoaded', function () {
         tabContent.classList.remove('catalog__bottom--active')
       })
       document.querySelector(`[data-target="${path}"]`).classList.add('catalog__bottom--active')
+
+      $('.accordion').accordion("refresh");
     })
   })
 
@@ -231,6 +235,8 @@ window.addEventListener('DOMContentLoaded', function () {
         tabContent.classList.remove('catalog__biography--active')
       })
       document.querySelector(`[data-target="${path}"]`).classList.add('catalog__biography--active')
+
+      $('.accordion').accordion("refresh");
     })
   })
 
@@ -353,6 +359,34 @@ window.addEventListener('DOMContentLoaded', function () {
     document.querySelector('.header-search__btn').classList.toggle('header-search__btn--active')
   });
 
-  //Where focus
+  // Where focus
   window.addEventListener('focusin', event => console.log(new Date, event.target));
+
+  // Smooth scroll catalog
+  let artistNameBtn = document.querySelectorAll('.accordion__tab'),
+  infoHeading = document.querySelectorAll('.biography__name');
+
+  for (let item of artistNameBtn) {
+    item.addEventListener('click', function (e) {
+      artistNameBtn.forEach(el => el.classList.remove('active'));
+
+      infoHeading.forEach(el => {
+        el.parentElement.style.display = "none";
+
+        let person = el.innerText;
+        if (person === e.currentTarget.innerText) {
+          el.parentElement.style.display = "block";
+
+          item.classList.add('active');
+        }
+
+        if (window.innerWidth < 1024) {
+          el.parentElement.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  }
 })
