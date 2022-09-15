@@ -141,6 +141,7 @@ window.addEventListener('DOMContentLoaded', function () {
     navigation: {
       nextEl: '.swiper-button-next3',
       prevEl: '.swiper-button-prev3',
+      disabledClass: 'swiper-button-disabled3',
     },
     breakpoints: {
       768: {

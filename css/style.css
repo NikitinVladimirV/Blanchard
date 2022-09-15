@@ -143,6 +143,12 @@
   left: 6px;
 }
 
+.swiper-button-disabled:hover {
+  border: 2px solid transparent;
+  background-color: #666;
+  cursor: default;
+}
+
 .swiper-pagination-fraction {
   width: max-content;
 }
@@ -348,13 +354,17 @@
   font-weight: 600;
   color: var(--color-white);
   background: rgba(0, 0, 0, 0.4);
-  transform: scaleY(0);
-  transform-origin: top;
-  transition: transform .3s linear;
+  /* transform: scaleY(0);
+  transform-origin: top; */
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .3s linear;
 }
 
 .header-menu__btn--active ~ .header-menu__drop {
-  transform: scaleY(1);
+  /* transform: scaleY(1); */
+  visibility: visible;
+  opacity: 1;
 }
 
 .header-drop__list {
@@ -1746,6 +1756,16 @@ input[type="checkbox"].focus-visible ~ span {
   top: 114px;
   right: 4px;
   background-color: #ECECEC;
+}
+
+.swiper-button-disabled3:hover {
+  border: 2px solid transparent;
+  background-color: #ECECEC;
+  cursor: default;
+}
+
+.swiper-button-disabled3:hover path {
+  stroke: var(--color-black);
 }
 
 /* Contacts */
